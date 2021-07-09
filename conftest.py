@@ -67,6 +67,8 @@ def take_screenshot(browser, test_name):
 def user_logged_into_application_with_email_as_spped_12501_and_password_as_suresh2021(browser, Email_Address, Password):
     """user logged into application with email as "spped_12501" and password as "Suresh@2021"."""
     """"Launching the application"""
+
+    browser.maximize_window()
     browser.get(CASHFLOW_SYS_IE_02)
     browser.implicitly_wait(10)
     """Entering the user login details"""
@@ -101,9 +103,11 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
     browser.find_element_by_xpath("//span[@title='England']").click()
     elements = browser.find_elements_by_xpath(
         "//*[@id='taxResidence_list']/following::div//*[@class='ant-select-item-option-content']")
+    time.sleep(1)
     for element in elements:
         if TaxResidency == element.text:
             element.click()
+            break
         else:
             print("no Tax residency found")
     browser.find_element_by_id("gender").click()
@@ -113,6 +117,7 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
         element3 = list.get_attribute("title")
         if element3 == Gender:
             list.click()
+            break
     browser.find_element_by_xpath("//button/span[text()= 'Add Person']").click()
 
     browser.find_element_by_id("caseName").send_keys(ClientName)
@@ -123,5 +128,5 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
     clientelement = browser.find_element_by_id("caseName")
     assert ClientName == clientelement.get_attribute("value")
     browser.find_element_by_xpath("//button[@aria-label='Close']").click()
-    time.sleep(5)
+    time.sleep(1)
 

@@ -7,18 +7,21 @@ from pytest_bdd import (
     then,
     when,
 )
-from selenium.webdriver import ActionChains
 
+from Pages.Login_cashflow import CashflowLogin
 from Pages.Properties import Properties
 
 
 @pytest.mark.usefixtures("browser")
-@scenario('../features/AddProperty.feature', 'Adding property')
-@scenario('../features/AddProperty.feature', 'Renovation to property')
-@scenario('../features/AddProperty.feature', 'Rent to property')
-@scenario('../features/AddProperty.feature', 'Sale event to property')
-@scenario('../features/AddProperty.feature', 'User Login')
-@scenario('../features/AddProperty.feature', 'mortgage to property')
+@scenario('../features/AddProperty.feature', 'Add Property')
+@scenario('../features/AddProperty.feature', 'Scenario mode for property to exclude')
+def test_scenario_mode_for_property_to_exclude():
+    """Scenario mode for property to exclude."""
+
+def Propertyscenariotest():
+    """mortgage to property."""
+
+
 def test_mortgage_to_property():
     """mortgage to property."""
 
@@ -26,85 +29,119 @@ def test_mortgage_to_property():
 @when('User in cashflow home page')
 def user_in_cashflow_home_page(browser):
     """User in cashflow home page."""
-    element = browser.find_element_by_xpath("//span[text()='Active Scenario']")
-    if element.is_displayed():
-        print("User is on home page")
-
+    pages_properties = Properties(browser)
+    pages_properties.Verify_user_in_home_page()
 
 @then('I add property from property page')
 def i_add_property_from_property_page(browser):
     """I add property from property page."""
     pages_properties = Properties(browser)
-    pages_properties.Navigate_to_properties_page()
+    pages_properties.i_add_property_plan_from_property_page()
 
 @then('I provide <PropertyDescription>')
 def i_provide_propertydescription(browser, PropertyDescription):
     """I provide <PropertyDescription>."""
-    AddProperty =browser.find_element_by_xpath("//button//span[text()='Add Property']")
-    if AddProperty.is_displayed():
-        AddProperty.click()
-    browser.find_element_by_id("name").send_keys(PropertyDescription)
+    pages_properties = Properties(browser)
+    pages_properties.i_provide_propertydescription(PropertyDescription)
 
 @then('I provide property details as <PreExisting>')
 def i_provide_property_details_as_preexisting(browser, PreExisting):
     """I provide property details as <PreExisting>."""
-    propertydetails = browser.find_elements_by_xpath("//*[@id='isPreexisting']//input")
-    for type in propertydetails:
-        if type.text == PreExisting:
-            type.click()
+    pages_properties = Properties(browser)
+    pages_properties.select_preexisting(PreExisting)
+
+@then('I Provide Property Value as <CurrentValue>')
+def i_provide_property_value_as_currentvalue(browser, CurrentValue):
+    """I Provide Property Value as <CurrentValue>."""
+    pages_properties = Properties(browser)
+    pages_properties.currentvalue(CurrentValue)
+
+@then('I provide the base cost for CGT as <BaseCostCGT>')
+def i_provide_the_base_cost_for_cgt_as_basecostcgt(browser, BaseCostCGT):
+    """I provide the base cost for CGT as <BaseCostCGT>."""
+    pages_properties = Properties(browser)
+    pages_properties.basecostCGTvalue(BaseCostCGT)
+
+@then('I enable Sale Event with sale event as forever with Sale Expense % <SaleExpense>')
+def i_enable_sale_event_with_sale_event_as_retire_with_sale_expense__saleexpense(browser, SaleExpense):
+    """I enable Sale Event with sale event as <Retire> with Sale Expense % <SaleExpense%>."""
+    pages_properties = Properties(browser)
+    pages_properties.Saleevent(SaleExpense)
 
 
 @then('I Enable Rental with <Rental>, <RentalExpense>')
-def i_enable_rental_with_rental_rentalexpense():
+def i_enable_rental_with_rental_rentalexpense(browser, Rental,RentalExpense):
     """I Enable Rental with <Rental>, <RentalExpense>."""
-    raise NotImplementedError
-
-
-@then('I Provide Property Value as <CurrentValue>')
-def i_provide_property_value_as_currentvalue():
-    """I Provide Property Value as <CurrentValue>."""
-    raise NotImplementedError
-
-@then('I check allnow mortage interest offset')
-def i_check_allnow_mortage_interest_offset():
-    """I check allnow mortage interest offset."""
-    raise NotImplementedError
+    pages_properties = Properties(browser)
+    pages_properties.rental(Rental, RentalExpense)
 
 
 @then('I enable Mortgages with <MortagageDescription>, <ReplaymentType>, <MortagageValue>, <InterestRate>, <MortgageStartEvent>, <MortgageCeaseEvent>')
-def i_enable_mortgages_with_mortagagedescription_replaymenttype_mortagagevalue_interestrate_mortgagestartevent_mortgageceaseevent():
+def i_enable_mortgages_with_mortagagedescription_replaymenttype_mortagagevalue_interestrate_mortgagestartevent_mortgageceaseevent(browser, MortagageDescription, ReplaymentType, MortagageValue, InterestRate, MortgageStartEvent, MortgageCeaseEvent):
     """I enable Mortgages with <MortagageDescription>, <ReplaymentType>, <MortagageValue>, <InterestRate>, <MortgageStartEvent>, <MortgageCeaseEvent>."""
-    raise NotImplementedError
+    pages_properties = Properties(browser)
+    pages_properties.mortage(MortagageDescription, ReplaymentType, MortagageValue, InterestRate, MortgageStartEvent, MortgageCeaseEvent)
 
 
-@then('I enable Renovation with <RenovationCost>, <IncreasedtoPropertyValue>')
-def i_enable_renovation_with_renovationcost_increasedtopropertyvalue():
+@then('I enable Renovation with <RenovationCost>, <IncreasedtoPropertyValue> <RenovationEvent>')
+def i_enable_renovation_with_renovationcost_increasedtopropertyvalue(browser, RenovationCost, IncreasedtoPropertyValue, RenovationEvent):
     """I enable Renovation with <RenovationCost>, <IncreasedtoPropertyValue>."""
-    raise NotImplementedError
-
-
-@then('I enable Sale Event with sale event as <Retire> with Sale Expense % <SaleExpense%>')
-def i_enable_sale_event_with_sale_event_as_retire_with_sale_expense__saleexpense():
-    """I enable Sale Event with sale event as <Retire> with Sale Expense % <SaleExpense%>."""
-    raise NotImplementedError
+    pages_properties = Properties(browser)
+    pages_properties.renovation(RenovationCost, IncreasedtoPropertyValue, RenovationEvent)
 
 
 
-
-@then('I provide the base cost for CGT as <BaseCostCGT>')
-def i_provide_the_base_cost_for_cgt_as_basecostcgt():
-    """I provide the base cost for CGT as <BaseCostCGT>."""
-    raise NotImplementedError
-
-
-@then('I save Property')
-def i_save_property():
+@then('I save Property <PropertyDescription>')
+def i_save_property(browser, PropertyDescription):
     """I save Property."""
-    raise NotImplementedError
+    pages_properties = Properties(browser)
+    pages_properties.savepropery(PropertyDescription)
+
+@then('I logout from application')
+def i_logout_from_application(browser):
+    """I logout from application."""
+    Logout_app = CashflowLogin(browser)
+    Logout_app.logout()
 
 
-@then('I select Renovation event <RenovationEvent>')
-def i_select_renovation_event_renovationevent():
-    """I select Renovation event <RenovationEvent>."""
-    raise NotImplementedError
+@when('user Search for existing client <Existingclient>')
+def user_search_for_existing_client_existingclient(browser, Existingclient):
+    """user Search for existing client <Existingclient>."""
+    page_properties = Properties(browser)
+    page_properties.searchclient(Existingclient)
 
+@then('I navigate to property page')
+def i_navigate_to_property_page(browser):
+    """I navigate to property page."""
+    page_properties = Properties(browser)
+    page_properties.navigaetoPropertypage()
+
+@then('I create new scenario <ScenarioName> <ScenarioDescription>')
+def i_create_new_scenario_scenarioname_scenariodescription(browser, ScenarioName, ScenarioDescription):
+    """I create new scenario <scenarioname> <scenarioDescription>."""
+    page_properties = Properties(browser)
+    page_properties.createscenario(ScenarioName, ScenarioDescription)
+
+@then('I navigate to the Property details <PropertyDescription>')
+def i_navigate_to_the_property_details_propertydescription(browser, PropertyDescription):
+    """I navigate to the Property details <PropertyDescription>."""
+    page_properties = Properties(browser)
+    page_properties.navigatetonarrativedetails(PropertyDescription)
+
+@then('I exclude property with all switches ON')
+def i_exclude_property_with_all_switches_on(browser):
+    """I exclude property with all switches ON."""
+    page_properties = Properties(browser)
+    page_properties.navigatetonarrativedetails()
+
+@then('I save Property <PropertyDescription>')
+def i_save_property(browser, PropertyDescription):
+    """I save Property."""
+    pages_properties = Properties(browser)
+    pages_properties.addpropery(PropertyDescription)
+
+@then('I verify the scenario is excluded')
+def i_verify_the_scenario_is_excluded(browser):
+    """I verify the scenario is excluded."""
+    page_properties = Properties(browser)
+    page_properties.excludedscenario()
