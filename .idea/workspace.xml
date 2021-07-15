@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Add property scenario">
-      <change afterPath="$PROJECT_DIR$/Pages/Investment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Features/Investments.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Features/PropertyScenario.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_InvestmentPropertyLinking.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_Investments.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_PropertyScenario.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/tables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/AddProperty.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddProperty.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddProperty1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddProperty1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_InvestmentPropertyLinking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_InvestmentPropertyLinking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/step_defs/test_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_sample.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625812449915</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add property scenario">
+      <created>1626243906210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626243906210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

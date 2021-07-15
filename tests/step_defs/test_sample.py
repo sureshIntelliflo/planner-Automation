@@ -1,5 +1,5 @@
 # coding=utf-8
-"""Add investments feature tests."""
+"""Investment and Properties linking feature tests."""
 
 from pytest_bdd import (
     given,
@@ -9,9 +9,9 @@ from pytest_bdd import (
 )
 
 
-@scenario('features\InvestmentPropertyLinking.feature', 'Add investments and exclude in a scenario')
-def test_add_investments_and_exclude_in_a_scenario():
-    """Add investments and exclude in a scenario."""
+@scenario('features\InvestmentPropertyLinking.feature', 'Link investment to property in mortgage offset')
+def test_link_investment_to_property_in_mortgage_offset():
+    """Link investment to property in mortgage offset."""
 
 
 @given('user logged into application with email as "spped_12499" and password as "Suresh@2021"')

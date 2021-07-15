@@ -188,7 +188,7 @@ class Properties:
         if NewMortgage.is_displayed():
             self.driver.find_element_by_xpath("//input[@id='description']").send_keys(MortagageDescription)
             self.driver.find_element_by_id("repaymentType").click()
-            time.sleep(2)
+            time.sleep(1)
             self.driver.find_element_by_xpath(f"//div[contains(text(),'{ReplaymentType}')]").click()
 
         self.driver.find_element_by_xpath("//input[@id='value_amount']").send_keys(MortagageValue)
@@ -200,17 +200,19 @@ class Properties:
         self.driver.find_element_by_id("endEvent_id").click()
         time.sleep(2)
         self.driver.find_element_by_xpath(f"//div[contains(text(),'{MortgageCeaseEvent}')]").click()
+        time.sleep(1)
 
     def MortgageOffet(self, InvestmentDescription, OffsetOptions):
         self.driver.find_element_by_xpath("//button[@id='offsetEnabled']").click()
-        LinkedcurrentAcccount =  self.driver.find_element_by_xpath("//input[@id='offset_investment_id']")
-        if LinkedcurrentAcccount.is_displayed():
-            LinkedcurrentAcccount.click()
-            self.driver.find_element_by_xpath(f"//div[contains(text(),'{InvestmentDescription}')]")
-        offsetOptions = self.driver.find_element_by_xpath("//input[@id='offset_option']")
-        if offsetOptions.is_displayed():
-            offsetOptions.click()
-            self.driver.find_element_by_xpath(f"//div[contains(text(),'{OffsetOptions}')]").click()
+        time.sleep(1)
+        LinkedcurrentAcccount = self.driver.find_element_by_xpath("//input[@id='offset_investment_id']")
+        LinkedcurrentAcccount.click()
+        self.driver.find_element_by_xpath(f"//div[contains(text(),'{InvestmentDescription}')]").click()
 
-    def SaveMortgage(self):
-        self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Save Mortgage')]").click()
+        offsetOptions = self.driver.find_element_by_xpath("//input[@id='offset_option']//following::span[@title]")
+        offsetOptions.click()
+        self.driver.find_element_by_xpath(f"//div[contains(text(),'{OffsetOptions}')]").click()
+
+
+    def AddMortgage(self):
+        self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Add Mortgage')]").click()

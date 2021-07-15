@@ -1,6 +1,6 @@
-Feature: Add investments
+Feature: Investment and Properties linking
 
-  Scenario Outline: Add investments and exclude in a scenario
+  Scenario Outline: Link investment to property in mortgage offset
     Given user logged into application with email as "spped_12499" and password as "Suresh@2021"
     When user logged in and I add client with details name as "Investment property linked", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_InvestmentProperty"
     When User in cashflow home page
@@ -19,7 +19,7 @@ Feature: Add investments
     Then I enable Mortgages with <MortagageDescription>, <ReplaymentType>, <MortagageValue>, <InterestRate>, <MortgageStartEvent>, <MortgageCeaseEvent>
     And I enable mortgage offset with Linked Current Account <InvestmentDescription> and Offset Options <OffsetOptions>
     And i save Mortgage and Propery
-    Then I navigate to tables
+    And I logout from application
     Examples:
-      | InvestmentDescription        | InvestmentType         | Investment   | CurrentValue | Returns | PropertyDescription          | PropertyTyep | CurrentValue | BaseCostCGT | MortagageDescription | ReplaymentType | MortagageValue | InterestRate | MortgageStartEvent | MortgageCeaseEvent |
-      | Automated_InvestmentProperty | Offset Current Account | Pre-Existing | 300000       | 9.8     | Automated_PropertyInvestment | Pre-Existing | 300000       | 20000       | Automated_Mortage    | Interest Only  | 300000         | 22           | Property Purchase  | Pre-Existing       |
+      | InvestmentDescription | InvestmentType         | Investment   | CurrentValue | Returns | PropertyDescription  | PropertyTyep | BaseCostCGT | MortagageDescription | ReplaymentType | MortagageValue | InterestRate | MortgageStartEvent | MortgageCeaseEvent | OffsetOptions                 |
+      | A_PropertyInvestment  | Offset Current Account | Pre-Existing | 300000       | 9.8     | A_PropertyInvestment | Pre-Existing | 300000      | Automated_Mortage    | Interest Only  | 300000         | 22           | Property Purchase  | Pre-Existing       | Interest Only Reduce Payments |
