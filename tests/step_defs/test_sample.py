@@ -1,5 +1,5 @@
 # coding=utf-8
-"""Investment and Properties linking feature tests."""
+"""Income and DB pensions feature tests."""
 
 from pytest_bdd import (
     given,
@@ -9,9 +9,9 @@ from pytest_bdd import (
 )
 
 
-@scenario('features\InvestmentPropertyLinking.feature', 'Link investment to property in mortgage offset')
-def test_link_investment_to_property_in_mortgage_offset():
-    """Link investment to property in mortgage offset."""
+@scenario('features\IncomeDBPensions.feature', 'Verify the income and DB Pensions Linking')
+def test_verify_the_income_and_db_pensions_linking():
+    """Verify the income and DB Pensions Linking."""
 
 
 @given('user logged into application with email as "spped_12499" and password as "Suresh@2021"')
@@ -26,104 +26,116 @@ def user_in_cashflow_home_page():
     raise NotImplementedError
 
 
-@when('user logged in and I add client with details name as "Investment property linked", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_InvestmentProperty"')
-def user_logged_in_and_i_add_client_with_details_name_as_investment_property_linked_knowas_qa_automation_dob_01011990tax_residency_england_gender_as_male_and_create_client_with_case_name_as_automatedqa_investmentproperty():
-    """user logged in and I add client with details name as "Investment property linked", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_InvestmentProperty"."""
+@when('user logged in and I add client with details name as "IncomePensionlinked", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_IncomePension"')
+def user_logged_in_and_i_add_client_with_details_name_as_incomepensionlinked_knowas_qa_automation_dob_01011990tax_residency_england_gender_as_male_and_create_client_with_case_name_as_automatedqa_incomepension():
+    """user logged in and I add client with details name as "IncomePensionlinked", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_IncomePension"."""
     raise NotImplementedError
 
 
-@then('I Provide Property Value as <CurrentValue>')
-def i_provide_property_value_as_currentvalue():
-    """I Provide Property Value as <CurrentValue>."""
+@then('I Add pensions from pensions page')
+def i_add_pensions_from_pensions_page():
+    """I Add pensions from pensions page."""
     raise NotImplementedError
 
 
-@then('I add Investment Description <InvestmentDescription>')
-def i_add_investment_description_investmentdescription():
-    """I add Investment Description <InvestmentDescription>."""
+@then('I add Income type <IncomeType>')
+def i_add_income_type_incometype():
+    """I add Income type <IncomeType>."""
     raise NotImplementedError
 
 
-@then('I add Investment to Baseline scenario <InvestmentDescription>')
-def i_add_investment_to_baseline_scenario_investmentdescription():
-    """I add Investment to Baseline scenario <InvestmentDescription>."""
+@then('I add Pension and verify added pensions <PensionDescription>z')
+def i_add_pension_and_verify_added_pensions_pensiondescriptionz():
+    """I add Pension and verify added pensions <PensionDescription>z."""
     raise NotImplementedError
 
 
-@then('I add investment returns as <Returns>')
-def i_add_investment_returns_as_returns():
-    """I add investment returns as <Returns>."""
+@then('I add benefit basis <Benefitstype>')
+def i_add_benefit_basis_benefitstype():
+    """I add benefit basis <Benefitstype>."""
     raise NotImplementedError
 
 
-@then('I add investment value as <CurrentValue>')
-def i_add_investment_value_as_currentvalue():
-    """I add investment value as <CurrentValue>."""
+@then('I add benefit income <BenefitIncome> and benefit lump sum <LumpSum>')
+def i_add_benefit_income_benefitincome_and_benefit_lump_sum_lumpsum():
+    """I add benefit income <BenefitIncome> and benefit lump sum <LumpSum>."""
     raise NotImplementedError
 
 
-@then('I add property with <PropertyDescription>')
-def i_add_property_with_propertydescription():
-    """I add property with <PropertyDescription>."""
+@then('I add contributions with income linking <IncomeDescription> with gross contributions <GrossContributions> pension basis <PensionBasis>')
+def i_add_contributions_with_income_linking_incomedescription_with_gross_contributions_grosscontributions_pension_basis_pensionbasis():
+    """I add contributions with income linking <IncomeDescription> with gross contributions <GrossContributions> pension basis <PensionBasis>."""
     raise NotImplementedError
 
 
-@then('I enable Mortgages with <MortagageDescription>, <ReplaymentType>, <MortagageValue>, <InterestRate>, <MortgageStartEvent>, <MortgageCeaseEvent>')
-def i_enable_mortgages_with_mortagagedescription_replaymenttype_mortagagevalue_interestrate_mortgagestartevent_mortgageceaseevent():
-    """I enable Mortgages with <MortagageDescription>, <ReplaymentType>, <MortagageValue>, <InterestRate>, <MortgageStartEvent>, <MortgageCeaseEvent>."""
+@then('I add death options with spouse income after death and death lump sum <SpouseIncomeAfterDeath> <LumpSumOptions> <ServiceMultiplier>')
+def i_add_death_options_with_spouse_income_after_death_and_death_lump_sum_spouseincomeafterdeath_lumpsumoptions_servicemultiplier():
+    """I add death options with spouse income after death and death lump sum <SpouseIncomeAfterDeath> <LumpSumOptions> <ServiceMultiplier>."""
     raise NotImplementedError
 
 
-@then('I enable mortgage offset with Linked Current Account <InvestmentDescription> and Offset Options <OffsetOptions>')
-def i_enable_mortgage_offset_with_linked_current_account_investmentdescription_and_offset_options_offsetoptions():
-    """I enable mortgage offset with Linked Current Account <InvestmentDescription> and Offset Options <OffsetOptions>."""
+@then('I add income amount <IncomeAmount>')
+def i_add_income_amount_incomeamount():
+    """I add income amount <IncomeAmount>."""
     raise NotImplementedError
 
 
-@then('I navigate to Property')
-def i_navigate_to_property():
-    """I navigate to Property."""
+@then('I add income and verify added income <IncomeDescription>')
+def i_add_income_and_verify_added_income_incomedescription():
+    """I add income and verify added income <IncomeDescription>."""
     raise NotImplementedError
 
 
-@then('I navigate to investments page')
-def i_navigate_to_investments_page():
-    """I navigate to investments page."""
+@then('I add income current or future type <CurrentFutureIncome>')
+def i_add_income_current_or_future_type_currentfutureincome():
+    """I add income current or future type <CurrentFutureIncome>."""
     raise NotImplementedError
 
 
-@then('I navigate to tables')
-def i_navigate_to_tables():
-    """I navigate to tables."""
+@then('I add income description <IncomeDescription>')
+def i_add_income_description_incomedescription():
+    """I add income description <IncomeDescription>."""
     raise NotImplementedError
 
 
-@then('I provide property details as <PropertyTyep>')
-def i_provide_property_details_as_propertytyep():
-    """I provide property details as <PropertyTyep>."""
+@then('I add new income from income Page')
+def i_add_new_income_from_income_page():
+    """I add new income from income Page."""
     raise NotImplementedError
 
 
-@then('I provide the base cost for CGT as <BaseCostCGT>')
-def i_provide_the_base_cost_for_cgt_as_basecostcgt():
-    """I provide the base cost for CGT as <BaseCostCGT>."""
+@then('I add pension description <PensionDescription>')
+def i_add_pension_description_pensiondescription():
+    """I add pension description <PensionDescription>."""
     raise NotImplementedError
 
 
-@then('I select investment as Pre existing <Investment>')
-def i_select_investment_as_pre_existing_investment():
-    """I select investment as Pre existing <Investment>."""
+@then('I enable adjust lifetime allowance')
+def i_enable_adjust_lifetime_allowance():
+    """I enable adjust lifetime allowance."""
     raise NotImplementedError
 
 
-@then('i add investment type as <InvestmentType>')
-def i_add_investment_type_as_investmenttype():
-    """i add investment type as <InvestmentType>."""
+@then('I navigate to Income page')
+def i_navigate_to_income_page():
+    """I navigate to Income page."""
     raise NotImplementedError
 
 
-@then('i save Mortgage and Propery')
-def i_save_mortgage_and_propery():
-    """i save Mortgage and Propery."""
+@then('I navigate to pensions')
+def i_navigate_to_pensions():
+    """I navigate to pensions."""
+    raise NotImplementedError
+
+
+@then('I select policy status <pensionstype>')
+def i_select_policy_status_pensionstype():
+    """I select policy status <pensionstype>."""
+    raise NotImplementedError
+
+
+@then('I select policy structure is Defined Benefit')
+def i_select_policy_structure_is_defined_benefit():
+    """I select policy structure is Defined Benefit."""
     raise NotImplementedError
 

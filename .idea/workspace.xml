@@ -4,12 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Add property scenario">
-      <change afterPath="$PROJECT_DIR$/Pages/tables.py" afterDir="false" />
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Add property and investment linking mortgage offset">
+      <change afterPath="$PROJECT_DIR$/Pages/Income.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Pensions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_InvestmentPropertyLinking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_InvestmentPropertyLinking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/step_defs/test_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_sample.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626243906210</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add property and investment linking mortgage offset">
+      <created>1626331850713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626331850713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +131,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add property scenario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add property scenario" />
+    <MESSAGE value="Add property and investment linking mortgage offset" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add property and investment linking mortgage offset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
