@@ -1,5 +1,5 @@
 # coding=utf-8
-"""Income and DB pensions feature tests."""
+"""Income and DC pensions feature tests."""
 import pytest
 from pytest_bdd import (
     given,
@@ -62,11 +62,11 @@ def i_add_contributions_with_income_linking_incomedescription_with_gross_contrib
     page_Pension = Pensions(browser)
     page_Pension.BenefitContributions(IncomeDescription, GrossContributions, PensionBasis)
 
-@then('I add death options with spouse income after death and death lump sum <SpouseIncomeAfterDeath> <LumpSumOptions> <ServiceMultiplier>')
-def i_add_death_options_with_spouse_income_after_death_and_death_lump_sum_spouseincomeafterdeath_lumpsumoptions_servicemultiplier(browser, SpouseIncomeAfterDeath, LumpSumOptions, ServiceMultiplier):
+@then('I add death options with spouse income after death and death lump sum <LumpSumOptions> <ServiceMultiplier>')
+def i_add_death_options_with_spouse_income_after_death_and_death_lump_sum_spouseincomeafterdeath_lumpsumoptions_servicemultiplier(browser, LumpSumOptions, ServiceMultiplier):
     """I add death options with spouse income after death and death lump sum <SpouseIncomeAfterDeath> <LumpSumOptions> <ServiceMultiplier>."""
     page_Pension = Pensions(browser)
-    page_Pension.BenefitDeathOptions(SpouseIncomeAfterDeath, LumpSumOptions, ServiceMultiplier)
+    page_Pension.BenefitDeathOptions(LumpSumOptions, ServiceMultiplier)
 
 @then('I add income amount <IncomeAmount>')
 def i_add_income_amount_incomeamount(browser, IncomeAmount):

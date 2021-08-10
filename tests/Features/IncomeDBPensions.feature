@@ -19,11 +19,11 @@ Feature: Income and DB pensions
     Then I add benefit basis <Benefitstype>
     Then I add benefit income <BenefitIncome> and benefit lump sum <LumpSum>
     Then I add contributions with income linking <IncomeDescription> with gross contributions <GrossContributions> pension basis <PensionBasis>
-    Then I add death options with spouse income after death and death lump sum <SpouseIncomeAfterDeath> <LumpSumOptions> <ServiceMultiplier>
+    Then I add death options with spouse income after death and death lump sum <LumpSumOptions> <ServiceMultiplier>
     Then I enable adjust lifetime allowance
     And I add Pension and verify added pensions <PensionDescription>z
     Examples:
-      | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription   | pensionstype | Benefitstype | BenefitIncome | LumpSum | GrossContributions | PensionBasis     | SpouseIncomeAfterDeath | LumpSumOptions | ServiceMultiplier |
-      | Automated_income  | Salary     | Current Income      | 450000       | Automated_DBPension  | Active       | Statement    | 31200         | 500000  | 12.7               | Relief At Source | 100                    | Multiple       | 2                 |
+      | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription  | pensionstype | Benefitstype | BenefitIncome | LumpSum | GrossContributions | PensionBasis     | LumpSumOptions | ServiceMultiplier |
+      | Automated_income  | Salary     | Current Income      | 450000       | Automated_DBPension | Active       | Statement    | 31200         | 500000  | 12.7               | Relief At Source | Multiple       | 2                 |
 
 

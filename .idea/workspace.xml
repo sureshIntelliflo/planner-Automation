@@ -4,13 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Add property and investment linking mortgage offset">
-      <change afterPath="$PROJECT_DIR$/Pages/Income.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Pensions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" afterDir="false" />
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Income and DB Pensions Linking">
+      <change afterPath="$PROJECT_DIR$/tests/Features/IncomeDCPensions.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDCPensions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_sample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Pensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Pensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_sample.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +51,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Features" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\test-cashflow\tests\Features" />
       <recent name="C:\test-cashflow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626331850713</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Income and DB Pensions Linking">
+      <created>1627396670522</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1627396670522</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,7 +141,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add property scenario" />
     <MESSAGE value="Add property and investment linking mortgage offset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add property and investment linking mortgage offset" />
+    <MESSAGE value="Income and DB Pensions Linking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Income and DB Pensions Linking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
