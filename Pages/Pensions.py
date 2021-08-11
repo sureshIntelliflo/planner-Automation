@@ -79,17 +79,14 @@ class Pensions:
             assert pensionnarrative.text == PensionDescription
 
     def SelectDCpensions(self):
-        self.driver.find_element_by_xpath("//label//input[@value='DEFINED_CONTRIBUTION']").click();
+        self.driver.find_element_by_xpath("//span[normalize-space()='Defined Contribution']").click();
 
     def PolicyType(self, DCType):
         self.driver.find_element_by_xpath("//div[@class='ant-select-selector']").click()
-        element = self.driver.find_element_by_xpath(f"//div[@title='{DCType}']")
-        if element.is_display():
-            element.click()
-        else:
-            print("unable to see the DC pensions type")
+        self.driver.find_element_by_xpath(f"//div[contains(text(),'{DCType}')]").click()
 
-    def DCPension(self, TotalFundValue, DrawdownValue, OriginalCrystallisedAmount):
+
+    def DCPensionFund(self, TotalFundValue, DrawdownValue, OriginalCrystallisedAmount):
         self.driver.find_element_by_xpath("//input[@id='totalFundValue_amount']").send_keys(TotalFundValue)
         self.driver.find_element_by_xpath("//input[@id='drawdownValue_amount']").send_keys(DrawdownValue)
         self.driver.find_element_by_xpath("//input[@id='originalAmount_amount']").send_keys(OriginalCrystallisedAmount)
