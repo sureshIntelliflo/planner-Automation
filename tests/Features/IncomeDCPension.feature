@@ -20,6 +20,12 @@ Feature:  Income and DC Pension
     And I select returns <Risk> <GrossReturn>
     Then I enable Specific charges switch
     Then I add DC Contributions <ContributionType> <TakenBy> <IncomeDescription> <ContributionAmount> <Contribution> <Frequency> <PeriodSet> <StartYear> <EndYear>
+    And I select Uncrystallised Withdrawal - As Required Method as <UncrystallisedWithdrawal>
+    Then I Enable Uncrystallised Withdrawal - Custom <withdrawlType> <CrystalliseValue> <AmountValue> <PercentageValue> <FrequencyType> <PeriodSetValueevent>
+    Then I Enable Crystallised Withdrawal_Custom <WithdrawalMethod> <CrystallisedAmount> <FrequencyType_cy> <PeriodSetValueevent_cy>
+    Then I enable Scheme Specific PCLS
+    And I Add DC Pension and Verify the Pension <PensionDescription>
+
     Examples:
-      | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription | DCType       | TotalFundValue | DrawdownValue | OriginalCrystallisedAmount | Risk | GrossReturn | ContributionType            | TakenBy | ContributionAmount | Contribution | Frequency | PeriodSet | StartYear | EndYear |
-      | Automated_income  | Salary     | Current Income      | 450000       | Automated_Pension  | Occupational | 45000          | 4000          | 5000                       | High | 11          | Personal - Salary Sacrifice | AMOUNT  | 5000               | 9 |
+      | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription | DCType       | TotalFundValue | DrawdownValue | OriginalCrystallisedAmount | Risk | GrossReturn | ContributionType            | TakenBy | ContributionAmount | Contribution | Frequency | PeriodSet | StartYear | EndYear | UncrystallisedWithdrawal             | withdrawlType                        | CrystalliseValue | AmountValue | PercentageValue | FrequencyType | PeriodSetValueevent | WithdrawalMethod | CrystallisedAmount | FrequencyType_cy | PeriodSetValueevent_cy |
+      | Automated_income  | Salary     | Current Income      | 450000       | Automated_Pension  | Occupational | 45000          | 4000          | 5000                       | High | 11          | Personal - Salary Sacrifice | AMOUNT  | 5000               | 9            | Regular   | EVENT     | 2020      | 2060    | Uncrystallised Fund Pension Lump Sum | Uncrystallised Fund Pension Lump Sum | AMOUNT           | 1000        | 9               | Regular       | YEAR                | Amount           | 5000               | Regular          | EVENT                  |

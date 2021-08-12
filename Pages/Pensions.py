@@ -92,7 +92,8 @@ class Pensions:
         self.driver.find_element_by_xpath("//input[@id='originalAmount_amount']").send_keys(OriginalCrystallisedAmount)
 
     def Return(self, Risk, GrossReturn):
-        self.driver.find_element_by_xpath("//div[@class='ant-row ant-form-item PensionFormReturnSection_wrapper__2E_-u']//div[@class='ant-select-selector']").click()
+        self.driver.find_element_by_xpath("//input[@id='riskProfile_id']").click()
+        time.sleep(1)
         AttitudetoRisk = self.driver.find_element_by_xpath(f"//div[contains(text(),'{Risk}')]")
         if AttitudetoRisk == "Custom":
             AttitudetoRisk.click()
@@ -105,41 +106,41 @@ class Pensions:
 
     def Contributions(self, ContributionType, TakenBy, IncomeDescription, ContributionAmount, Contribution, Frequency, PeriodSet, StartYear, EndYear):
         self.driver.find_element_by_xpath("//button[@id='contributionsEnabled']").click()
+        time.sleep(1)
         self.driver.find_element_by_xpath("//span[normalize-space()='Add contribution']").click()
-
+        time.sleep(1)
         Contributiontypedropdown = self.driver.find_element_by_xpath("//*[@id='contributionType']//parent::span//parent::div")
         if Contributiontypedropdown.is_displayed():
             Contributiontypedropdown.click()
+            time.sleep(1)
             if ContributionType == "Personal - Salary Sacrifice":
                 self.driver.find_element_by_xpath(f"//div[contains(text(),'{ContributionType}')]").click()
-                TakenByAmount = self.driver.find_element_by_xpath("//input[@value='AMOUNT']")
-                TakenByPercentage = self.driver.find_element_by_xpath("//input[@value='PERCENTAGE']")
-                linkedemployment = self.driver.find_element_by_xpath("//div[@class='mb-5']//div[@class='ant-select-selector']")
-                if TakenBy == "Amount":
-                    TakenByAmount.click()
-                    linkedemployment.click()
-                    self.driver.find_element_by_xpath(f"//div[contains(text(),'{IncomeDescription}')]")
+                time.sleep(1)
+                self.driver.find_element_by_xpath(f"(//input[@value='{TakenBy}']//following::span//following::span)[1]").click()
+                self.driver.find_element_by_xpath("//div[@class='mb-5']//div[@class='ant-select-selector']").click()
+                if TakenBy == "AMOUNT":
+                    self.driver.find_element_by_xpath(f"//div[contains(text(),'{IncomeDescription}')]").click()
                     self.driver.find_element_by_xpath("//input[@id='amount_amount']").send_keys(ContributionAmount)
-                elif TakenBy == "Percentage":
-                    TakenByPercentage.click()
-                    linkedemployment.click()
-                    self.driver.find_element_by_xpath(f"//div[contains(text(),'{IncomeDescription}')]")
+                elif TakenBy == "PERCENTAGE":
+                    self.driver.find_element_by_xpath(f"//div[contains(text(),'{IncomeDescription}')]").click()
                     self.driver.find_element_by_xpath("//input[@id='percentage']").send_keys(Contribution)
-
-            self.driver.find_element_by_xpath(f"//span[normalize-space()='{Frequency}']").click()
-            Period = self.driver.find_element_by_xpath(f"//input[@value='{PeriodSet}']")
-            if Period == "Years":
-                PeriodSetBy = self.driver.find_element_by_xpath("//span[normalize-space()='Years']")
-                if PeriodSetBy.is_displayed():
-                    PeriodSetBy.click()
+                time.sleep(1)
+                self.driver.find_element_by_xpath(f"//span[normalize-space()='{Frequency}']").click()
+                self.driver.find_element_by_xpath(f"(//input[@value='{PeriodSet}']//following::span//following::span)[1]").click()
+                if PeriodSet == "YEAR":
                     self.driver.find_element_by_xpath("//input[@id='start_year']").send_keys(StartYear)
                     self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys(EndYear)
                     self.driver.find_element_by_xpath("//span[normalize-space()='Add Contribution']").click()
-            elif Period == "EVENT":
-                self.driver.find_element_by_xpath("//input[@id='start_event_id']").click()
-                self.driver.find_element_by_xpath("//div[contains(text(),'Pre-Existing')]").click()
-                self.driver.find_element_by_xpath("//span[normalize-space()='Add Contribution']").click()
-
+                elif PeriodSet == "EVENT":
+                    self.driver.find_element_by_xpath("//input[@id='start_event_id']").click()
+                    time.sleep(1)
+                    self.driver.find_element_by_xpath("//div[contains(text(),'Pre-Existing')]").click()
+                    self.driver.find_element_by_xpath("//span[normalize-space()='Add Contribution']").click()
+                    time.sleep(2)
+            else:
+                print("unable to select the contributions type")
+        else:
+            print("problem wit Contributions dialog")
 
     def UncrystallisedWithdrawal(self, UncrystallisedWithdrawal):
         self.driver.find_element_by_xpath(f"//span[normalize-space()='{UncrystallisedWithdrawal}']").click()
@@ -147,61 +148,56 @@ class Pensions:
     def UncrystallisedWithdrawal_Custom(self, withdrawlType, CrystalliseValue, AmountValue, PercentageValue, FrequencyType, PeriodSetValueevent):
         self.driver.find_element_by_xpath("//button[@id='accumulationBenefitsEnabled']").click()
         self.driver.find_element_by_xpath("//span[normalize-space()='Add Uncrystallised Withdrawal']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("(//input[@id='withdrawalType']/following::span)[1]").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"//div[contains(text(),'{withdrawlType}')]").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"(//input[@value='{CrystalliseValue}']/following::span)[2]").click()
+        time.sleep(1)
+        if CrystalliseValue == "AMOUNT":
+            self.driver.find_element_by_xpath("//input[@id='amount_amount']").send_keys(AmountValue)
+        elif CrystalliseValue == "PERCENTAGE":
+            self.driver.find_element_by_xpath("//input[@id='percentage']").send_keys(PercentageValue)
 
-        type = self.driver.find_element_by_xpath("//input[@id='withdrawalType']")
-        if type.is_displayed():
-            type.click()
-            self.driver.find_element_by_xpath(f"//div[contains(text(),'{withdrawlType}')]").click()
-            CrystalliseValueby =self.driver.find_element_by_xpath(f"//input[@value='{CrystalliseValue}']")
-            if CrystalliseValueby == "AMOUNT":
-                CrystalliseValueby.click()
-                self.driver.find_element_by_xpath("//input[@id='amount_amount']").send_keys(AmountValue)
-            elif CrystalliseValueby == "PERCENTAGE":
-                CrystalliseValueby.click()
-                self.driver.find_element_by_xpath("//input[@id='percentage']").send_keys(PercentageValue)
-            Frequency = self.driver.find_element_by_xpath(f"//span[normalize-space()='{FrequencyType}']")
-            AddButton = self.driver.find_element_by_xpath("//span[normalize-space()='Add Withdrawal']")
-            if Frequency == "Regular":
-                PeriodSetValue = self.driver.find_element_by_xpath(f"//input[@value='{PeriodSetValueevent}']")
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"//span[normalize-space()='{FrequencyType}']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"//input[@value='{PeriodSetValueevent}']").click()
+        if PeriodSetValueevent == "YEAR":
+            self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//span[normalize-space()='Add Withdrawal']").click()
+        time.sleep(1)
 
-                if PeriodSetValue == "EVENT":
-                    AddButton.click()
-                elif PeriodSetValue == "YEAR":
-                    self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
-                    AddButton.click()
-            elif Frequency == "One Off":
-                PeriodSetValue = self.driver.find_element_by_xpath(f"//input[@value='{PeriodSetValueevent}']")
-                if PeriodSetValue == "EVENT":
-                    AddButton.click()
-                elif PeriodSetValue == "YEAR":
-                    AddButton.click()
-
-    def CrystallisedWithdrawal_Custom(self, WithdrawalMethod, FrequencyType, PeriodSetValueevent):
+    def CrystallisedWithdrawal_Custom(self, WithdrawalMethod, CrystallisedAmount, FrequencyType_cy, PeriodSetValueevent_cy):
         self.driver.find_element_by_xpath("//button[@id='decumulationBenefitsEnabled']").click()
         self.driver.find_element_by_xpath("//span[normalize-space()='Add Crystallised Withdrawal']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("(//input[@id='drawdownType']//following::span)[1]").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"//div[contains(text(),'{WithdrawalMethod}')]").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//input[@id='amount_amount']").send_keys(CrystallisedAmount)
+        AddButton = self.driver.find_element_by_xpath("//span[normalize-space()='Add Withdrawal']")
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"//span[normalize-space()='{FrequencyType_cy}']").click()
+        time.sleep(1)
+        if FrequencyType_cy == "Regular":
+            self.driver.find_element_by_xpath(f"(//input[@value='{PeriodSetValueevent_cy}']/following::span/following::span)[1]").click()
 
-        withdrawals = self.driver.find_element_by_xpath("(//input[@id='drawdownType']//following::span)[1]")
-        if withdrawals.is_displayed():
-            withdrawals.click()
-            withdrawal = self.driver.find_element_by_xpath(f"//div[contains(text(),'{WithdrawalMethod}')]")
-            if withdrawal == "Amount":
-                self.driver.find_element_by_xpath("//input[@id='amount_amount']").send_keys()
-                AddButton = self.driver.find_element_by_xpath("//span[normalize-space()='Add Withdrawal']")
-                Frequency = self.driver.find_element_by_xpath(f"//span[normalize-space()='{FrequencyType}']")
-                if Frequency == "Regular":
-                    PeriodSetValue = self.driver.find_element_by_xpath(f"//input[@value='{PeriodSetValueevent}']")
-
-                    if PeriodSetValue == "EVENT":
-                        AddButton.click()
-                    elif PeriodSetValue == "YEAR":
-                        self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
-                        AddButton.click()
-                elif Frequency == "One Off":
-                    PeriodSetValue = self.driver.find_element_by_xpath(f"//input[@value='{PeriodSetValueevent}']")
-                    if PeriodSetValue == "EVENT":
-                        AddButton.click()
-                    elif PeriodSetValue == "YEAR":
-                        AddButton.click()
+            if PeriodSetValueevent_cy == "EVENT":
+                AddButton.click()
+            elif PeriodSetValueevent_cy == "YEAR":
+                self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
+                AddButton.click()
+        elif FrequencyType_cy == "One Off":
+            self.driver.find_element_by_xpath(f"(//input[@value='{PeriodSetValueevent_cy}']/following::span/following::span)[1]").click()
+            if PeriodSetValueevent_cy == "EVENT":
+                AddButton.click()
+            elif PeriodSetValueevent_cy == "YEAR":
+                AddButton.click()
+        time.sleep(2)
 
     def SchemeSpecificPCLS(self):
         self.driver.find_element_by_xpath("//button[@id='schemeSpecificPensionCommencementLumpSumEnabled']").click()

@@ -117,3 +117,47 @@ def i_select_returns_risk_grossreturn(browser, Risk, GrossReturn):
     """I select returns <Risk> <GrossReturn>."""
     page_Pension = Pensions(browser)
     page_Pension.Return(Risk, GrossReturn)
+
+
+@then('I enable Specific charges switch')
+def i_enable_specific_charges_switch(browser):
+    """I enable Specific charges switch."""
+    page_Pension = Pensions(browser)
+    page_Pension.SpecificCharges()
+
+@then('I add DC Contributions <ContributionType> <TakenBy> <IncomeDescription> <ContributionAmount> <Contribution> <Frequency> <PeriodSet> <StartYear> <EndYear>')
+def i_add_dc_contributions_contributiontype_takenby_incomedescription_contributionamount_contribution_frequency_periodset_startyear_endyear(browser, ContributionType, TakenBy, IncomeDescription, ContributionAmount, Contribution, Frequency, PeriodSet, StartYear, EndYear):
+    """I add DC Contributions <ContributionType> <TakenBy> <IncomeDescription> <ContributionAmount> <Contribution> <Frequency> <PeriodSet> <StartYear> <EndYear>."""
+    page_Pension = Pensions(browser)
+    page_Pension.Contributions(ContributionType, TakenBy, IncomeDescription, ContributionAmount, Contribution, Frequency, PeriodSet, StartYear, EndYear)
+
+@then('I select Uncrystallised Withdrawal - As Required Method as <UncrystallisedWithdrawal>')
+def i_select_uncrystallised_withdrawal__as_required_method_as_uncrystallisedwithdrawal(browser,UncrystallisedWithdrawal):
+    """I select Uncrystallised Withdrawal - As Required Method as <UncrystallisedWithdrawal>."""
+    page_Pension = Pensions(browser)
+    page_Pension.UncrystallisedWithdrawal(UncrystallisedWithdrawal)
+
+@then('I Enable Uncrystallised Withdrawal - Custom <withdrawlType> <CrystalliseValue> <AmountValue> <PercentageValue> <FrequencyType> <PeriodSetValueevent>')
+def i_enable_uncrystallised_withdrawal__custom_withdrawltype_crystallisevalue_amountvalue_percentagevalue_frequencytype_periodsetvalueevent(browser, withdrawlType, CrystalliseValue, AmountValue, PercentageValue, FrequencyType, PeriodSetValueevent):
+    """I Enable Uncrystallised Withdrawal - Custom <withdrawlType> <CrystalliseValue> <AmountValue> <PercentageValue> <FrequencyType> <PeriodSetValueevent>."""
+    page_Pension = Pensions(browser)
+    page_Pension.UncrystallisedWithdrawal_Custom(withdrawlType, CrystalliseValue, AmountValue, PercentageValue, FrequencyType, PeriodSetValueevent)
+
+@then('I enable Scheme Specific PCLS')
+def i_enable_scheme_specific_pcls(browser):
+    """I enable Scheme Specific PCLS."""
+    page_Pension = Pensions(browser)
+    page_Pension.SchemeSpecificPCLS()
+
+@then('I Add DC Pension and Verify the Pension <PensionDescription>')
+def i_add_dc_pension_and_verify_the_pension_pensiondescription(browser, PensionDescription):
+    """I Add DC Pension and Verify the Pension <PensionDescription>."""
+    page_Pension = Pensions(browser)
+    page_Pension.AddPension()
+    page_Pension.VerifyPension(PensionDescription)
+
+@then('I Enable Crystallised Withdrawal_Custom <WithdrawalMethod> <CrystallisedAmount> <FrequencyType_cy> <PeriodSetValueevent_cy>')
+def i_enable_crystallised_withdrawal_custom_withdrawalmethod_frequencytype_cy_periodsetvalueevent_cy(browser, WithdrawalMethod, CrystallisedAmount, FrequencyType_cy, PeriodSetValueevent_cy):
+    """I Enable Crystallised Withdrawal_Custom <WithdrawalMethod> <FrequencyType_cy> <PeriodSetValueevent_cy>."""
+    page_Pension = Pensions(browser)
+    page_Pension.CrystallisedWithdrawal_Custom(WithdrawalMethod, CrystallisedAmount, FrequencyType_cy, PeriodSetValueevent_cy)
