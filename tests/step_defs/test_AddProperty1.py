@@ -13,18 +13,9 @@ from Pages.Properties import Properties
 
 
 @pytest.mark.usefixtures("browser")
-@scenario('../features/AddProperty.feature', 'Add Property')
-@scenario('../features/AddProperty.feature', 'Scenario mode for property to exclude')
-def test_scenario_mode_for_property_to_exclude():
-    """Scenario mode for property to exclude."""
-
-def Propertyscenariotest():
-    """mortgage to property."""
-
-
-def test_mortgage_to_property():
-    """mortgage to property."""
-
+@scenario('../features/AddProperty.feature', 'Verify the add property with switches enabled and exclude property in scenario with all switches enabled')
+def test_verify_the_add_property_with_switches_enabled_and_exclude_property_in_scenario_with_all_switches_enabled():
+    """Verify the add property with switches enabled and exclude property in scenario with all switches enabled."""
 
 @when('User in cashflow home page')
 def user_in_cashflow_home_page(browser):
@@ -91,11 +82,11 @@ def i_enable_renovation_with_renovationcost_increasedtopropertyvalue(browser, Re
 
 
 
-@then('I save Property <PropertyDescription>')
+@then('I Add Property <PropertyDescription>')
 def i_save_property(browser, PropertyDescription):
     """I save Property."""
     pages_properties = Properties(browser)
-    pages_properties.savepropery(PropertyDescription)
+    pages_properties.addpropery(PropertyDescription)
 
 @then('I logout from application')
 def i_logout_from_application(browser):
@@ -122,23 +113,23 @@ def i_create_new_scenario_scenarioname_scenariodescription(browser, ScenarioName
     page_properties = Properties(browser)
     page_properties.createscenario(ScenarioName, ScenarioDescription)
 
-@then('I navigate to the Property details <PropertyDescription>')
-def i_navigate_to_the_property_details_propertydescription(browser, PropertyDescription):
-    """I navigate to the Property details <PropertyDescription>."""
+@then('I navigate to the recently added Property details')
+def i_navigate_to_the_recently_added_property_details(browser):
+    """I navigate to the recently added Property details."""
     page_properties = Properties(browser)
-    page_properties.navigatetonarrativedetails(PropertyDescription)
+    page_properties.navigatetonarrativedetails()
 
 @then('I exclude property with all switches ON')
 def i_exclude_property_with_all_switches_on(browser):
     """I exclude property with all switches ON."""
     page_properties = Properties(browser)
-    page_properties.navigatetonarrativedetails()
+    page_properties.excludeplanwithallSwitchesON()
 
 @then('I save Property <PropertyDescription>')
 def i_save_property(browser, PropertyDescription):
     """I save Property."""
     pages_properties = Properties(browser)
-    pages_properties.addpropery(PropertyDescription)
+    pages_properties.savepropery(PropertyDescription)
 
 @then('I verify the scenario is excluded')
 def i_verify_the_scenario_is_excluded(browser):

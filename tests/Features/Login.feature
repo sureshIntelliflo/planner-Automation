@@ -3,7 +3,7 @@ Feature: Login
 
     Scenario: login to cashflow with valid credentials
         Given user is on cashflow login page
-        When user enters email as "spped_12501" and password as "Suresh@2021"
+        When user enters email as "FLa_Test2" and password as "Suresh@2021"
         And user clicks on login
         Then user sees page title as "intelliflo planning"
 

@@ -135,39 +135,38 @@ class Properties:
         self.driver.find_element_by_xpath("//span[normalize-space()='Plan Inputs']").click()
         self.driver.find_element_by_xpath(
             "//span[@class='text-sm font-normal'][normalize-space()='Properties']").click()
+        time.sleep(1)
 
     def createscenario(self, ScenarioName, ScenarioDescription):
-        self.driver.find_element_by_xpath("//div[@class='flex items-center p-2']//*[local-name()='svg']").click()
+        self.driver.find_element_by_xpath("//div[@class='flex items-center hidden lg:block justify-center']//span[@class='hidden md:block mr-1 text-primary-500 text-sm font-semibold'][normalize-space()='Active Scenario']").click()
         time.sleep(1)
         AddScenariobtn = self.driver.find_element_by_xpath("//button//span[text()='Add scenario']")
         if AddScenariobtn.is_displayed():
             AddScenariobtn.click()
         time.sleep(1)
-        addscenariodialog = self.driver.find_element_by_xpath("//div[@id='rcDialogTitle0']")
-        if addscenariodialog.is_displayed():
-            self.driver.find_element_by_xpath("//input[@id='name']").send_keys(ScenarioName)
-            self.driver.find_element_by_xpath("//textarea[@id='description']").send_keys(ScenarioDescription)
-            self.driver.find_element_by_xpath("//span[normalize-space()='Add Scenario']").click()
-            verifyscenario = self.driver.find_element_by_xpath(f"//span[text()='Active Scenario']//following::span[text()='{ScenarioName}']")
-            assert verifyscenario.text == ScenarioName
 
-    def navigatetonarrativedetails(self, PropertyDescription):
+        self.driver.find_element_by_xpath("//div[@class='ant-modal-body']//input[@id='name']").send_keys(ScenarioName)
+        self.driver.find_element_by_xpath("//textarea[@id='description']").send_keys(ScenarioDescription)
+        self.driver.find_element_by_xpath("//span[normalize-space()='Add Scenario']").click()
+        verifyscenario = self.driver.find_element_by_xpath(f"//div[@class='flex items-center hidden lg:block justify-center']//span[@class='text-gray-900 text-sm'][normalize-space()='{ScenarioName}']")
+        assert verifyscenario.text == ScenarioName
         time.sleep(1)
-        propertynarrative = self.driver.find_element_by_xpath(f"//div[contains(text(),'{PropertyDescription}')]")
-        if propertynarrative.is_displayed():
-            propertynarrative.click()
+
+    def navigatetonarrativedetails(self):
+        self.driver.find_element_by_xpath("//div[contains(text(),'AutomatedProperty1')]").click()
+
 
     def excludeplanwithallSwitchesON(self):
-        time.sleep(1)
-        excludeplan = self.driver.find_element_by_xpath("//button[normalize-space()='Exclude from Scenario']")
-        excludeplan.click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//button[normalize-space()='Exclude from Scenario']").click()
+
         textalert = self.driver.find_element_by_xpath("//span[@class='text-red-800']")
         assert textalert.text == "This property is excluded from the current scenario"
 
     def savepropery(self, PropertyDescription):
-        addproperty = self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Save Property')]")
-        addproperty.click()
-        time.sleep(2)
+        self.driver.find_element_by_xpath("//button[@type='submit']//span[contains(text(),'Save Property')]").click()
+
+        time.sleep(1)
         propertynarrative = self.driver.find_element_by_xpath("//div[contains(text(),'AutomatedProperty1')]")
         if propertynarrative.is_displayed():
             assert propertynarrative.text == PropertyDescription

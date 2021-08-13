@@ -68,15 +68,16 @@ def i_search_for_client_clientname(browser, Clientname):
     """I search for Client <Clientname>."""
     browser.find_element_by_xpath(" //input[@placeholder='Search...' and @type='text']").send_keys(Clientname)
     browser.find_element_by_xpath("//button//span[@aria-label='search']").click()
-
+    time.sleep(1)
 
 @then('I select the Client from search results <Clientname>')
 def i_select_the_client_from_search_results_clientname(browser, Clientname):
     """I select the Client from search results <Clientname>."""
     results = browser.find_elements_by_xpath("//*[@id='i4c-application-ui']//div[@class='my-5']//span[@class='block text-lg truncate']")
     for resultslist in results:
-        if resultslist.text == Clientname:
+        if Clientname in resultslist.text:
             resultslist.click()
+            break
     time.sleep(1)
 
 @then('I update the client changes')
@@ -85,8 +86,9 @@ def i_update_the_client_changes(browser):
     browser.find_element_by_xpath("//button//span[text()='Update Client']").click()
     browser.find_element_by_xpath("//button[@aria-label='Close']").click()
 
-@then('I verify client name on Cashflow <NewClientName>')
-def i_verify_client_name_on_cashflow_newclientname(browser, NewClientName):
+@then('I verify client name on Cashflow')
+def i_verify_client_name_on_cashflow_newclientname(browser):
     """I verify client name on Cashflow <NewClientName>."""
-    Client = browser.find_element_by_xpath("//div[@class='flex PersonIconGroup_base__1IxN4']//following-sibling::span")
-    assert NewClientName == Client.text
+    toastmessage = browser.find_element_by_xpath("//span[normalize-space()='Your changes have been saved']")
+    if toastmessage.is_displayed():
+        assert toastmessage.text == "Your changes have been saved"

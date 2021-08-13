@@ -1,7 +1,7 @@
 Feature: Investment and Properties linking
 
   Scenario Outline: Link investment to property in mortgage offset
-    Given user logged into application with email as "spped_12499" and password as "Suresh@2021"
+    Given user logged into application with email as "FLa_Test2" and password as "Suresh@2021"
     When user logged in and I add client with details name as "Investment property linked", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_InvestmentProperty"
     When User in cashflow home page
     Then I navigate to investments page

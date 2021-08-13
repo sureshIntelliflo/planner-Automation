@@ -41,7 +41,7 @@ def i_add_income_type_incometype(browser,IncomeType):
 def i_add_pension_and_verify_added_pensions_pensiondescriptionz(browser, PensionDescription):
     """I add Pension and verify added pensions <PensionDescription>z."""
     page_Pension = Pensions(browser)
-    page_Pension.AddPension(PensionDescription)
+    page_Pension.AddPensionandVerify(PensionDescription)
 
 
 @then('I add benefit basis <Benefitstype>')

@@ -9,6 +9,9 @@ from pytest_bdd import (
     then,
     when, parsers,
 )
+
+from Pages.Properties import Properties
+
 CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/dashboard/clients"
 @pytest.mark.usefixtures("browser")
 @scenario('../Features/AddTwoHoH.feature', 'Two HoH Client creation for cashflow')
@@ -19,6 +22,7 @@ def test_two_hoh_client_creation_for_cashflow():
 @given('user is on cashflow login page')
 def user_is_on_cashflow_login_page(browser):
     """user is on cashflow login page."""
+    browser.maximize_window()
     browser.get(CASHFLOW_SYS_IE_02)
     browser.implicitly_wait(10)
 
@@ -188,5 +192,6 @@ def i_logout_from_application(browser):
         "//button[@class='ant-btn ant-btn-link HeaderLogo_logo__lmyp5 Button_plain__3UtWY']").click()
     browser.find_element_by_link_text("Logout").click()
     time.sleep(2)
+
 
 

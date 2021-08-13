@@ -4,11 +4,27 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="DC Pensions fix">
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment=" income DC Pension linking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Investment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Investment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Pensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Pensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Properties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/AddClient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddClient.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/AddProperty.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddProperty.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/AddTwoHoH.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddTwoHoH.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_IncomeDCPension.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDCPension.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/Investments.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Investments.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/PropertyScenario.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddProperty1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddProperty1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddTwoHoH.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddTwoHoH.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_PropertyScenario.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628693650999</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=" income DC Pension linking">
+      <created>1628773743163</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1628773743163</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,7 +187,8 @@
     <MESSAGE value="Income and DB Pensions Linking&#10;DC Pensions" />
     <MESSAGE value="Income and DB Pensions Linking&#10;DC Pensions Update" />
     <MESSAGE value="DC Pensions fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="DC Pensions fix" />
+    <MESSAGE value=" income DC Pension linking" />
+    <option name="LAST_COMMIT_MESSAGE" value=" income DC Pension linking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -72,7 +72,7 @@ class Pensions:
     def AdjustLifetimeAllowance(self):
         self.driver.find_element_by_xpath("//button[@id='lifetimeAllowanceAdjustmentEnabled']").click()
 
-    def AddPension(self, PensionDescription):
+    def AddPensionandVerify(self, PensionDescription):
         self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Add Pension')]").click()
         pensionnarrative = self.driver.find_element_by_xpath(f"//span[normalize-space()='{PensionDescription}']")
         if pensionnarrative.is_displayed():

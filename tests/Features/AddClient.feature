@@ -3,7 +3,7 @@ Feature:Adding a new client to the PLanner
 
   Scenario Outline: Single HoH Client creation for cashflow
     Given user is on cashflow login page
-    When user enters email as "spped_12501" and password as "Suresh@2021"
+    When user enters email as "FLa_Test2" and password as "Suresh@2021"
     And user clicks on login
 
     When user sees add client button perform click action

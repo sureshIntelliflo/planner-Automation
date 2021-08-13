@@ -18,11 +18,6 @@ CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/dashboard/cl
 def test_single_hoh_client_creation_for_cashflow():
     """Single HoH Client creation for cashflow."""
 
-
-def test_login_to_cashflow_with_valid_credentials():
-    """login to cashflow with valid credentials."""
-
-
 @given('user is on cashflow login page')
 def user_is_on_cashflow_login_page(browser):
     """user is on cashflow login page."""
