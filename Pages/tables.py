@@ -12,7 +12,9 @@ class Tables:
 
         self.driver.find_element_by_xpath("//div[@class='flex flex-col relative']").click()
         time.sleep(1)
-        self.driver.find_element_by_xpath("(//a//span[text()='Tables'])[1]").click()
+        self.driver.find_element_by_xpath("//a[3]//div[1]//div[1]//*[local-name()='svg']").click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//tr[@data-row-key='REGULAR']//button[@aria-label='Collapse row']").click()
 
     def NavigatewithinTables(self):
         CashflowTable = self.driver.find_element_by_xpath("//div[@id='rc-tabs-1-tab-cashflow-summary']")

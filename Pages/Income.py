@@ -55,3 +55,21 @@ class Income:
         incomenarrative = self.driver.find_element_by_xpath(f"//span[normalize-space()='{IncomeDescription}']")
         if incomenarrative.is_displayed():
             assert incomenarrative.text == IncomeDescription
+
+    def IncomeExclude(self, IncomeDescription):
+
+        income = self.driver.find_element_by_xpath(f"//span[normalize-space()='{IncomeDescription}']")
+        if income.is_displayed():
+            income.click()
+            excludefromscenario = self.driver.find_element_by_xpath("//button[normalize-space()='Exclude from Scenario']")
+            if excludefromscenario.is_displayed():
+                excludefromscenario.click()
+                textalert = self.driver.find_element_by_xpath("//span[@class='text-red-800']")
+                assert textalert.text == "This income is excluded from the current scenario"
+                self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Save Income')]").click()
+                if self.driver.find_element_by_xpath(f"//span[@class='ant-tag ant-tag-red']//preceding::span[text()= '{IncomeDescription}']").is_displayed():
+                    print("Income is excluded from scenario")
+                else:
+                    print("income is not excluded from scenario")
+        else:
+            print("unable to locate the added income")

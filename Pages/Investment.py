@@ -1,5 +1,8 @@
 import time
 
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
+
 
 class investments:
 
@@ -27,9 +30,12 @@ class investments:
         invest_type= self.driver.find_element_by_xpath("//input[@id='investmentType']")
         invest_type.click()
         time.sleep(1)
+        self.driver.find_element_by_xpath("//input[@id='investmentType']").send_keys(InvestmentType)
         type = self.driver.find_element_by_xpath(f"//div[contains(text(),'{InvestmentType}')]")
         if type.is_displayed():
             type.click()
+
+
 
     def select_preexisting(self, Investment):
         time.sleep(1)

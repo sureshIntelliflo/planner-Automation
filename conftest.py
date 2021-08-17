@@ -4,7 +4,7 @@ import pytest
 from pytest_bdd import given, parsers, when
 from selenium import webdriver
 
-CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/dashboard/clients"
+CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/login"
 
 
 # Hooks

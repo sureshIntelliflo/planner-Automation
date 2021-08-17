@@ -4,27 +4,108 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment=" income DC Pension linking">
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="refactor the Failures">
+      <change afterPath="$PROJECT_DIR$/=/00f352b8-7557-477f-a4a5-40559ef79b52-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/04cc6a6e-23ec-4b1c-9469-d2d0d17119b9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/052c043a-bc5b-4d94-8cfc-65a9ea4bbbac-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/06abb597-b464-4b02-86cb-3833c42e7a30-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/1617ecd1-7e89-4b65-b397-b9fa4e7fca61-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/1755c0a8-eea0-44f5-9708-a0b6eb70552b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/1ed60e32-29e5-4e98-8ed8-1359fc5a04f2-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/24d1944e-cce9-4551-8b03-9ac1eece4e57-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/2dcd6cfd-77da-4aac-b191-6a4c4491ab37-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/34673c69-016c-4c0e-98c7-d45446734369-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/3988de92-2066-4846-95a7-877f88cea38e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/3c4bfb68-38cb-42f8-870a-0ae62eed746b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/3d3f1570-a806-4e21-868f-42efce2cea87-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/410da232-9f01-4525-81a5-44d96789fbe4-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/48e25433-fe0f-4d62-a22b-b7af885ec788-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/51314e5f-f18c-4059-b389-abb5e2d68d7a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/52f0c37d-b312-4467-988d-6cdbb6abfab5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/59871a35-8cee-4cb3-8c3b-bfaa1ad1fc53-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/5be742f5-fe7c-4064-9af3-b093fa019438-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/66bc79a3-b66a-48d1-944a-bd4fba9c4c44-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/77c6565f-daa2-4f77-aee1-efbd9837e0a9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/7e7e53a1-a9c1-43ea-a773-5cc5c7a3ee5b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/80da3653-a6ad-498c-970c-9fcb0b9bfc3b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/8ef92120-e5ef-4233-8282-f7ebc70afdc0-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/970dcdf8-6d91-4cc8-b8e9-1e94fb702f70-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/9e6806d6-1d27-4485-bbbe-6d5a1310716d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/a5e526fe-6dff-4290-9cd0-289d93dd42c6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/a604d38d-c456-425b-9a17-476a60340bab-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/c0b7a5e8-b82d-4263-bddd-ca337e5141b2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/c7d301cf-2684-43e4-8565-22c60102a252-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/ca7faaa5-1846-4bb9-994b-af2f7619de4d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/cfc41c85-6cc5-44aa-b965-044665087046-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/d116be7f-c0c7-49c9-bc73-a82dbf6441ab-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/d6323e81-8a5c-4b79-94c4-67d00632d05d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/d681a9f9-6022-43c3-be01-19e2b4d5a542-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/d9486438-9f70-4141-9a56-6abf3ee7b956-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/dc961fcb-9570-492a-926f-ba5ee599ea2e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/e149d63d-2b82-4091-8f0d-a728547e14c8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/e67e0b5a-b8dd-4320-8889-708da70d9710-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/eef428b7-8413-40d2-9c5d-e6be8314bc17-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/f20a6768-c688-421b-8f52-83531bded5ab-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/=/fda1b3a6-3994-451b-89ef-6e334f43283f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Protections.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/0336a480-fa14-4eec-beba-1e87fa548321-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/06f38ca5-f39e-4be7-b7e6-303b9cc617be-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/0f4e0dad-0ba9-4926-a565-20a0dbaa1ca1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/1337d5f9-69c0-407d-a51f-ac0af18a0cfc-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/165c13c5-bb06-479f-9b7d-02d135f7447a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/4d8a5cc2-ced1-4aa8-9699-486cc5ce747b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/62d14cac-92e2-4937-a210-b7ca9aa78f27-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/63eba22f-a2ce-441f-95a1-aea2d9eef2a2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/644c92f4-ab64-4b93-913d-bb3d5435f8bc-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/6587c4fc-b2ba-44f8-b285-62fa6b76cb98-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/69f0fa82-ac36-4a12-884d-20ed2c0279e0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/a30b9e31-6ba9-445d-bc79-b27cf5a8d9c7-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/a9ee8092-7f6c-49b0-83ba-c16488a1817a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/b8c4e97b-aa48-4cee-998d-ed2941e23c27-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/b9db5cba-4f0c-4df3-859b-80b4f38ab1f6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/c85c86b5-3215-42b1-8110-033126354fc9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/e9ae89aa-6425-40b9-8a9c-74c8c7646b4f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/ed6077b2-6670-460e-b9d0-c0cc657e0238-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/ee6f0fef-ab5f-4dd3-a6af-00040a7fbc9b-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/f5569d3b-716b-445e-9161-ae446e050a0f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/f730bd28-013f-4a25-8bba-e55b76cbd862-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Features/IncomeProtectionsLInking.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Features/IncomeProtections_excludeIncome.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Features/InvestmentLInkingInvestment.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeProtectionLinking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeProtection_excludeIncome.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_InvestmentLinking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.41.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.41.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.41.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.41.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.41.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.41.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.41.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.41.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.41.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.41.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.41.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.41.dist-info/top_level.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Income.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Income.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Investment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Investment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Pensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Pensions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/AddClient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddClient.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/AddProperty.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddProperty.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/AddTwoHoH.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddTwoHoH.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Investments.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Investments.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/PropertyScenario.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddProperty1.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddProperty1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddTwoHoH.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddTwoHoH.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPensionLinking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_PropertyScenario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.43.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.43.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.43.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.43.dist-info/REQUESTED" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.43.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.43.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest-2.9.43.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest/listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/allure_pytest/listener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.43.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.43.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.43.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.43.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/allure_python_commons-2.9.43.dist-info/top_level.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628773743163</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor the Failures">
+      <created>1628852422038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628852422038</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,7 +276,8 @@
     <MESSAGE value="Income and DB Pensions Linking&#10;DC Pensions Update" />
     <MESSAGE value="DC Pensions fix" />
     <MESSAGE value=" income DC Pension linking" />
-    <option name="LAST_COMMIT_MESSAGE" value=" income DC Pension linking" />
+    <MESSAGE value="refactor the Failures" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor the Failures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
