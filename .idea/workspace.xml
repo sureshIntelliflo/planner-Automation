@@ -4,68 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Income and protections linking &#10;Exclude the income">
-      <change afterPath="$PROJECT_DIR$/=/01d97f19-61de-4f5d-ad38-d000e3292dce-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/020e4757-6cca-46b3-9981-d2fec0f4d8a4-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/035410a7-dfed-410b-b9bd-a5e41662feff-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/05710aea-39e4-4d75-916a-3e51b5595611-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/0771cd64-1fad-4428-8dfd-d6bbb2e8d4fe-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/07e408ae-9458-43e7-9448-9e06aa7aabec-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/0be1bdb6-410c-4d8c-a8ce-95630f301a2d-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/0d363873-0ab9-4d44-9deb-f9c586e0f48e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/11012e96-829f-49ac-97bb-a91000c1e7e9-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/294e33f8-e5c6-4d88-81a2-0d0ee54f1b38-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/2b1e9209-9862-4a65-9e0a-e3cfc250e4ac-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/415fa401-d67b-4d72-bf5c-79c2ac4c875d-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/46805ac2-1a95-4381-89de-7febfb403a95-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/4992be06-33cd-4bc3-8300-d137d6494f64-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/4dd27ae2-bb99-4376-8516-2cc3a3fe75a0-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/557eccaa-5bcc-4bf2-a051-8bffa0c6063b-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/5e5a7b5a-3b8a-49f3-a40d-3343b8ecc2e3-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/5f021ce1-f1de-42e0-975f-6ce3f8cdc058-attachment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/7512db8f-99d4-460a-a1db-c4bdbc889291-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/7dcfd258-1da2-483a-ad58-0ee3b8ed85df-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/85ced45a-4496-4593-a313-765176545817-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/865771b2-e954-43de-a9ca-1ae0f4d8ca6a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/898beffb-1496-4556-ab20-1becf410561d-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/89953bec-fdf9-4faf-a6c9-44d32f867073-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/89995681-cc07-4957-81c2-4380695c678b-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/9084c9db-e02a-4598-a7cd-143984ea1d22-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/92eb4b88-4291-4bc8-8d99-70fcfb3b59b3-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/944083a5-0aab-451a-842c-0eab03509723-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/9461111f-4575-4a12-8416-25ab92533a0d-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/979e97a1-9269-4167-85ef-5b40059740aa-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/9b102e6f-f18e-4535-8c40-12c7bd921a18-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/a76b6e1c-760f-49ed-99c8-25e797d1a15d-attachment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/a94410d8-285e-4d79-abe7-55e01febb981-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/b1f56969-bb7c-49ae-9c17-95d7c6dc9077-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/b83af7fb-7b8d-4241-a060-4ab6852d6f8a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/b9bf9ceb-799f-4f9b-bc08-7d86aa9767e7-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/baa6fc8d-efc0-4c45-814d-a45222582a54-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/c670c127-654f-4655-aa25-ce7e265c2da5-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/cb2f5e34-0cf4-48ef-9139-6a4ccf74a60e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/ce023b18-e4a6-4e04-9990-5af6dda96ce6-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/ce8cb930-1be3-40da-8f56-0530d3d1ddb9-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/d576dedb-a92c-4e7e-8d50-60352a66a88f-attachment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/d5a3eb74-5bf5-4c58-96b3-a0314e180a98-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/d73c5ef7-1032-4add-ba61-e95a91e00a37-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/d94c5ab8-c86c-4601-9fd1-177ed466d7e6-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/e6d9f8b6-cbbd-4ab9-a4b3-722f4b00c139-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/e7880c65-de62-4c0d-89d5-66e64cdbdd87-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/e80194d2-fbb7-4014-9279-de721b0b57cd-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/ea26c93f-f06f-494b-b851-6c7f05765aae-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/ede16af7-9da0-442e-8253-2dcf0437e48c-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/f090adc9-191e-449e-ad31-de4cdff8ba50-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/f251b785-2cde-4159-ae64-9e3b30984fc7-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/f46b6271-bd81-428c-b2e6-2c6674e86b4b-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/f5072d24-b3d9-4d83-af70-5d38d0751fc4-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/f7e5f3f7-cf61-4968-84af-ef6fc3d76855-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/fa594997-b39c-49be-bc98-cfaacd8c066a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/=/fdcad615-e89e-4ac5-927c-3364f76edb2c-result.json" afterDir="false" />
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="unit trust links Isa stock and shares">
+      <change afterPath="$PROJECT_DIR$/Pages/Common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Features/DCAnnuityinPayment.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_DCAnnuityPayment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Investment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Investment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentLInkingInvestment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentLInkingInvestment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_InvestmentLinking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_InvestmentLinking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Login_cashflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Login_cashflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Pensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Pensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/tables.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629212068523</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="unit trust links Isa stock and shares">
+      <created>1629353007341</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629353007341</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,7 +198,8 @@
     <MESSAGE value=" income DC Pension linking" />
     <MESSAGE value="refactor the Failures" />
     <MESSAGE value="Income and protections linking &#10;Exclude the income" />
-    <option name="LAST_COMMIT_MESSAGE" value="Income and protections linking &#10;Exclude the income" />
+    <MESSAGE value="unit trust links Isa stock and shares" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit trust links Isa stock and shares" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

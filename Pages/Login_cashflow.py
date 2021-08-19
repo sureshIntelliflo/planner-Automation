@@ -24,3 +24,6 @@ class CashflowLogin:
             self.driver.find_element_by_xpath(
                 "//button[@class='ant-btn ant-btn-link HeaderLogo_logo__lmyp5 Button_plain__3UtWY']").click()
             self.driver.find_element_by_link_text("Logout").click()
+
+        def logoutfromClientpage(self):
+            self.driver.find_element_by_xpath("//a[normalize-space()='Logout']").click()

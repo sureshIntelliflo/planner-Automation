@@ -6,6 +6,11 @@ class Pensions:
     def __init__(self, driver):
         self.driver = driver
 
+    def verifyuserhomepage(self):
+        element = self.driver.find_element_by_xpath("//span[text()='Active Scenario']")
+        if element.is_displayed():
+            print("User is on home page")
+
     def Navigatetopensions(self):
         self.driver.find_element_by_xpath("//span[normalize-space()='Plan Inputs']").click()
         self.driver.find_element_by_xpath(
@@ -83,6 +88,7 @@ class Pensions:
 
     def PolicyType(self, DCType):
         self.driver.find_element_by_xpath("//div[@class='ant-select-selector']").click()
+        time.sleep(1)
         self.driver.find_element_by_xpath(f"//div[contains(text(),'{DCType}')]").click()
 
 
@@ -213,5 +219,14 @@ class Pensions:
         if Pension.is_displayed():
             assert Pension.text == PensionDescription
 
+    def AnnuityFundValue(self, Income_as_Amount, Rate_of_Increase, AnnuityCeaseEvent):
+        self.driver.find_element_by_xpath("//input[@id='incomeAsAmount_amount']").send_keys(Income_as_Amount)
+        self.driver.find_element_by_xpath("//input[@id='rateOfIncrease']").send_keys(Rate_of_Increase)
+        self.driver.find_element_by_xpath("//div[@name='stopEvent,id']//div[@class='ant-select-selector']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"//div[contains(text(),'{AnnuityCeaseEvent}')]").click()
 
 
+    def inheritedtax(self, InheritedpensionType):
+        self.driver.find_element_by_xpath("//button[@id='inheritedPensionEnabled']").click()
+        self.driver.find_element_by_xpath(f"(//input[@value='{InheritedpensionType}']//following::span)[2]").click()
