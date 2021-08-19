@@ -70,3 +70,83 @@ def i_add_investment_value_as_currentvalue1(browser, CurrentValue1):
     """I add investment value as <CurrentValue1>."""
     pages_Investment = investments(browser)
     pages_Investment.currentvalue(CurrentValue1)
+
+@then('I add Investment to Baseline scenario <InvestmentDescription2>')
+def i_add_investment_to_baseline_scenario_investmentdescription2(browser, InvestmentDescription2):
+    """I add Investment to Baseline scenario <InvestmentDescription2>."""
+    pages_Investment = investments(browser)
+    pages_Investment.Investmentadd(InvestmentDescription2)
+    pages_Investment.verifyInvestments(InvestmentDescription2)
+    page_tables = Tables(browser)
+    page_tables.NavigatetoTables()
+
+@then('I add contributions <contributionamount>')
+def i_add_contributions_contributionamount(browser, contributionamount):
+    """I add contributions <contributionamount>."""
+    pages_Investment = investments(browser)
+    pages_Investment.Contributions(contributionamount)
+
+@then('I add investment returns as <AttitudetoRisk2> <GrossReturn2> <Interest2> <Dividends2> <Growth2>')
+def i_add_investment_returns_as_attitudetorisk2_grossreturn2_interest2_dividends2_growth2(browser, AttitudetoRisk2, GrossReturn2, Interest2, Dividends2, Growth2):
+    """I add investment returns as <AttitudetoRisk2> <GrossReturn2> <Interest2> <Dividends2> <Growth2>."""
+    pages_Investment = investments(browser)
+    pages_Investment.returns(AttitudetoRisk2, GrossReturn2, Interest2, Dividends2, Growth2)
+
+
+@then('I add investment value as <CurrentValue2>')
+def i_add_investment_value_as_currentvalue2(browser, CurrentValue2):
+    """I add investment value as <CurrentValue2>."""
+    pages_Investment = investments(browser)
+    pages_Investment.currentvalue(CurrentValue2)
+
+
+@then('I add new investment <InvestmentDescription2>')
+def i_add_new_investment_investmentdescription2(browser, InvestmentDescription2):
+    """I add new investment <InvestmentDescription2>."""
+    pages_Investment = investments(browser)
+    pages_Investment.AddInvestments(InvestmentDescription2)
+
+
+@then('I add specific charges')
+def i_add_specific_charges(browser):
+    """I add specific charges."""
+    Investments = investments(browser)
+    Investments.specificcharge()
+
+@then('I add withdrawals custom <WithdrawalAmount>')
+def i_add_withdrawals_custom_withdrawalamount(browser, WithdrawalAmount):
+    """I add withdrawals custom <WithdrawalAmount>."""
+    Investments = investments(browser)
+    Investments.withdrowls_custom(WithdrawalAmount)
+
+@then('I add withdrawals sell whole investments')
+def i_add_withdrawals_sell_whole_investments(browser):
+    """I add withdrawals sell whole investments."""
+    Investments = investments(browser)
+    Investments.withdrawals_sell_whole_investment()
+
+
+@then('I enable death options')
+def i_enable_death_options(browser):
+    """I enable death options."""
+    Investments = investments(browser)
+    Investments.deathoptions()
+
+@then('I select investment as Pre existing <Investment2>')
+def i_select_investment_as_pre_existing_investment2(browser, Investment2):
+    """I select investment as Pre existing <Investment2>."""
+    pages_Investment = investments(browser)
+    pages_Investment.select_preexisting(Investment2)
+
+@then('i add investment type as <InvestmentType2>')
+def i_add_investment_type_as_investmenttype2(browser, InvestmentType2):
+    """i add investment type as <InvestmentType2>."""
+    pages_Investment = investments(browser)
+    pages_Investment.investmentType(InvestmentType2)
+
+@then('I add contributions <contributionstype> <InvestmentDescription1>')
+def i_add_contributions_contributionstype_investmentdescription1(browser, contributionstype, InvestmentDescription1):
+    """I add contributions <contributionstype> <InvestmentDescription1>."""
+    pages_Investment = investments(browser)
+    pages_Investment.linkContribution(contributionstype, InvestmentDescription1)
+

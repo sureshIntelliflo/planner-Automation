@@ -49,6 +49,7 @@ class investments:
         riskdropdown = self.driver.find_element_by_xpath("//input[@id='riskProfileId']")
         riskdropdown.click()
         risktype = self.driver.find_element_by_xpath(f"//div[@class='ant-select-item-option-content'][normalize-space()='{AttitudetoRisk}']")
+        time.sleep(1)
         if AttitudetoRisk == "High":
             risktype.click()
         elif AttitudetoRisk == "Cash":
@@ -117,7 +118,7 @@ class investments:
 
     def withdrowls_custom(self, WithdrawalAmount):
         self.driver.find_element_by_xpath("//button[@id='withdrawalsEnabled']").click()
-        withdrawalmethod= self.driver.find_element_by_xpath("//input[@id='withdrawals_withdrawalType']")
+        withdrawalmethod= self.driver.find_element_by_xpath("//div[@name='withdrawals,withdrawalType']//div[@class='ant-select-selector']")
         if withdrawalmethod.is_displayed():
             withdrawalmethod.click()
             self.driver.find_element_by_xpath("//div[contains(text(),'Amount')]").click()
@@ -127,10 +128,11 @@ class investments:
 
     def withdrawals_sell_whole_investment(self):
         self.driver.find_element_by_xpath("//button[@id='saleEventEnabled']").click()
-        sellevent = self.driver.find_element_by_xpath("//input[@id='saleEvent_id']")
+        sellevent = self.driver.find_element_by_xpath("//div[@name='saleEvent,id']//div[@class='ant-select-selector']")
         if sellevent.is_displayed():
             sellevent.click()
-            self.driver.find_element_by_xpath("//div[@id='saleEvent_id_list']//following::div[@title='Forever']").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath("//div[contains(text(),'Forever')]").click()
 
     def specificcharge(self):
         self.driver.find_element_by_xpath("//button[@id='chargesEnabled']").click()
@@ -150,14 +152,26 @@ class investments:
 
     def verifyInvestments(self, InvestmentDescription):
         savedinvestment = self.driver.find_element_by_xpath(f"//span[normalize-space()='{InvestmentDescription}']")
-
         if savedinvestment.is_displayed():
             assert  savedinvestment.text == InvestmentDescription
 
+    def Contributions(self, Contribution_Amount):
+        self.driver.find_element_by_xpath("//button[@id='contributionsEnabled']").click()
+        contributionamount = self.driver.find_element_by_xpath("//input[@id='contributions_amount_amount']")
+        if contributionamount.is_displayed():
+            contributionamount.send_keys(Contribution_Amount)
+        else:
+            print("unable to add contributions")
 
 
-
-
+    def linkContribution(self, contributionstype, InvestmentDescription1):
+        self.driver.find_element_by_xpath("//button[@id='contributionsEnabled']").click()
+        time.sleep(1)
+        type = self.driver.find_element_by_xpath(f"//span[normalize-space()='{contributionstype}']")
+        if type.is_displayed():
+            type.click()
+            self.driver.find_element_by_xpath("//div[@name='bedAndIsaContributions,investment,id']//div[@class='ant-select-selector']").click()
+            self.driver.find_element_by_xpath(f"//div[contains(text(),'{InvestmentDescription1}')]").click()
 
 
 
