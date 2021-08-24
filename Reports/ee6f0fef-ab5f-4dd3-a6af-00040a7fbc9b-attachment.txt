@@ -1,2 +1,0 @@
-Create client page is displaying
-Step Failed: Then "i add investment type as <InvestmentType1>"

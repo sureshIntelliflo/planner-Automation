@@ -1,4 +1,3 @@
-
 Feature: Login
 
     Scenario: login to cashflow with valid credentials
@@ -10,4 +9,3 @@ Feature: Login
     Scenario: User successful Logout from cashflow
         Then user click on logout
         And User sees logout page title as "Signed Out"
-

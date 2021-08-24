@@ -5,7 +5,7 @@ from pytest_bdd import given, parsers, when
 from selenium import webdriver
 
 CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/login"
-
+CASHFLOW_SYS_IE_06 = "https://planning.sys-ie-06.intelliflo.systems/login"
 
 # Hooks
 def pytest_bdd_step_error(step):

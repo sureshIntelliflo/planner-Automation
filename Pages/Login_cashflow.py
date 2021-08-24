@@ -20,6 +20,18 @@ class CashflowLogin:
         def click_login(self):
             self.driver.find_element_by_css_xpath(CashflowLogin.Login_Button).click()
 
+        def VerifyLoginpage(self, pagetitle):
+            assert pagetitle == self.driver.title
+
+        def SimpleLogout(self):
+            self.driver.find_element_by_link_text("Logout").click()
+
+        def VerifyLogoutPage(self, SignedOut):
+            assert SignedOut == self.driver.title
+
+        def VerifyValidation(self, Validation):
+            assert Validation == self.driver.find_element_by_xpath("//div[@cla  ss='alert alert-danger']").gettext()
+
         def logout(self):
             self.driver.find_element_by_xpath(
                 "//button[@class='ant-btn ant-btn-link HeaderLogo_logo__lmyp5 Button_plain__3UtWY']").click()
