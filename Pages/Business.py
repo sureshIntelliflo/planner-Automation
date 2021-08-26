@@ -1,3 +1,6 @@
+import time
+
+
 class Business:
 
     def __init__(self, driver):
@@ -22,9 +25,31 @@ class Business:
     def BusinessSaleEvent(self, SaleEvent):
         self.driver.find_element_by_xpath("//button[@id='saleEnabled']").click()
         self.driver.find_element_by_xpath("//div[@class='ant-select-selector']").click()
+        time.sleep(1)
         self.driver.find_element_by_xpath(f"//div[contains(text(),'{SaleEvent}')]").click()
 
-    def BusinessDividends(self, DividendFrequency):
+    def BusinessDividends(self, DividendFrequency, DividendAmount, IncreasePerstart, PeriodSetby):
         self.driver.find_element_by_xpath("//button[@id='dividendsEnabled']").click()
         self.driver.find_element_by_xpath("//span[normalize-space()='Add Business Dividend']").click()
+        time.sleep(1)
         self.driver.find_element_by_xpath(f"//span[normalize-space()='{DividendFrequency}']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//span[normalize-space()='Dividend Amount']//following::input[@id='value_amount']").send_keys(DividendAmount)
+        self.driver.find_element_by_xpath("//input[@id='increasePreStartPercentage']").send_keys(IncreasePerstart)
+        self.driver.find_element_by_xpath(f"//span[normalize-space()='{PeriodSetby}']").click()
+        time.sleep(1)
+
+        self.driver.find_element_by_xpath("//span[normalize-space()='Add Dividend']").click()
+
+    def DeathOptions(self):
+
+        self.driver.find_element_by_xpath("//input[@id='qualifiesForBusinessRelief']").click()
+
+    def AddBusiness(self):
+        self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Add Business')]").click()
+
+    def VerifyBusiness(self, BusinessDescription):
+        business = self.driver.find_element_by_xpath(f"//span[normalize-space()='{BusinessDescription}']")
+        if business.is_displayed():
+            assert business.text == BusinessDescription
+
