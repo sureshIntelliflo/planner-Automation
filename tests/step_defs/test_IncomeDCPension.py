@@ -8,8 +8,11 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Income import Income
+from Pages.Login_cashflow import CashflowLogin
 from Pages.Pensions import Pensions
+from Pages.tables import Tables
 
 
 @pytest.mark.usefixtures("browser")
@@ -155,9 +158,19 @@ def i_add_dc_pension_and_verify_the_pension_pensiondescription(browser, PensionD
     page_Pension = Pensions(browser)
     page_Pension.AddPension()
     page_Pension.VerifyPension(PensionDescription)
+    page_tables = Tables(browser)
+    page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 @then('I Enable Crystallised Withdrawal_Custom <WithdrawalMethod> <CrystallisedAmount> <FrequencyType_cy> <PeriodSetValueevent_cy>')
 def i_enable_crystallised_withdrawal_custom_withdrawalmethod_frequencytype_cy_periodsetvalueevent_cy(browser, WithdrawalMethod, CrystallisedAmount, FrequencyType_cy, PeriodSetValueevent_cy):
     """I Enable Crystallised Withdrawal_Custom <WithdrawalMethod> <FrequencyType_cy> <PeriodSetValueevent_cy>."""
     page_Pension = Pensions(browser)
     page_Pension.CrystallisedWithdrawal_Custom(WithdrawalMethod, CrystallisedAmount, FrequencyType_cy, PeriodSetValueevent_cy)
+
+@then('I logout from application')
+def i_logout_from_application(browser):
+    """I logout from application."""
+    logout =  CashflowLogin(browser)
+    logout.logoutfromClientpage()

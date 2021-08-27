@@ -8,6 +8,7 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Investment import investments
 from Pages.Login_cashflow import CashflowLogin
 from Pages.Properties import Properties
@@ -119,12 +120,16 @@ def i_provide_the_base_cost_for_cgt_as_basecostcgt(browser, BaseCostCGT):
 def i_logout_from_application(browser):
     """I logout from application."""
     logout =  CashflowLogin(browser)
-    logout.logout()
+    logout.logoutfromClientpage()
 
-@then('i save Mortgage and Propery')
-def i_save_mortgage_and_propery(browser, PropertyDescription):
-    """i save Mortgage and Propery."""
+@then('i save Mortgage and Property <PropertyDescription>')
+def i_save_mortgage_and_property_propertydescription(browser, PropertyDescription):
+    """i save Mortgage and Property <PropertyDescription>."""
     pages_properties = Properties(browser)
     pages_properties.AddMortgage()
     pages_properties.addpropery(PropertyDescription)
+    page_tables = Tables(browser)
+    page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 

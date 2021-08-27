@@ -25,7 +25,7 @@ Feature:  Income and DC Pension
     Then I Enable Crystallised Withdrawal_Custom <WithdrawalMethod> <CrystallisedAmount> <FrequencyType_cy> <PeriodSetValueevent_cy>
     Then I enable Scheme Specific PCLS
     And I Add DC Pension and Verify the Pension <PensionDescription>
-
+    And I logout from application
     Examples:
       | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription | DCType       | TotalFundValue | DrawdownValue | OriginalCrystallisedAmount | Risk | GrossReturn | ContributionType            | TakenBy | ContributionAmount | Contribution | Frequency | PeriodSet | StartYear | EndYear | UncrystallisedWithdrawal             | withdrawlType                        | CrystalliseValue | AmountValue | PercentageValue | FrequencyType | PeriodSetValueevent | WithdrawalMethod | CrystallisedAmount | FrequencyType_cy | PeriodSetValueevent_cy |
       | Automated_income  | Salary     | Current Income      | 450000       | Automated_Pension  | Occupational | 45000          | 4000          | 5000                       | High | 11          | Personal - Salary Sacrifice | AMOUNT  | 5000               | 9            | Regular   | EVENT     | 2020      | 2060    | Uncrystallised Fund Pension Lump Sum | Uncrystallised Fund Pension Lump Sum | AMOUNT           | 1000        | 9               | Regular       | YEAR                | Amount           | 5000               | Regular          | EVENT                  |

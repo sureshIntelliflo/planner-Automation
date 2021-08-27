@@ -8,12 +8,14 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Login_cashflow import CashflowLogin
 from Pages.Properties import Properties
+from Pages.tables import Tables
 
 
 @pytest.mark.usefixtures("browser")
-@scenario('../features/AddProperty.feature', 'Verify the add property with switches enabled and exclude property in scenario with all switches enabled')
+@scenario('../features/Property.feature', 'Verify the add property with switches enabled and exclude property in scenario with all switches enabled')
 def test_verify_the_add_property_with_switches_enabled_and_exclude_property_in_scenario_with_all_switches_enabled():
     """Verify the add property with switches enabled and exclude property in scenario with all switches enabled."""
 
@@ -91,8 +93,8 @@ def i_save_property(browser, PropertyDescription):
 @then('I logout from application')
 def i_logout_from_application(browser):
     """I logout from application."""
-    Logout_app = CashflowLogin(browser)
-    Logout_app.logout()
+    logout = CashflowLogin(browser)
+    logout.logoutfromClientpage()
 
 
 @when('user Search for existing client <Existingclient>')
@@ -136,3 +138,7 @@ def i_verify_the_scenario_is_excluded(browser):
     """I verify the scenario is excluded."""
     page_properties = Properties(browser)
     page_properties.excludedscenario()
+    page_tables = Tables(browser)
+    page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()

@@ -75,6 +75,7 @@ def user_logged_into_application_with_email_as_spped_12501_and_password_as_sures
     browser.find_element_by_css_selector('#username').send_keys(Email_Address)
     browser.find_element_by_css_selector('#password').send_keys(Password)
     browser.find_element_by_xpath("//button[@class='btn btn-primary']").click()
+    time.sleep(3)
 
 @when(parsers.cfparse('user logged in and I add client with details name as "{name}", KnowAs "{knownAS}", '
                       'DOB "{DoB}",Tax residency "{TaxResidency}", gender as "{Gender}" and Create client with case name as "{ClientName}"'))
@@ -123,7 +124,7 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
     browser.find_element_by_id("caseName").send_keys(ClientName)
 
     browser.find_element_by_xpath("//button/span[text()= 'Create Client']").click()
-
+    time.sleep(3)
     browser.find_element_by_xpath("//button//span[text()='Client Settings']").click()
     clientelement = browser.find_element_by_id("caseName")
     assert ClientName == clientelement.get_attribute("value")

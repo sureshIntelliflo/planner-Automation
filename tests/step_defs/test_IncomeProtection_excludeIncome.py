@@ -8,6 +8,7 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Income import Income
 from Pages.Login_cashflow import CashflowLogin
 from Pages.Pensions import Pensions
@@ -117,7 +118,7 @@ def i_select_the_type_of_protection_protectionstype(browser, ProtectionsType):
 def i_logout_from_application(browser):
     """I logout from application."""
     logout =  CashflowLogin(browser)
-    logout.logout()
+    logout.logoutfromClientpage()
 
 @then('Verify the Protections for any breakages <ProtectionDescription>')
 def verify_the_protections_for_any_breakages_protectiondescription(browser, ProtectionDescription):
@@ -127,6 +128,8 @@ def verify_the_protections_for_any_breakages_protectiondescription(browser, Prot
     page_protection.ViewProtectionDetails(ProtectionDescription)
     page_tables = Tables(browser)
     page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 @then('I exclude Income form Baseline <IncomeDescription>')
 def i_exclude_income_form_baseline_incomedescription(browser, IncomeDescription):

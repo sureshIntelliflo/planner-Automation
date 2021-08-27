@@ -36,7 +36,7 @@ def user_enters_email_as_sureshpeddarapuintelliflocom_and_password_as_suresh2021
 def user_clicks_on_login(browser):
     """user clicks on "login"."""
     browser.find_element_by_xpath("//button[@class='btn btn-primary']").click()
-    time.sleep(5)
+    time.sleep(10)
 
 
 

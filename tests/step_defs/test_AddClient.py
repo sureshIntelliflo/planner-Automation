@@ -10,6 +10,9 @@ from pytest_bdd import (
     when, parsers,
 )
 
+from Pages.Common import CommonFunctions
+from Pages.Login_cashflow import CashflowLogin
+
 CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/dashboard/clients"
 CASHFLOW_SYS_IE_06 = "https://planning.sys-ie-06.intelliflo.systems/login"
 
@@ -140,10 +143,12 @@ def i_verify_client_clientname(browser, ClientName):
     assert ClientName == clientelement.get_attribute("value")
     browser.find_element_by_xpath("//button[@aria-label='Close']").click()
     time.sleep(5)
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 
 @then('I logout from application')
 def i_logout_from_application(browser):
     """I logout from application."""
-    browser.find_element_by_xpath("//button[@class='ant-btn ant-btn-link HeaderLogo_logo__lmyp5 Button_plain__3UtWY']").click()
-    browser.find_element_by_link_text("Logout").click()
+    logout = CashflowLogin(browser)
+    logout.logoutfromClientpage()

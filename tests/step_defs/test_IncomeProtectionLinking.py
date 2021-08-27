@@ -8,10 +8,12 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Income import Income
 from Pages.Login_cashflow import CashflowLogin
 from Pages.Pensions import Pensions
 from Pages.Protections import Protections
+from Pages.tables import Tables
 
 
 @pytest.mark.usefixtures("browser")
@@ -86,6 +88,10 @@ def i_add_protections_and_verify_the_protections_protectiondescription(browser, 
     page_protection = Protections(browser)
     page_protection.AddProtections()
     page_protection.VerifyProtection(ProtectionDescription)
+    page_tables = Tables(browser)
+    page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 
 @then('I Add protection benefit <IncomeDescription> <DeathInServiceMultiplier>')
@@ -117,4 +123,4 @@ def i_select_the_type_of_protection_protectionstype(browser, ProtectionsType):
 def i_logout_from_application(browser):
     """I logout from application."""
     logout =  CashflowLogin(browser)
-    logout.logout()
+    logout.logoutfromClientpage()

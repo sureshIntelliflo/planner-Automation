@@ -8,6 +8,7 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Investment import investments
 from Pages.Login_cashflow import CashflowLogin
 from Pages.Properties import Properties
@@ -79,6 +80,8 @@ def i_add_investment_to_baseline_scenario_investmentdescription2(browser, Invest
     pages_Investment.verifyInvestments(InvestmentDescription2)
     page_tables = Tables(browser)
     page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 @then('I add contributions <contributionamount>')
 def i_add_contributions_contributionamount(browser, contributionamount):
@@ -150,3 +153,9 @@ def i_add_contributions_contributionstype_investmentdescription1(browser, contri
     pages_Investment = investments(browser)
     pages_Investment.linkContribution(contributionstype, InvestmentDescription1)
 
+
+@then('I logout from application')
+def i_logout_from_application(browser):
+    """I logout from application."""
+    logout =  CashflowLogin(browser)
+    logout.logoutfromClientpage()

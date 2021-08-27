@@ -22,6 +22,7 @@ Feature: Income and DB pensions
     Then I add death options with spouse income after death and death lump sum <LumpSumOptions> <ServiceMultiplier>
     Then I enable adjust lifetime allowance
     And I add Pension and verify added pensions <PensionDescription>z
+    And I logout from application
     Examples:
       | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription  | pensionstype | Benefitstype | BenefitIncome | LumpSum | GrossContributions | PensionBasis     | LumpSumOptions | ServiceMultiplier |
       | Automated_income  | Salary     | Current Income      | 450000       | Automated_DBPension | Active       | Statement    | 31200         | 500000  | 12.7               | Relief At Source | Multiple       | 2                 |

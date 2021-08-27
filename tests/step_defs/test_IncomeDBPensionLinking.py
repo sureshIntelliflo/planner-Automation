@@ -8,8 +8,11 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Income import Income
+from Pages.Login_cashflow import CashflowLogin
 from Pages.Pensions import Pensions
+from Pages.tables import Tables
 
 
 @pytest.mark.usefixtures("browser")
@@ -42,6 +45,10 @@ def i_add_pension_and_verify_added_pensions_pensiondescriptionz(browser, Pension
     """I add Pension and verify added pensions <PensionDescription>z."""
     page_Pension = Pensions(browser)
     page_Pension.AddPensionandVerify(PensionDescription)
+    page_tables = Tables(browser)
+    page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 
 @then('I add benefit basis <Benefitstype>')
@@ -139,3 +146,10 @@ def i_select_policy_structure_policystructure(browser):
     """I select policy structure <PolicyStructure>."""
     page_Pension = Pensions(browser)
     page_Pension.AddPensionPolicyStructure()
+
+
+@then('I logout from application')
+def i_logout_from_application(browser):
+    """I logout from application."""
+    logout =  CashflowLogin(browser)
+    logout.logoutfromClientpage()

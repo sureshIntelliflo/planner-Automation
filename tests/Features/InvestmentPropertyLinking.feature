@@ -18,7 +18,7 @@ Feature: Investment and Properties linking
     And I provide the base cost for CGT as <BaseCostCGT>
     Then I enable Mortgages with <MortagageDescription>, <ReplaymentType>, <MortagageValue>, <InterestRate>, <MortgageStartEvent>, <MortgageCeaseEvent>
     And I enable mortgage offset with Linked Current Account <InvestmentDescription> and Offset Options <OffsetOptions>
-    And i save Mortgage and Propery
+    And i save Mortgage and Property <PropertyDescription>
     And I logout from application
     Examples:
       | InvestmentDescription | InvestmentType         | Investment   | CurrentValue | Returns | PropertyDescription  | PropertyTyep | BaseCostCGT | MortagageDescription | ReplaymentType | MortagageValue | InterestRate | MortgageStartEvent | MortgageCeaseEvent | OffsetOptions                 |

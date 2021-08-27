@@ -8,8 +8,10 @@ from pytest_bdd import (
     when,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Investment import investments
 from Pages.Login_cashflow import CashflowLogin
+from Pages.tables import Tables
 
 
 @pytest.mark.usefixtures("browser")
@@ -151,9 +153,13 @@ def i_verify_the_investment_in_scenario(browser, InvestmentDescription):
     """I verify the investment in scenario."""
     Investments = investments(browser)
     Investments.verifyinvestmentinclude(InvestmentDescription)
+    page_tables = Tables(browser)
+    page_tables.NavigatetoTables()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 @then('I logout from application')
 def i_logout_from_application(browser):
     """I logout from application."""
     logout =  CashflowLogin(browser)
-    logout.logout()
+    logout.logoutfromClientpage()
