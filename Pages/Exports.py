@@ -14,5 +14,11 @@ class Exports:
 
     def Exportdownload(self):
         self.driver.find_element_by_xpath("//span[normalize-space()='Download Report']").click()
-        time.sleep(4)
+        time.sleep(10)
 
+    def SelectComparisonReport(self, ScenarioName):
+        self.driver.find_element_by_xpath("//span[normalize-space()='Comparison Report']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//div[@name='compareScenarioId']//div[@class='ant-select-selector']").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//div[@class='ant-select-item-option-content'][normalize-space()='Baseline Scenario']").click()

@@ -28,8 +28,15 @@ def browser(browsertype, request):
     """ Creates a webdriver browser instance """
     global browser
     if 'chrome' in browsertype:
-        browser = webdriver.Chrome()
-        browser.implicitly_wait(10)
+        options = webdriver.ChromeOptions()
+        options.add_argument("--start-maximized")
+        prefs = {"profile.default_content_settings.popups": 0,
+                 "download.default_directory":
+                     r"C:\test-cashflow\Downloads\\",
+                 "directory_upgrade": True}
+        options.add_experimental_option("prefs", prefs)
+        browser = webdriver.Chrome(options=options)
+        browser.implicitly_wait(20)
         failed_before = request.session.testsfailed
         yield browser
         if request.session.testsfailed != failed_before:
@@ -39,9 +46,10 @@ def browser(browsertype, request):
         browser.quit()
     elif 'firefox' in browsertype:
         options = webdriver.FirefoxOptions()
-        browser = webdriver.Firefox(firefox_options=options)
+        options.binary_location = r"C:/Program Files/Mozilla Firefox/firefox.exe"
+        browser = webdriver.Firefox(options=options, executable_path="C:/AutomationDrivers/geckodriver.exe")
         browser.maximize_window()
-        browser.implicitly_wait(10)
+        browser.implicitly_wait(20)
         failed_before = request.session.testsfailed
         yield browser
         if request.session.testsfailed != failed_before:
@@ -96,6 +104,7 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
     browser.find_element_by_id("knownAs").send_keys(knownAS)
 
     browser.find_element_by_xpath("(//*[@class='flex items-center'])[1]").click()
+    time.sleep(1)
     browser.find_element_by_xpath(
         "//*[@class='rc-virtual-list-holder-inner']/child::div//div[contains(text(),'Red')]").click()
 
