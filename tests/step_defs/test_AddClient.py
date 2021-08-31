@@ -24,7 +24,7 @@ def test_single_hoh_client_creation_for_cashflow():
 @given('user is on cashflow login page')
 def user_is_on_cashflow_login_page(browser):
     """user is on cashflow login page."""
-    browser.get(CASHFLOW_SYS_IE_06)
+    browser.get(CASHFLOW_SYS_IE_02)
     browser.implicitly_wait(10)
 
 

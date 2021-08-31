@@ -1,5 +1,5 @@
 # coding=utf-8
-"""Exports feature tests."""
+"""Exports comparing feature tests."""
 import pytest
 from pytest_bdd import (
     given,
@@ -12,15 +12,19 @@ from Pages.Business import Business
 from Pages.Common import CommonFunctions
 from Pages.Expenses import Expenses
 from Pages.Exports import Exports
+from Pages.Income import Income
 from Pages.Investment import investments
 from Pages.Loans import Loans
 from Pages.Login_cashflow import CashflowLogin
+from Pages.Properties import Properties
+from Pages.Protections import Protections
+from Pages.Wizards import Wizards
 
 
 @pytest.mark.usefixtures("browser")
-@scenario('../features/Exports.feature', 'Verify the exports functionality from plan outputs')
-def test_verify_the_exports_functionality_from_plan_outputs():
-    """Verify the exports functionality from plan outputs."""
+@scenario('../features/Wizards.feature', 'Verify the Optimisation Wizard functionality from Wizards')
+def test_verify_the_exports_scenario_comparing_functionality_from_plan_outputs():
+    """Verify the exports scenario comparing functionality from plan outputs."""
 
 @when('User in cashflow home page')
 def user_in_cashflow_home_page(browser):
@@ -178,23 +182,156 @@ def i_save_expense_and_verify_the_expense_expensesdescription(browser, ExpensesD
     page_expenses.VerifyExpenses(ExpensesDescription)
 
 
-@then('I navigate to plan outputs and select Exports')
-def i_navigate_to_plan_outputs_and_select_exports(browser):
-    """I navigate to plan outputs and select Exports."""
-    page_export = Exports(browser)
-    page_export.NavigatetoExports()
+@then('I logout from application')
+def i_logout_from_application(browser):
+    """I logout from application."""
+    logout =  CashflowLogin(browser)
+    logout.logoutfromClientpage()
 
-@then('I download the exports with default selections')
-def i_download_the_exports_with_default_selections(browser):
-    """I download the exports with detault selections."""
-    page_export = Exports(browser)
-    page_export.Exportdownload()
+
+@then('I add Income type <IncomeType>')
+def i_add_income_type_incometype(browser,IncomeType):
+    """I add Income type <IncomeType>."""
+    page_income = Income(browser)
+    page_income.AddIncomeType(IncomeType)
+
+@then('I add income amount <IncomeAmount>')
+def i_add_income_amount_incomeamount(browser, IncomeAmount):
+    """I add income amount <IncomeAmount>."""
+    page_income = Income(browser)
+    page_income.AddIncomeAmount(IncomeAmount)
+
+
+@then('I add income and verify added income <IncomeDescription>')
+def i_add_income_and_verify_added_income_incomedescription(browser,IncomeDescription):
+    """I add income and verify added income <IncomeDescription>."""
+    page_income = Income(browser)
+    page_income.Addincome(IncomeDescription)
+
+@then('I add income current or future type <CurrentFutureIncome>')
+def i_add_income_current_or_future_type_currentfutureincome(browser, CurrentFutureIncome):
+    """I add income current or future type <CurrentFutureIncome>."""
+    page_income = Income(browser)
+    page_income.Current_Future_income(CurrentFutureIncome)
+
+
+@then('I add income description <IncomeDescription>')
+def i_add_income_description_incomedescription(browser, IncomeDescription):
+    """I add income description <IncomeDescription>."""
+    page_income = Income(browser)
+    page_income.AddIncomeDescription(IncomeDescription)
+
+
+@then('I add new income from income Page')
+def i_add_new_income_from_income_page(browser):
+    """I add new income from income Page."""
+    page_income = Income(browser)
+    page_income.AddNewIncome()
+
+
+@then('I navigate to Income page')
+def i_navigate_to_income_page(browser):
+    """I navigate to Income page."""
+    page_income = Income(browser)
+    page_income.NavigatetoIncome()
+
+
+@then('I Add Protections and Verify the Protections <ProtectionDescription>')
+def i_add_protections_and_verify_the_protections_protectiondescription(browser, ProtectionDescription):
+    """I Add Protections and Verify the Protections <ProtectionDescription>."""
+    page_protection = Protections(browser)
+    page_protection.AddProtections()
+    page_protection.VerifyProtection(ProtectionDescription)
+
+
+
+@then('I Add protection benefit <IncomeDescription> <DeathInServiceMultiplier>')
+def i_add_protection_benefit_incomedescription_deathinservicemultiplier(browser, IncomeDescription, DeathInServiceMultiplier):
+    """I Add protection benefit <IncomeDescription> <DeathInServiceMultiplier>."""
+    page_protection = Protections(browser)
+    page_protection.ProtectionBenefit(IncomeDescription, DeathInServiceMultiplier)
+
+@then('I add new Protections <ProtectionDescription>')
+def i_add_new_protections_protectiondescription(browser, ProtectionDescription):
+    """I add new Protections <ProtectionDescription>."""
+    page_protection = Protections(browser)
+    page_protection.AddNewProtections(ProtectionDescription)
+
+@then('I navigate to protections')
+def i_navigate_to_protections(browser):
+    """I navigate to protections."""
+    page_protection = Protections(browser)
+    page_protection.NavigatetoProtections()
+
+
+@then('I select the Type of Protection <ProtectionsType>')
+def i_select_the_type_of_protection_protectionstype(browser, ProtectionsType):
+    """I select the Type of Protection <ProtectionsType>."""
+    page_protection = Protections(browser)
+    page_protection.SelectProtectionType(ProtectionsType)
+
+@then('I create new scenario <ScenarioName> <ScenarioDescription>')
+def i_create_new_scenario_scenarioname_scenariodescription(browser, ScenarioName, ScenarioDescription):
+    """I create new scenario <scenarioname> <scenarioDescription>."""
+    page_properties = Properties(browser)
+    page_properties.createscenario(ScenarioName, ScenarioDescription)
+
+
+@then('I define Variables like select Pre Retirement Post Retirement For the duration of the plan')
+def i_define_variables_like_select_pre_retirement_post_retirement_for_the_duration_of_the_plan(browser):
+    """I define Variables like select Pre Retirement Post Retirement For the duration of the plan."""
+    page_wizards = Wizards(browser)
+    page_wizards.definevariables()
+
+@then('I navigate to Optimisation Wizard page')
+def i_navigate_to_optimisation_wizard_page(browser):
+    """I navigate to Optimisation Wizard page."""
+    page_wizards = Wizards(browser)
+    page_wizards.NavigatetoWizards()
+
+
+@then('I select How much risk do I need to take and select plan includes cash pensions DGT Loan trusts')
+def i_select_how_much_risk_do_i_need_to_take_and_select_plan_includes_cash_pensions_dgt_loan_trusts(browser):
+    """I select How much risk do I need to take and select plan includes cash pensions DGT Loan trusts."""
+    page_wizards = Wizards(browser)
+    page_wizards.WizardsRisk()
+
+@then('I Define Financial Goal with financial goal <FinancialGoal> <Goaltype> <TargetYear>')
+def i_define_financial_goal_with_financial_goal_financialgoal_goaltype_targetyear(browser, FinancialGoal, Goaltype, TargetYear):
+    """I Define Financial Goal with financial goal <FinancialGoal> <Goaltype> <TargetYear>."""
+    page_wizards = Wizards(browser)
+    page_wizards.FinancialGoal(FinancialGoal, Goaltype, TargetYear)
+
+@then('I Select maximum one off lump sum <LumpSumYear>')
+def i_select_maximum_one_off_lump_sum_lumpsumyear(browser, LumpSumYear):
+    """I Select maximum one off lump sum <LumpSumYear>."""
+    page_wizards = Wizards(browser)
+    page_wizards.MaximumoneOffLumpsum(LumpSumYear)
+
+
+@then('I run wizards')
+def i_run_wizards(browser):
+    """I run wizards."""
+    page_wizards = Wizards(browser)
+    page_wizards.RunWizards()
+
+@then('I export the  wizards results')
+def i_export_the__wizards_results(browser):
+    """I export the  wizards results."""
+    page_wizards = Wizards(browser)
+    page_wizards.Verifyresults()
+
+@then('I verify the wizards results')
+def i_verify_the_wizards_results(browser):
+    """I verify the wizards results."""
+    page_wizards = Wizards(browser)
+    page_wizards.ExportWizards()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 
 @then('I logout from application')
 def i_logout_from_application(browser):
     """I logout from application."""
-    page_common = CommonFunctions(browser)
-    page_common.DeleteClient()
     logout =  CashflowLogin(browser)
     logout.logoutfromClientpage()

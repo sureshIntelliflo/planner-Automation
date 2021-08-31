@@ -4,17 +4,16 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Delete Client refactor">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Features/ExportsComparing.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_ExportsComparing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_sample.py" afterDir="false" />
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Exports compare baseline vs scenario">
+      <change afterPath="$PROJECT_DIR$/Pages/Graphs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Timeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Wizards.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Features/Wizards.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_Wizards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Exports.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Exports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/geckodriver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/step_defs/test_Exports.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_Exports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_sample.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/step_defs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test-AVP" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -201,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630056579315</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Exports compare baseline vs scenario">
+      <created>1630069555753</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1630069555753</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +238,8 @@
     <MESSAGE value="Exports in progress" />
     <MESSAGE value="Exports flow" />
     <MESSAGE value="Delete Client refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Client refactor" />
+    <MESSAGE value="Exports compare baseline vs scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exports compare baseline vs scenario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
