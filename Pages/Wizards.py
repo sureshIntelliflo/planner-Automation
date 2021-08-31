@@ -14,7 +14,7 @@ class Wizards:
     wizardsresultstitle = "//span[@class='ant-page-header-heading-title']"
 
     def NavigatetoWizards(self):
-        self.driver.find_element_by_xpath("//span[normalize-space()='Wizards']").click()
+        self.driver.find_element_by_xpath("//span[normalize-space()='Wizards']//a").click()
         time.sleep(1)
 
     def SelectOptimizedwizards(self):
@@ -87,7 +87,23 @@ class Wizards:
             assert False
 
 
+    def CapacityofLoss(self, MarketCrashPlan, CrashYear, UserDefinedMaxLoss):
+        self.driver.find_element_by_xpath("//span[@class='text-sm font-normal'][normalize-space()='Capacity For Loss']").click()
+        self.driver.find_element_by_xpath(f"//div[@id='capacityForLossPeriod']//span[contains(text(),'{MarketCrashPlan}')]").click()
+        Crash = self.driver.find_element_by_xpath("//input[@id='capacityForLossYear']")
+        Crash.send_keys(Keys.CONTROL + "a")
+        Crash.send_keys(Keys.DELETE)
+        Crash.send_keys(CrashYear)
+        self.driver.find_element_by_xpath("//input[@id='capacityForLossCash']").click()
+        self.driver.find_element_by_xpath("//button[@id='capacityForLossExpectedMaxLoss']").click()
+        self.driver.find_element_by_xpath("//input[@id='capacityForLossReturn']").send_keys(UserDefinedMaxLoss)
 
+    def VerifyCapacityofLossWizard(self):
+        Result = self.driver.find_element_by_xpath("//span[@class='text-red-900']")
+        if Result.is_displayed():
+            assert False
+        else:
+            assert True
 
 
 

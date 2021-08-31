@@ -22,7 +22,7 @@ from Pages.Wizards import Wizards
 
 
 @pytest.mark.usefixtures("browser")
-@scenario('../features/Wizards.feature', 'Verify the Optimisation Wizard functionality from Wizards')
+@scenario('../features/CapacityofLoss_Wizard.feature', 'Verify the Capacity of Loss Wizard functionality from Wizards')
 def test_verify_the_exports_scenario_comparing_functionality_from_plan_outputs():
     """Verify the exports scenario comparing functionality from plan outputs."""
 
@@ -276,57 +276,6 @@ def i_create_new_scenario_scenarioname_scenariodescription(browser, ScenarioName
     page_properties = Properties(browser)
     page_properties.createscenario(ScenarioName, ScenarioDescription)
 
-
-@then('I define Variables like select Pre Retirement Post Retirement For the duration of the plan')
-def i_define_variables_like_select_pre_retirement_post_retirement_for_the_duration_of_the_plan(browser):
-    """I define Variables like select Pre Retirement Post Retirement For the duration of the plan."""
-    page_wizards = Wizards(browser)
-    page_wizards.definevariables()
-
-@then('I navigate to Optimisation Wizard page')
-def i_navigate_to_optimisation_wizard_page(browser):
-    """I navigate to Optimisation Wizard page."""
-    page_wizards = Wizards(browser)
-    page_wizards.NavigatetoWizards()
-
-
-@then('I select How much risk do I need to take and select plan includes cash pensions DGT Loan trusts')
-def i_select_how_much_risk_do_i_need_to_take_and_select_plan_includes_cash_pensions_dgt_loan_trusts(browser):
-    """I select How much risk do I need to take and select plan includes cash pensions DGT Loan trusts."""
-    page_wizards = Wizards(browser)
-    page_wizards.WizardsRisk()
-
-@then('I Define Financial Goal with financial goal <FinancialGoal> <Goaltype> <TargetYear>')
-def i_define_financial_goal_with_financial_goal_financialgoal_goaltype_targetyear(browser, FinancialGoal, Goaltype, TargetYear):
-    """I Define Financial Goal with financial goal <FinancialGoal> <Goaltype> <TargetYear>."""
-    page_wizards = Wizards(browser)
-    page_wizards.FinancialGoal(FinancialGoal, Goaltype, TargetYear)
-
-@then('I Select maximum one off lump sum <LumpSumYear>')
-def i_select_maximum_one_off_lump_sum_lumpsumyear(browser, LumpSumYear):
-    """I Select maximum one off lump sum <LumpSumYear>."""
-    page_wizards = Wizards(browser)
-    page_wizards.MaximumoneOffLumpsum(LumpSumYear)
-
-
-@then('I run wizards')
-def i_run_wizards(browser):
-    """I run wizards."""
-    page_wizards = Wizards(browser)
-    page_wizards.RunWizards()
-
-@then('I export the  wizards results')
-def i_export_the__wizards_results(browser):
-    """I export the  wizards results."""
-    page_wizards = Wizards(browser)
-    page_wizards.Verifyresults()
-
-@then('I verify the wizards results')
-def i_verify_the_wizards_results(browser):
-    """I verify the wizards results."""
-    page_wizards = Wizards(browser)
-    page_wizards.ExportWizards()
-
 @then('I run the Capacity of Loss Report with  <FinancialGoal> <Goaltype> <TargetYear> <MarketCrashPlan> <CrashYear> <UserDefinedMaxLoss>')
 def i_run_the_capacity_of_loss_report_with__financialgoal_goaltype_targetyear_marketcrashplan_crashyear_userdefinedmaxloss(browser, FinancialGoal, Goaltype, TargetYear, MarketCrashPlan, CrashYear, UserDefinedMaxLoss):
     """I run the Capacity of Loss Report with  <FinancialGoal> <Goaltype> <TargetYear> <MarketCrashPlan> <CrashYear> <UserDefinedMaxLoss>."""
@@ -336,6 +285,17 @@ def i_run_the_capacity_of_loss_report_with__financialgoal_goaltype_targetyear_ma
     page_wizards.CapacityofLoss(MarketCrashPlan, CrashYear, UserDefinedMaxLoss)
     page_wizards.RunWizards()
 
+@then('I export the  wizards results')
+def i_export_the__wizards_results(browser):
+    """I export the  wizards results."""
+    page_wizards = Wizards(browser)
+    page_wizards.VerifyCapacityofLossWizard()
+
+@then('I verify the wizards results')
+def i_verify_the_wizards_results(browser):
+    """I verify the wizards results."""
+    page_wizards = Wizards(browser)
+    page_wizards.ExportWizards()
 
 @then('I logout from application')
 def i_logout_from_application(browser):
