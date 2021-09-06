@@ -19,13 +19,6 @@ def test_search_for_existing_client_and_update_client():
     """Search for existing client and Update Client."""
 
 
-@given('user is on cashflow login page')
-def user_is_on_cashflow_login_page(browser):
-    """user is on cashflow login page."""
-    browser.get(CASHFLOW_SYS_IE_02)
-    browser.implicitly_wait(10)
-
-
 @when(parsers.cfparse('user enters email as "{Email_Address}" and password as "{Password}"'))
 def user_enters_email_as_sureshpeddarapuintelliflocom_and_password_as_suresh2021(browser, Email_Address, Password):
     """user enters email as "suresh.peddarapu@intelliflo.com" and password as "Suresh@2021"."""

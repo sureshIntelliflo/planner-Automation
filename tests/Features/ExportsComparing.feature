@@ -1,5 +1,6 @@
 Feature: Exports comparing
 
+  @functional
   Scenario Outline: Verify the exports scenario comparing functionality from plan outputs
     Given user logged into application with email as "FLa_Test2" and password as "Suresh@2021"
     When user logged in and I add client with details name as "Automated Exports flow", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_ExportsFlow"

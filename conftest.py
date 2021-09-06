@@ -77,8 +77,8 @@ def user_logged_into_application_with_email_as_spped_12501_and_password_as_sures
     """"Launching the application"""
 
     browser.maximize_window()
-    browser.get(CASHFLOW_SYS_IE_02)
-    browser.implicitly_wait(10)
+    browser.get(CASHFLOW_SYS_IE_06)
+    browser.implicitly_wait(30)
     """Entering the user login details"""
     browser.find_element_by_css_selector('#username').send_keys(Email_Address)
     browser.find_element_by_css_selector('#password').send_keys(Password)
@@ -139,4 +139,10 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
     assert ClientName == clientelement.get_attribute("value")
     browser.find_element_by_xpath("//button[@aria-label='Close']").click()
     time.sleep(1)
+
+@given('user is on cashflow login page')
+def user_is_on_cashflow_login_page(browser):
+    """user is on cashflow login page."""
+    browser.get(CASHFLOW_SYS_IE_06)
+    browser.implicitly_wait(30)
 

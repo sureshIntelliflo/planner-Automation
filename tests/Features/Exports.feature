@@ -1,5 +1,6 @@
 Feature: Exports
 
+  @functional
   Scenario Outline: Verify the exports functionality from plan outputs
     Given user logged into application with email as "FLa_Test2" and password as "Suresh@2021"
     When user logged in and I add client with details name as "Automated Exports flow", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_ExportsFlow"
@@ -28,7 +29,7 @@ Feature: Exports
     Then I add expense expenditure with details as <EssentialAmount> <DiscretionaryAmount>
     Then I save expense and Verify the expense <ExpensesDescription>
     And I navigate to plan outputs and select Exports
-    Then I download the exports with detault selections
+    Then I download the exports with default selections
     Then I logout from application
     Examples:
       | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk | GrossReturn | Interest | Dividends | Growth | BusinessDescription | BusinessType | BusinessValue | AnnualIncreasepercentage | BaseCostforCGT | ValuationBasis  | SaleEvent | DividendFrequency | DividendAmount | IncreasePerstart | PeriodSetby | LoanDescription | loantype     | OutstandingBalance | InterestRate | repaymentType | ExpenseCategory | ExpensesDescription | EssentialAmount | DiscretionaryAmount |

@@ -1,6 +1,7 @@
 Feature:
   Search and Rename Client
 
+  @functional
   Scenario Outline: Search for existing client and Update Client
     Given user is on cashflow login page
     When user enters email as "FLa_Test2" and password as "Suresh@2021"

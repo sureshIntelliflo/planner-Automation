@@ -1,6 +1,6 @@
-@AddClient
-Feature:Adding a new client with two HoH to the PLanner
 
+Feature:Adding a new client with two HoH to the PLanner
+  @functional
   Scenario Outline: Two HoH Client creation for cashflow
     Given user is on cashflow login page
     When user enters email as "FLa_Test2" and password as "Suresh@2021"

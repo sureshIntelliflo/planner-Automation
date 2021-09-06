@@ -21,11 +21,7 @@ CASHFLOW_SYS_IE_06 = "https://planning.sys-ie-06.intelliflo.systems/login"
 def test_single_hoh_client_creation_for_cashflow():
     """Single HoH Client creation for cashflow."""
 
-@given('user is on cashflow login page')
-def user_is_on_cashflow_login_page(browser):
-    """user is on cashflow login page."""
-    browser.get(CASHFLOW_SYS_IE_02)
-    browser.implicitly_wait(10)
+
 
 
 @when(parsers.cfparse('user enters email as "{Email_Address}" and password as "{Password}"'))

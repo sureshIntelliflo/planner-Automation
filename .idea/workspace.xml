@@ -4,13 +4,36 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Wizards - Optimization wizards">
-      <change afterPath="$PROJECT_DIR$/tests/Features/CapacityofLoss_Wizard.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_CapacityofLoss_Wizards.py" afterDir="false" />
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Wizards - Capacity of Loss">
+      <change afterPath="$PROJECT_DIR$/tests/Features/Protection_Wizard.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_Protection_Wizards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Wizards.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Wizards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/AddClient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddClient.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/AddTwoHoH.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/AddTwoHoH.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/CapacityofLoss_Wizard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/CapacityofLoss_Wizard.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/DCAnnuityinPayment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/DCAnnuityinPayment.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/DeleteClient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/DeleteClient.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/Exports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Exports.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/ExportsComparing.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/ExportsComparing.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeProtectionsLInking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeProtectionsLInking.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeProtections_excludeIncome.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeProtections_excludeIncome.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentLInkingInvestment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentLInkingInvestment.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/Investments.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Investments.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/Property.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Property.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Features/Wizards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Wizards.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_Wizards.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_Wizards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_AddTwoHoH.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_AddTwoHoH.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +70,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/step_defs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test-AVP" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -211,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630405601133</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Wizards - Capacity of Loss">
+      <created>1630420393512</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1630420393512</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +274,8 @@
     <MESSAGE value="Delete Client refactor" />
     <MESSAGE value="Exports compare baseline vs scenario" />
     <MESSAGE value="Wizards - Optimization wizards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wizards - Optimization wizards" />
+    <MESSAGE value="Wizards - Capacity of Loss" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wizards - Capacity of Loss" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
