@@ -315,7 +315,7 @@ def i_run_wizards(browser):
     page_wizards = Wizards(browser)
     page_wizards.RunWizards()
 
-@then('I export the  wizards results')
+@then('I export the wizards results')
 def i_export_the__wizards_results(browser):
     """I export the  wizards results."""
     page_wizards = Wizards(browser)

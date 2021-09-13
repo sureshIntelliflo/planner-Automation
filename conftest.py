@@ -1,11 +1,16 @@
+import datetime
+import os
 import time
 
+import allure
 import pytest
+from allure_commons.types import AttachmentType
 from pytest_bdd import given, parsers, when
 from selenium import webdriver
 
 CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/"
 CASHFLOW_SYS_IE_06 = "https://planning.sys-ie-06.intelliflo.systems/"
+
 
 # Hooks
 def pytest_bdd_step_error(step):
@@ -42,6 +47,7 @@ def browser(browsertype, request):
         if request.session.testsfailed != failed_before:
             test_name = request.node.name
             take_screenshot(browser, test_name)
+            allure.attach(browser.get_screenshot_as_png(), test_name, attachment_type=AttachmentType.PNG)
         # yield browser
         browser.quit()
     elif 'firefox' in browsertype:
@@ -65,11 +71,20 @@ def browser(browsertype, request):
 
 
 def take_screenshot(browser, test_name):
+    # now = datetime.now()
+    # dt_string = now.strftime("%b-%d-%Y")
+    # time_string = now.strftime("%H-%M-%S")
+    # parent_dir = "./"
+    # path = os.path.join(parent_dir, dt_string)
+    # os.makedirs(path, exist_ok=True)
+    # screenshot_file_path = f"./ScreenshotsOnFailure/{dt_string}/{test_name}_{time_string}.png"
+    # browser.save_screenshot(filename=screenshot_file_path)
     screenshots_dir = "ScreenshotsOnFailure/"
     screenshot_file_path = "{}/{}.png".format(screenshots_dir, test_name)
     browser.save_screenshot(
-        screenshot_file_path
-    )
+    screenshot_file_path
+)
+
 
 @given(parsers.cfparse('user logged into application with email as "{Email_Address}" and password as "{Password}"'))
 def user_logged_into_application_with_email_as_spped_12501_and_password_as_suresh2021(browser, Email_Address, Password):
@@ -84,6 +99,7 @@ def user_logged_into_application_with_email_as_spped_12501_and_password_as_sures
     browser.find_element_by_css_selector('#password').send_keys(Password)
     browser.find_element_by_xpath("//button[@class='btn btn-primary']").click()
     time.sleep(3)
+
 
 @when(parsers.cfparse('user logged in and I add client with details name as "{name}", KnowAs "{knownAS}", '
                       'DOB "{DoB}",Tax residency "{TaxResidency}", gender as "{Gender}" and Create client with case name as "{ClientName}"'))
@@ -140,9 +156,9 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
     browser.find_element_by_xpath("//button[@aria-label='Close']").click()
     time.sleep(1)
 
+
 @given('user is on cashflow login page')
 def user_is_on_cashflow_login_page(browser):
     """user is on cashflow login page."""
     browser.get(CASHFLOW_SYS_IE_06)
     browser.implicitly_wait(30)
-
