@@ -17,7 +17,7 @@ class investments:
 
     def Verify_user_in_home_page(self):
         try:
-            element = self.driver.find_element_by_xpath("//span[text()='Active Scenario']")
+            element = self.driver.find_element_by_xpath("//span[normalize-space()='Client Settings']")
             if element.is_displayed():
                 print("User is on home page")
             else:

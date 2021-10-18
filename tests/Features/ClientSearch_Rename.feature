@@ -4,7 +4,7 @@ Feature:
   @functional
   Scenario Outline: Search for existing client and Update Client
     Given user is on cashflow login page
-    When user enters email as "FLa_Test2" and password as "Suresh@2021"
+    When user enters email as "Fla_Test1" and password as "Suresh@2021"
     And user clicks on login
 
     Then I search for Client <Clientname>

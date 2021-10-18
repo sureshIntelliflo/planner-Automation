@@ -1,7 +1,6 @@
-Feature:  Income and DC Pension
+Feature:  Income and DC Pension then Exclude income
 
-  @functional
-  Scenario Outline: Verify the DC Pension and Income linking
+  Scenario Outline: Verify the DC Pension and Income linking and exclude income
     Given user is on cashflow login page
     When User is on Login page and Login as <Username> <Password>
     And User successfully logged into application
@@ -28,7 +27,9 @@ Feature:  Income and DC Pension
     Then I Enable Crystallised Withdrawal_Custom <WithdrawalMethod> <CrystallisedAmount> <FrequencyType_cy> <PeriodSetValueevent_cy>
     Then I enable Scheme Specific PCLS
     And I Add DC Pension and Verify the Pension <PensionDescription>
+    Then I exclude Income form Baseline <IncomeDescription>
+    And Verify the DC pensions for any breakages <PensionDescription>
     And I logout from application
     Examples:
-      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                   | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription | DCType       | TotalFundValue | DrawdownValue | OriginalCrystallisedAmount | Risk | GrossReturn | ContributionType            | TakenBy | ContributionAmount | Contribution | Frequency | PeriodSet | StartYear | EndYear | UncrystallisedWithdrawal             | withdrawlType                        | CrystalliseValue | AmountValue | PercentageValue | FrequencyType | PeriodSetValueevent | WithdrawalMethod | CrystallisedAmount | FrequencyType_cy | PeriodSetValueevent_cy |
-      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income DC pension | Automated_income  | Salary     | Current Income      | 450000       | Automated_Pension  | Occupational | 45000          | 4000          | 5000                       | High | 11          | Personal - Salary Sacrifice | AMOUNT  | 5000               | 9            | Regular   | EVENT     | 2020      | 2060    | Uncrystallised Fund Pension Lump Sum | Uncrystallised Fund Pension Lump Sum | AMOUNT           | 1000        | 9               | Regular       | YEAR                | Amount           | 5000               | Regular          | EVENT                  |
+      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                                    | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription | DCType       | TotalFundValue | DrawdownValue | OriginalCrystallisedAmount | Risk | GrossReturn | ContributionType            | TakenBy | ContributionAmount | Contribution | Frequency | PeriodSet | StartYear | EndYear | UncrystallisedWithdrawal             | withdrawlType                        | CrystalliseValue | AmountValue | PercentageValue | FrequencyType | PeriodSetValueevent | WithdrawalMethod | CrystallisedAmount | FrequencyType_cy | PeriodSetValueevent_cy |
+      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income DC pension & exclude income | Automated_income  | Salary     | Current Income      | 450000       | Automated_Pension  | Occupational | 45000          | 4000          | 5000                       | High | 11          | Personal - Salary Sacrifice | AMOUNT  | 5000               | 9            | Regular   | EVENT     | 2020      | 2060    | Uncrystallised Fund Pension Lump Sum | Uncrystallised Fund Pension Lump Sum | AMOUNT           | 1000        | 9               | Regular       | YEAR                | Amount           | 5000               | Regular          | YEAR                   |

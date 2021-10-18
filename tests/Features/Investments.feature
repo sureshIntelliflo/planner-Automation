@@ -2,9 +2,11 @@ Feature: Add investments
 
   @functional
   Scenario Outline: Add investments and exclude in a scenario
-    Given user logged into application with email as "FLa_Test2" and password as "Suresh@2021"
-    When user logged in and I add client with details name as "Automated User investment", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_investment"
-    When User in cashflow home page
+    Given user is on cashflow login page
+    When User is on Login page and Login as <Username> <Password>
+    And User successfully logged into application
+    Then User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>
+    And User Provide the Client Name as <ClientName>
     Then I navigate to investments page
     And I add Investment Description <InvestmentDescription>
     And i add investment type as <InvestmentType>
@@ -25,5 +27,5 @@ Feature: Add investments
     Then I verify the investment in scenario <InvestmentDescription>
     And I logout from application
     Examples:
-      | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk | GrossReturn | Interest | Dividends | Growth | ScenarioName       | ScenarioDescription           | contributionstype | contributionamount | WithdrawalAmount |
-      | Automated_Investment  | ISA Stocks & Shares | Pre-Existing | 300000       | High           | 11          | 30       | 40        | 30     | investmentScenario | Tests performed by automation | Custom            | 30000              | 4500             |
+      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName             | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk | GrossReturn | Interest | Dividends | Growth | ScenarioName       | ScenarioDescription           | contributionstype | contributionamount | WithdrawalAmount |
+      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Investments | Automated_Investment  | ISA Stocks & Shares | Pre-Existing | 300000       | High           | 11          | 30       | 40        | 30     | investmentScenario | Tests performed by automation | Custom            | 30000              | 4500             |

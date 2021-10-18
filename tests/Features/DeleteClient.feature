@@ -3,7 +3,7 @@ Feature: Delete Migrate user from planner
   @functional
   Scenario: login to cashflow with valid credentials
     Given user is on cashflow login page
-    When user enters email as "FLa_Test2" and password as "Suresh@2021"
+    When user enters email as "PlanningGroupUser0001" and password as "PlanningGroupUser0001"
     And user clicks on login
     Then user sees page title as "intelliflo planning"
 

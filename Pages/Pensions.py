@@ -15,7 +15,7 @@ class Pensions:
 
     def verifyuserhomepage(self):
         try:
-            element = self.driver.find_element_by_xpath("//span[text()='Active Scenario']")
+            element = self.driver.find_element_by_xpath("//span[normalize-space()='Client Settings']")
             if element.is_displayed():
                 print("User is on home page")
             else:
@@ -283,6 +283,7 @@ class Pensions:
             time.sleep(1)
             self.driver.find_element_by_xpath(f"//input[@value='{PeriodSetValueevent}']").click()
             if PeriodSetValueevent == "YEAR":
+                self.driver.find_element_by_xpath("//input[@id='start_year']").send_keys("2040")
                 self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
             time.sleep(1)
             self.driver.find_element_by_xpath("//span[normalize-space()='Add Withdrawal']").click()
@@ -311,8 +312,11 @@ class Pensions:
                     f"(//input[@value='{PeriodSetValueevent_cy}']/following::span/following::span)[1]").click()
 
                 if PeriodSetValueevent_cy == "EVENT":
+                    self.driver.find_element_by_xpath("//div[@name='start,event,id']//div[@class='ant-select-selector']").click()
+                    self.driver.find_element_by_xpath("//div[contains(text(), 'Retire')]").click()
                     AddButton.click()
                 elif PeriodSetValueevent_cy == "YEAR":
+                    self.driver.find_element_by_xpath("//input[@id='start_year']").send_keys("2058")
                     self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
                     AddButton.click()
             elif FrequencyType_cy == "One Off":
@@ -372,3 +376,11 @@ class Pensions:
         except:
             self.Attachscreenshot("inheritedtax")
 
+    def VerifyPensiondetails(self, PensionDescription):
+        try:
+            Pension = self.driver.find_element_by_xpath(f"//span[normalize-space()='{PensionDescription}']")
+            if Pension.is_displayed():
+                Pension.click()
+                self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Save Pension')]").click()
+        except:
+            self.Attachscreenshot("VerifyPension")

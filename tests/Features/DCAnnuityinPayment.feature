@@ -2,9 +2,11 @@ Feature:  DC Annuity in Payment
 
   @functional
   Scenario Outline: Verify the DC Annuity in payment pensions
-    Given user logged into application with email as "FLa_Test2" and password as "Suresh@2021"
-    When user logged in and I add client with details name as "DCAnnuityinPayment", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_DCAnnuityPension"
-    When User in cashflow home page
+    Given user is on cashflow login page
+    When User is on Login page and Login as <Username> <Password>
+    And User successfully logged into application
+    Then User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>
+    And User Provide the Client Name as <ClientName>
     And I navigate to pensions
     Then I Add pensions from pensions page
     Then I add pension description <PensionDescription>
@@ -16,5 +18,5 @@ Feature:  DC Annuity in Payment
     And I logout from application
 
     Examples:
-      | PensionDescription   | DCType             | Income_as_Amount | Rate_of_Increase | AnnuityCeaseEvent | InheritedpensionType |
-      | Automated_DC_Pension | Annuity in Payment | 10000000         | 12               | Forever           | TAX_FREE             |
+      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName            | PensionDescription   | DCType             | Income_as_Amount | Rate_of_Increase | AnnuityCeaseEvent | InheritedpensionType |
+      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation DC Annuity | Automated_DC_Pension | Annuity in Payment | 10000000         | 12               | Forever           | TAX_FREE             |

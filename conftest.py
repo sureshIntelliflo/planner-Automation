@@ -5,12 +5,14 @@ import time
 import allure
 import pytest
 from allure_commons.types import AttachmentType
-from pytest_bdd import given, parsers, when
+from pytest_bdd import given, parsers, when, then
 from selenium import webdriver
+
+from Pages.Login_cashflow import CashflowLogin
 
 CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/"
 CASHFLOW_SYS_IE_06 = "https://planning.sys-ie-06.intelliflo.systems/"
-
+CASHFLOW_PROD = "https://planner.gb.intelliflo.net/login"
 
 # Hooks
 def pytest_bdd_step_error(step):
@@ -162,3 +164,34 @@ def user_is_on_cashflow_login_page(browser):
     """user is on cashflow login page."""
     browser.get(CASHFLOW_SYS_IE_06)
     browser.implicitly_wait(30)
+
+@when('User is on Login page and Login as <Username> <Password>')
+def user_is_on_login_page_and_login_as_username_password(browser, Username, Password):
+    """User is on Login page and Login as <Username> <Password>."""
+    page_login = CashflowLogin(browser)
+    page_login.CallUserLogin(Username, Password)
+
+@when('User successfully logged into application')
+def user_successfully_logged_into_application(browser):
+    """User successfully logged into application."""
+    page_login = CashflowLogin(browser)
+    page_login.VerifyUserLogingsuccessful()
+
+@then('User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>')
+def user_create_client_with_single_headofhousehold_as_hohname_hohknowas_dob_taxresidency_gender(browser, HoHName, HoHKnowas, DoB, TaxResidency, Gender):
+    """User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>."""
+    page_login = CashflowLogin(browser)
+    page_login.AddSingleHOHclient(HoHName, HoHKnowas, DoB, TaxResidency, Gender)
+
+
+@then('User Provide the Client Name as <ClientName>')
+def user_provide_the_client_name_as_clientname(browser, ClientName):
+    """User Provide the Client Name as <ClientName>."""
+    page_login = CashflowLogin(browser)
+    page_login.ClientName(ClientName)
+
+@then('User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>')
+def user_add_second_hoh_details_as_hohname_2_hohknowas_2_dob_2_relation_secondgender(browser, HohName_2, HoHKnowas_2, DoB_2, SecondGender, relation):
+    """User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>."""
+    page_login = CashflowLogin(browser)
+    page_login.AddSecondHoH(HohName_2, HoHKnowas_2, DoB_2, SecondGender, relation)

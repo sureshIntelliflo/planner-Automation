@@ -2,9 +2,11 @@ Feature: Protection income linking and income excluded from scenario
 
   @functional
   Scenario Outline: Verify the income and Death in service Protections linking then Exclude income from scenario
-    Given user logged into application with email as "FLa_Test2" and password as "Suresh@2021"
-    When user logged in and I add client with details name as "incomeProtectionlinking", KnowAs "QA Automation", DOB "01/01/1990",Tax residency "England", gender as "Male" and Create client with case name as "AutomatedQA_IncomeProtection"
-    When User in cashflow home page
+    Given user is on cashflow login page
+    When User is on Login page and Login as <Username> <Password>
+    And User successfully logged into application
+    Then User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>
+    And User Provide the Client Name as <ClientName>
     Then I navigate to Income page
     And I add new income from income Page
     And I add income description <IncomeDescription>
@@ -21,7 +23,7 @@ Feature: Protection income linking and income excluded from scenario
     And Verify the Protections for any breakages <ProtectionDescription>
     Then I logout from application
     Examples:
-      | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | ProtectionDescription | ProtectionsType  | DeathInServiceMultiplier |
-      | Automated_income  | Salary     | Current Income      | 450000       | Automated_Protection  | Death in Service | 2                        |
+      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                    | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | ProtectionDescription | ProtectionsType  | DeathInServiceMultiplier |
+      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income Protections | Automated_income  | Salary     | Current Income      | 450000       | Automated_Protection  | Death in Service | 2                        |
 
 
