@@ -19,4 +19,4 @@ Feature:  DC Annuity in Payment
 
     Examples:
       | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName            | PensionDescription   | DCType             | Income_as_Amount | Rate_of_Increase | AnnuityCeaseEvent | InheritedpensionType |
-      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation DC Annuity | Automated_DC_Pension | Annuity in Payment | 10000000         | 12               | Forever           | TAX_FREE             |
+      | Fla_Test1 | Suresh#2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation DC Annuity | Automated_DC_Pension | Annuity in Payment | 10000000         | 12               | Forever           | TAX_FREE             |

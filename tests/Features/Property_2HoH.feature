@@ -28,7 +28,7 @@ Feature: Verify the Property
 
     Examples:
       | Username  | Password    | HoHName        | HoHKnowas | DoB        | TaxResidency | Gender | HohName_2      | HoHKnowas_2 | DoB_2      | SecondGender | relation | ClientName               | PropertyDescription | PreExisting  | CurrentValue | BaseCostCGT | SaleExpense | MortagageDescription | ReplaymentType | MortagageValue | InterestRate | MortgageStartEvent | MortgageCeaseEvent | Rental | RentalExpense | RenovationCost | IncreasedtoPropertyValue | RenovationEvent | ScenarioName     | ScenarioDescription       |
-      | Fla_Test1 | Suresh@2021 | AutomationHOH1 | QA        | 01/01/1990 | England      | Male   | AutomationHOH1 | QA2         | 01/01/1991 | Married      | Female   | Automation Join Property | AutomatedProperty1  | Pre Existing | 200000       | 25000       | 25          | Automated_Mortage    | Interest Only  | 300000         | 22           | Property Purchase  | Pre-Existing       | 35000  | 12500         | 42000          | 32000                    | Pre-Existing    | PropertyScenario | Automatedscenario testing |
+      | Fla_Test1 | Suresh#2021 | AutomationHOH1 | QA        | 01/01/1990 | England      | Male   | AutomationHOH1 | QA2         | 01/01/1991 | Married      | Female   | Automation Join Property | AutomatedProperty1  | Pre Existing | 200000       | 25000       | 25          | Automated_Mortage    | Interest Only  | 300000         | 22           | Property Purchase  | Pre-Existing       | 35000  | 12500         | 42000          | 32000                    | Pre-Existing    | PropertyScenario | Automatedscenario testing |
 
 
 

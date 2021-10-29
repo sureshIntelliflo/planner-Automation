@@ -94,7 +94,7 @@ def user_logged_into_application_with_email_as_spped_12501_and_password_as_sures
     """"Launching the application"""
 
     browser.maximize_window()
-    browser.get(CASHFLOW_SYS_IE_06)
+    browser.get(CASHFLOW_SYS_IE_02)
     browser.implicitly_wait(30)
     """Entering the user login details"""
     browser.find_element_by_css_selector('#username').send_keys(Email_Address)
@@ -162,7 +162,7 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
 @given('user is on cashflow login page')
 def user_is_on_cashflow_login_page(browser):
     """user is on cashflow login page."""
-    browser.get(CASHFLOW_SYS_IE_06)
+    browser.get(CASHFLOW_SYS_IE_02)
     browser.implicitly_wait(30)
 
 @when('User is on Login page and Login as <Username> <Password>')

@@ -28,6 +28,6 @@ Feature: Income and DB pensions
     And I logout from application
     Examples:
       | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                   | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription  | pensionstype | Benefitstype | BenefitIncome | LumpSum | GrossContributions | PensionBasis     | LumpSumOptions | ServiceMultiplier |
-      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income DB Pension | Automated_income  | Salary     | Current Income      | 450000       | Automated_DBPension | Active       | Statement    | 31200         | 500000  | 12.7               | Relief At Source | Multiple       | 2                 |
+      | Fla_Test1 | Suresh#2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income DB Pension | Automated_income  | Salary     | Current Income      | 450000       | Automated_DBPension | Active       | Statement    | 31200         | 500000  | 12.7               | Relief At Source | Multiple       | 2                 |
 
 

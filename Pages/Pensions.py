@@ -2,6 +2,9 @@ import time
 
 import allure
 from allure_commons.types import AttachmentType
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Pensions:
@@ -24,14 +27,17 @@ class Pensions:
         except:
             self.Attachscreenshot("verifyuserhomepage")
 
-
     def Navigatetopensions(self):
-        try:
-            self.driver.find_element_by_xpath("//span[normalize-space()='Plan Inputs']").click()
-            self.driver.find_element_by_xpath(
-                "//span[@class='text-sm font-normal'][normalize-space()='Pensions']").click()
-        except:
-            self.Attachscreenshot("Navigatetopensions")
+
+        WebDriverWait(self.driver, 20).until(
+            expected_conditions.element_to_be_clickable(
+                (By.XPATH,
+                 "//a[@class='NavigationSidebarItem_navlink__2ChYw NavigationSidebarItem_header__3cFRA']//span[text()='Plan Inputs']"))).click()
+
+        WebDriverWait(self.driver, 10).until(
+            expected_conditions.element_to_be_clickable(
+                (By.XPATH,
+                 "//span[@class='text-sm font-normal'][normalize-space()='Pensions']"))).click()
 
 
     def AddNewPensions(self):
@@ -46,20 +52,17 @@ class Pensions:
         except:
             self.Attachscreenshot("AddNewPensions")
 
-
     def AddPensionDescription(self, PensionDescription):
         try:
             self.driver.find_element_by_xpath("//input[@id='policyDescription']").send_keys(PensionDescription)
         except:
             self.Attachscreenshot("AddPensionDescription")
 
-
     def AddPensionPolicyStructure(self):
         try:
             self.driver.find_element_by_xpath("//fieldset[@class='mb-5']//label[1]").click()
         except:
             self.Attachscreenshot("AddPensionDescription")
-
 
     def policyStatus(self, pensionstype):
         try:
@@ -75,7 +78,6 @@ class Pensions:
         except:
             self.Attachscreenshot("policyStatus")
 
-
     def BenefitBasis(self, Benefitstype):
         try:
             type = self.driver.find_element_by_xpath(f"//span[normalize-space()='{Benefitstype}']")
@@ -87,7 +89,6 @@ class Pensions:
         except:
             self.Attachscreenshot("BenefitBasis")
 
-
     def BenefitStatementValues(self, BenefitIncome, LumpSum):
         try:
             benefitamount = self.driver.find_element_by_xpath("//input[@id='benefit_statementBenefit_income_amount']")
@@ -96,7 +97,6 @@ class Pensions:
             lumpamount.send_keys(LumpSum)
         except:
             self.Attachscreenshot("BenefitStatementValues")
-
 
     def BenefitContributions(self, IncomeDescription, GrossContributions, PensionBasis):
         try:
@@ -123,7 +123,6 @@ class Pensions:
         except:
             self.Attachscreenshot("BenefitContributions")
 
-
     def BenefitDeathOptions(self, LumpSumOptions, ServiceMultiplier):
         try:
             deathlumpsumoptions = self.driver.find_element_by_xpath(
@@ -137,13 +136,11 @@ class Pensions:
         except:
             self.Attachscreenshot("BenefitDeathOptions")
 
-
     def AdjustLifetimeAllowance(self):
         try:
             self.driver.find_element_by_xpath("//button[@id='lifetimeAllowanceAdjustmentEnabled']").click()
         except:
             self.Attachscreenshot("AdjustLifetimeAllowance")
-
 
     def AddPensionandVerify(self, PensionDescription):
         try:
@@ -156,13 +153,11 @@ class Pensions:
         except:
             self.Attachscreenshot("AddPensionandVerify")
 
-
     def SelectDCpensions(self):
         try:
             self.driver.find_element_by_xpath("//span[normalize-space()='Defined Contribution']").click()
         except:
             self.Attachscreenshot("SelectDCpensions")
-
 
     def PolicyType(self, DCType):
         try:
@@ -172,7 +167,6 @@ class Pensions:
         except:
             self.Attachscreenshot("PolicyType")
 
-
     def DCPensionFund(self, TotalFundValue, DrawdownValue, OriginalCrystallisedAmount):
         try:
             self.driver.find_element_by_xpath("//input[@id='totalFundValue_amount']").send_keys(TotalFundValue)
@@ -181,7 +175,6 @@ class Pensions:
                 OriginalCrystallisedAmount)
         except:
             self.Attachscreenshot("DCPensionFund")
-
 
     def Return(self, Risk, GrossReturn):
         try:
@@ -196,13 +189,11 @@ class Pensions:
         except:
             self.Attachscreenshot("Return")
 
-
     def SpecificCharges(self):
         try:
             self.driver.find_element_by_xpath("//button[@id='specificChargesEnabled']").click()
         except:
             self.Attachscreenshot("SpecificCharges")
-
 
     def Contributions(self, ContributionType, TakenBy, IncomeDescription, ContributionAmount, Contribution, Frequency,
                       PeriodSet, StartYear, EndYear):
@@ -253,13 +244,11 @@ class Pensions:
         except:
             self.Attachscreenshot("Contributions")
 
-
     def UncrystallisedWithdrawal(self, UncrystallisedWithdrawal):
         try:
             self.driver.find_element_by_xpath(f"//span[normalize-space()='{UncrystallisedWithdrawal}']").click()
         except:
             self.Attachscreenshot("UncrystallisedWithdrawal")
-
 
     def UncrystallisedWithdrawal_Custom(self, withdrawlType, CrystalliseValue, AmountValue, PercentageValue,
                                         FrequencyType, PeriodSetValueevent):
@@ -291,7 +280,6 @@ class Pensions:
         except:
             self.Attachscreenshot("UncrystallisedWithdrawal_Custom")
 
-
     def CrystallisedWithdrawal_Custom(self, WithdrawalMethod, CrystallisedAmount, FrequencyType_cy,
                                       PeriodSetValueevent_cy):
         try:
@@ -312,11 +300,12 @@ class Pensions:
                     f"(//input[@value='{PeriodSetValueevent_cy}']/following::span/following::span)[1]").click()
 
                 if PeriodSetValueevent_cy == "EVENT":
-                    self.driver.find_element_by_xpath("//div[@name='start,event,id']//div[@class='ant-select-selector']").click()
+                    self.driver.find_element_by_xpath(
+                        "//div[@name='start,event,id']//div[@class='ant-select-selector']").click()
                     self.driver.find_element_by_xpath("//div[contains(text(), 'Retire')]").click()
                     AddButton.click()
                 elif PeriodSetValueevent_cy == "YEAR":
-                    self.driver.find_element_by_xpath("//input[@id='start_year']").send_keys("2058")
+                   # self.driver.find_element_by_xpath("//input[@id='start_year']").send_keys("2058")
                     self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
                     AddButton.click()
             elif FrequencyType_cy == "One Off":
@@ -330,7 +319,6 @@ class Pensions:
         except:
             self.Attachscreenshot("CrystallisedWithdrawal_Custom")
 
-
     def SchemeSpecificPCLS(self):
         try:
             self.driver.find_element_by_xpath("//button[@id='schemeSpecificPensionCommencementLumpSumEnabled']").click()
@@ -341,13 +329,11 @@ class Pensions:
         except:
             self.Attachscreenshot("SchemeSpecificPCLS")
 
-
     def AddPension(self):
         try:
             self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Add Pension')]").click()
         except:
             self.Attachscreenshot("SchemeSpecificPCLS")
-
 
     def VerifyPension(self, PensionDescription):
         try:
@@ -356,7 +342,6 @@ class Pensions:
                 assert Pension.text == PensionDescription
         except:
             self.Attachscreenshot("VerifyPension")
-
 
     def AnnuityFundValue(self, Income_as_Amount, Rate_of_Increase, AnnuityCeaseEvent):
         try:
@@ -367,7 +352,6 @@ class Pensions:
             self.driver.find_element_by_xpath(f"//div[contains(text(),'{AnnuityCeaseEvent}')]").click()
         except:
             self.Attachscreenshot("AnnuityFundValue")
-
 
     def inheritedtax(self, InheritedpensionType):
         try:
@@ -381,6 +365,9 @@ class Pensions:
             Pension = self.driver.find_element_by_xpath(f"//span[normalize-space()='{PensionDescription}']")
             if Pension.is_displayed():
                 Pension.click()
-                self.driver.find_element_by_xpath("//button[@type='button']//span[contains(text(),'Save Pension')]").click()
+                WebDriverWait(self.driver, 10).until(
+                    expected_conditions.element_to_be_clickable(
+                        (By.XPATH, "//button[@type='button']//span[contains(text(),'Save Pension')]"))).click()
+
         except:
             self.Attachscreenshot("VerifyPension")

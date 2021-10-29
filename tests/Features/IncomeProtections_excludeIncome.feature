@@ -24,6 +24,6 @@ Feature: Protection income linking and income excluded from scenario
     Then I logout from application
     Examples:
       | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                    | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | ProtectionDescription | ProtectionsType  | DeathInServiceMultiplier |
-      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income Protections | Automated_income  | Salary     | Current Income      | 450000       | Automated_Protection  | Death in Service | 2                        |
+      | Fla_Test1 | Suresh#2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income Protections | Automated_income  | Salary     | Current Income      | 450000       | Automated_Protection  | Death in Service | 2                        |
 
 

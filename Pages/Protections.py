@@ -61,14 +61,11 @@ class Protections:
 
         self.driver.find_element_by_xpath(
             "//div[@name='linkedEmployment,id']//div[@class='ant-select-selector']").click()
-        linkedemployment = self.driver.find_element_by_xpath(f"//div[contains(text(),'{IncomeDescription}')]")
-        if linkedemployment.is_displayed():
-            linkedemployment.click()
-            self.driver.find_element_by_xpath("//input[@id='multiplier']").send_keys(DeathInServiceMultiplier)
-        else:
-            print("unable to locate the linked employment")
-            self.Attachscreenshot("ProtectionBenefit")
-            assert False
+        WebDriverWait(self.driver, 10).until(
+            expected_conditions.element_to_be_clickable(
+                (By.XPATH, f"//div[contains(text(),'{IncomeDescription}')]"))).click()
+        self.driver.find_element_by_xpath("//input[@id='multiplier']").send_keys(DeathInServiceMultiplier)
+
 
     def AddProtections(self):
         try:

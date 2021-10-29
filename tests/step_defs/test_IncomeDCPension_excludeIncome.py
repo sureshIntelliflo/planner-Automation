@@ -177,9 +177,9 @@ def i_exclude_income_form_baseline_incomedescription(browser, IncomeDescription)
 @then('Verify the DC pensions for any breakages <PensionDescription>')
 def verify_the_dc_pensions_for_any_breakages_pensiondescription(browser, PensionDescription):
     """Verify the DC pensions for any breakages <PensionDescription>."""
-    page_pensions = Pensions(browser)
-    page_pensions.Navigatetopensions()
-    page_pensions.VerifyPensiondetails(PensionDescription)
+   # page_pensions = Pensions(browser)
+  #  page_pensions.Navigatetopensions()
+   # page_pensions.VerifyPensiondetails(PensionDescription)
     page_tables = Tables(browser)
     page_tables.NavigatetoTables()
     page_common = CommonFunctions(browser)

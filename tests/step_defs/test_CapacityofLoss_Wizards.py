@@ -289,18 +289,18 @@ def i_run_the_capacity_of_loss_report_with__financialgoal_goaltype_targetyear_ma
 def i_export_the__wizards_results(browser):
     """I export the  wizards results."""
     page_wizards = Wizards(browser)
-    page_wizards.VerifyCapacityofLossWizard()
+    page_wizards.ExportWizards()
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 @then('I verify the wizards results')
 def i_verify_the_wizards_results(browser):
     """I verify the wizards results."""
     page_wizards = Wizards(browser)
-    page_wizards.ExportWizards()
+    page_wizards.VerifyCapacityofLossWizard()
 
 @then('I logout from application')
 def i_logout_from_application(browser):
     """I logout from application."""
-    page_common = CommonFunctions(browser)
-    page_common.DeleteClient()
     logout =  CashflowLogin(browser)
     logout.logoutfromClientpage()

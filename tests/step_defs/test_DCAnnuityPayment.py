@@ -19,7 +19,7 @@ def test_verify_the_dc_annuity_in_payment_pensions():
     """Verify the DC Annuity in payment pensions."""
 
 
-@when('I navigate to pensions')
+@then('I navigate to pensions')
 def i_navigate_to_pensions(browser):
     """I navigate to pensions."""
     page_Pension = Pensions(browser)

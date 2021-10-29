@@ -319,13 +319,13 @@ def i_run_wizards(browser):
 def i_export_the__wizards_results(browser):
     """I export the  wizards results."""
     page_wizards = Wizards(browser)
-    page_wizards.Verifyresults()
+    page_wizards.ExportWizards()
 
 @then('I verify the wizards results')
 def i_verify_the_wizards_results(browser):
     """I verify the wizards results."""
     page_wizards = Wizards(browser)
-    page_wizards.ExportWizards()
+    page_wizards.Verifyresults()
 
 @then('I run the Capacity of Loss Report with  <FinancialGoal> <Goaltype> <TargetYear> <MarketCrashPlan> <CrashYear> <UserDefinedMaxLoss>')
 def i_run_the_capacity_of_loss_report_with__financialgoal_goaltype_targetyear_marketcrashplan_crashyear_userdefinedmaxloss(browser, FinancialGoal, Goaltype, TargetYear, MarketCrashPlan, CrashYear, UserDefinedMaxLoss):

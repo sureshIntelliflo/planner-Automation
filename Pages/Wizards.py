@@ -7,6 +7,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from Pages.Common import CommonFunctions
+from Pages.Login_cashflow import CashflowLogin
+
 
 @allure.severity(allure.severity_level.CRITICAL)
 class Wizards:
@@ -48,7 +51,6 @@ class Wizards:
         except:
             self.Attachscreenshot("FinancialGoal")
 
-
     def definevariables(self):
         try:
             self.driver.find_element_by_xpath("//input[@id='optimizationPreRetirement']").click()
@@ -57,7 +59,6 @@ class Wizards:
             time.sleep(2)
         except:
             self.Attachscreenshot("definevariables")
-
 
     def MaximumoneOffLumpsum(self, LumpSum):
         try:
@@ -70,7 +71,6 @@ class Wizards:
         except:
             self.Attachscreenshot("MaximumoneOffLumpsum")
 
-
     def WizardsRisk(self):
         try:
             self.driver.find_element_by_xpath("//input[@id='optimizationMinAnnualReturn']").click()
@@ -78,7 +78,6 @@ class Wizards:
             time.sleep(1)
         except:
             self.Attachscreenshot("WizardsRisk")
-
 
     Wizardresutltitle = "//span[@class='block mb-2 font-semibold']"
 
@@ -91,7 +90,6 @@ class Wizards:
         except:
             self.Attachscreenshot("RunWizards")
 
-
     @allure.severity(allure.severity_level.CRITICAL)
     def Verifyresults(self):
 
@@ -103,23 +101,14 @@ class Wizards:
             Goallabel = self.driver.find_element_by_xpath("//span[@class='ant-tag']")
             ResultBlue = self.driver.find_element_by_xpath("//span[@class='ant-tag ant-tag-blue']")
             if Goallabel.is_displayed and ResultBlue.is_displayed:
-                Wizards = self.driver.find_element_by_xpath(
-                    "//span[contains(text(),'Raise annual expenditure by')]")
-                if Wizards.is_displayed():
-                    WebDriverWait(self.driver, 60).until(
-                        (expected_conditions.visibility_of_element_located((By.XPATH, Wizards))))
-                    print("Wizards results are displaying -- >" + Wizards.text)
-                    time.sleep(1)
-                    self.driver.find_element_by_xpath("//button[normalize-space()='Graph Settings']").click()
-                    self.driver.find_element_by_xpath("//*[name()='path' and contains(@d,'M563.8 512')]").click()
-                else:
-                    self.Attachscreenshot("Verifyresults")
-                    assert False
+                WebDriverWait(self.driver, 60).until(
+                    (expected_conditions.visibility_of_element_located(
+                        (By.XPATH, "(//span[@class='ant-tag ant-tag-blue']//following::span)[1]"))))
             else:
                 self.Attachscreenshot("Verifyresults")
+                CommonFunctions.DeleteClient()
+                CashflowLogin.logoutfromClientpage()
                 assert False
-
-
 
     @allure.severity(allure.severity_level.CRITICAL)
     def ExportWizards(self):
@@ -127,13 +116,11 @@ class Wizards:
         Exportwizards = self.driver.find_element_by_xpath("//span[normalize-space()='Export']")
         if Exportwizards.is_displayed():
             Exportwizards.click()
-            assert True
+            self.driver.find_element_by_link_text("Download").click()
+
         else:
             self.Attachscreenshot("ExportWizards")
-            assert False
-
-
-
+            CommonFunctions.DeleteClient()
 
     def CapacityofLoss(self, MarketCrashPlan, CrashYear, UserDefinedMaxLoss):
         try:
@@ -151,7 +138,6 @@ class Wizards:
         except:
             self.Attachscreenshot("CapacityofLoss")
 
-
     @allure.severity(allure.severity_level.CRITICAL)
     def VerifyCapacityofLossWizard(self):
 
@@ -162,15 +148,12 @@ class Wizards:
         else:
             assert True
 
-
-
     def NavigatetoProtectionWizard(self):
         try:
             self.driver.find_element_by_xpath(
                 "//span[@class='text-sm font-normal'][normalize-space()='Protection']").click()
         except:
             self.Attachscreenshot("NavigatetoProtectionWizard")
-
 
     def ProtectionWizard(self, BenefitType, Term):
 
@@ -182,8 +165,6 @@ class Wizards:
         termyears.send_keys(Keys.DELETE)
         termyears.send_keys(Term)
 
-
-
     @allure.severity(allure.severity_level.CRITICAL)
     def VerifyProtectionWizard(self):
 
@@ -194,5 +175,3 @@ class Wizards:
         else:
             self.Attachscreenshot("VerifyProtectionWizard")
             assert False
-
-

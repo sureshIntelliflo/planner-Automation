@@ -8,5 +8,5 @@ Feature: Single Head of households login
     And User Provide the Client Name as <ClientName>
     Examples:
       | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName             |
-      | Fla_Test1 | Suresh@2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation 1HoH Client |
+      | Fla_Test1 | Suresh#2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation 1HoH Client |
 

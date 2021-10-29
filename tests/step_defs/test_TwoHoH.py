@@ -10,6 +10,7 @@ from pytest_bdd import (
     when, parsers,
 )
 
+from Pages.Common import CommonFunctions
 from Pages.Login_cashflow import CashflowLogin
 
 
@@ -43,6 +44,8 @@ def user_provide_the_client_name_as_clientname(browser, ClientName):
     """User Provide the Client Name as <ClientName>."""
     page_login = CashflowLogin(browser)
     page_login.ClientName(ClientName)
+    page_common = CommonFunctions(browser)
+    page_common.DeleteClient()
 
 
 @then('User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>')

@@ -191,7 +191,7 @@ def i_navigate_to_plan_outputs_and_select_exports(browser):
 def i_download_the_comparison_exports_with_default_selections_with_baseline_vs_scenario_scenarioname(browser, ScenarioName):
     """I download the Comparison exports with default selections with baseline vs scenario <ScenarioName>."""
     page_export = Exports(browser)
-    page_export.SelectComparisonReport(ScenarioName)
+    page_export.SelectComparisonReport()
     page_export.Exportdownload()
     page_common = CommonFunctions(browser)
     page_common.DeleteClient()
