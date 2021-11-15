@@ -1,7 +1,7 @@
-Feature: Verify the Property
+Feature: Verify the Joint Property
 
   @functional
-  Scenario Outline: Verify the add property with switches enabled and exclude property in scenario with all switches enabled
+  Scenario Outline: Verify the Joint Property with Mortgage
     Given user is on cashflow login page
     When User is on Login page and Login as <Username> <Password>
     And User successfully logged into application

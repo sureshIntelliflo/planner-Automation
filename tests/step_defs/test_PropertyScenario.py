@@ -29,7 +29,7 @@ def user_in_cashflow_home_page(browser):
 def i_add_property_from_property_page(browser):
     """I add property from property page."""
     pages_properties = Properties(browser)
-    pages_properties.i_add_property_plan_from_property_page()
+    pages_properties.NavigatetoPropertyPage()
 
 @then('I provide <PropertyDescription>')
 def i_provide_propertydescription(browser, PropertyDescription):
@@ -47,7 +47,7 @@ def i_provide_property_details_as_preexisting(browser, PreExisting):
 def i_provide_property_value_as_currentvalue(browser, CurrentValue):
     """I Provide Property Value as <CurrentValue>."""
     pages_properties = Properties(browser)
-    pages_properties.currentvalue(CurrentValue)
+    pages_properties.PropertyValue(CurrentValue)
 
 @then('I provide the base cost for CGT as <BaseCostCGT>')
 def i_provide_the_base_cost_for_cgt_as_basecostcgt(browser, BaseCostCGT):

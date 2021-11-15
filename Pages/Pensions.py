@@ -305,7 +305,7 @@ class Pensions:
                     self.driver.find_element_by_xpath("//div[contains(text(), 'Retire')]").click()
                     AddButton.click()
                 elif PeriodSetValueevent_cy == "YEAR":
-                   # self.driver.find_element_by_xpath("//input[@id='start_year']").send_keys("2058")
+                    self.driver.find_element_by_xpath("//input[@id='start_year']").send_keys("2058")
                     self.driver.find_element_by_xpath("//input[@id='stop_year']").send_keys("2100")
                     AddButton.click()
             elif FrequencyType_cy == "One Off":

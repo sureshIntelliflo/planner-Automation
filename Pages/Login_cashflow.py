@@ -114,9 +114,11 @@ class CashflowLogin:
                 self.driver.find_element_by_xpath("//button//span[text()= 'Add first head of household']").click()
                 time.sleep(1)
                 self.driver.find_element_by_id("fullName").clear()
+                time.sleep(1)
                 self.driver.find_element_by_id("fullName").send_keys(HoHName)
-
+                time.sleep(1)
                 self.driver.find_element_by_id("knownAs").clear()
+                time.sleep(1)
                 self.driver.find_element_by_id("knownAs").send_keys(HoHKnowas)
 
                 self.driver.find_element_by_xpath("(//*[@class='flex items-center'])[1]").click()
