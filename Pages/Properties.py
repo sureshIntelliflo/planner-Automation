@@ -172,9 +172,15 @@ class Properties:
             "//button[@type='button']//span[text()='Add Property']")
         addproperty.click()
         time.sleep(2)
-        propertynarrative = self.driver.find_element_by_xpath(f"//div[contains(text(),'{PropertyDescription}')]")
-        if propertynarrative.is_displayed():
-            assert propertynarrative.text == PropertyDescription
+        Propertydesc = self.driver.find_elements_by_xpath(
+            "//span[@class='block pr-2 text-gray-900 truncate font-semibold']")
+        for Property in Propertydesc:
+            assert Property.text == PropertyDescription
+
+
+       # propertynarrative = self.driver.find_element_by_xpath(f"//div[contains(text(),'{PropertyDescription}')]")
+       # if propertynarrative.is_displayed():
+         #   assert propertynarrative.text == PropertyDescription
 
 
 
@@ -222,9 +228,14 @@ class Properties:
 
 
 
-    def navigatetonarrativedetails(self):
+    def navigatetonarrativedetails(self, PropertyDescription):
 
-        self.driver.find_element_by_xpath("//div[contains(text(),'AutomatedProperty1')]").click()
+        Propertydesc = self.driver.find_elements_by_xpath("//span[@class='block pr-2 text-gray-900 truncate font-semibold']")
+        for Property in Propertydesc:
+            if Property.text == PropertyDescription:
+                 Property.click()
+
+        #self.driver.find_element_by_xpath(f"//div[contains(text(),'{PropertyDescription}')]").click()
 
 
 
@@ -242,9 +253,14 @@ class Properties:
 
         self.driver.find_element_by_xpath("//button[@type='submit']//span[contains(text(),'Save Property')]").click()
         time.sleep(1)
-        propertynarrative = self.driver.find_element_by_xpath("//div[contains(text(),'AutomatedProperty1')]")
-        if propertynarrative.is_displayed():
-            assert propertynarrative.text == PropertyDescription
+        Propertydesc = self.driver.find_elements_by_xpath(
+            "//span[@class='block pr-2 text-gray-900 truncate font-semibold']")
+        for Property in Propertydesc:
+            assert Property.text == PropertyDescription
+
+        #propertynarrative = self.driver.find_element_by_xpath(f"//div[contains(text(),'{PropertyDescription}')]")
+        #if propertynarrative.is_displayed():
+          #  assert propertynarrative.text == PropertyDescription
 
 
 

@@ -115,11 +115,11 @@ def i_create_new_scenario_scenarioname_scenariodescription(browser, ScenarioName
     page_properties = Properties(browser)
     page_properties.createscenario(ScenarioName, ScenarioDescription)
 
-@then('I navigate to the recently added Property details')
-def i_navigate_to_the_recently_added_property_details(browser):
+@then('I navigate to the recently added Property details <PropertyDescription>')
+def i_navigate_to_the_recently_added_property_details(browser, PropertyDescription):
     """I navigate to the recently added Property details."""
     page_properties = Properties(browser)
-    page_properties.navigatetonarrativedetails()
+    page_properties.navigatetonarrativedetails(PropertyDescription)
 
 @then('I exclude property with all switches ON')
 def i_exclude_property_with_all_switches_on(browser):

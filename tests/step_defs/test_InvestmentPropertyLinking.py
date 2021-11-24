@@ -75,7 +75,7 @@ def i_add_investment_to_baseline_scenario_investmentdescription(browser, Investm
 def i_navigate_to_property(browser):
     """I navigate to Property."""
     propertypage = Properties(browser)
-    propertypage.i_add_property_plan_from_property_page()
+    propertypage.navigaetoPropertypage()
 
 @then('I add property with <PropertyDescription>')
 def i_add_property_with_propertydescription(browser, PropertyDescription):
@@ -88,7 +88,7 @@ def i_add_property_with_propertydescription(browser, PropertyDescription):
 def i_provide_property_value_as_currentvalue(browser, CurrentValue):
     """I Provide Property Value as <CurrentValue>."""
     propertypage = Properties(browser)
-    propertypage.currentvalue(CurrentValue)
+    propertypage.PropertyValue(CurrentValue)
 
 @then('I enable Mortgages with <MortagageDescription>, <ReplaymentType>, <MortagageValue>, <InterestRate>, <MortgageStartEvent>, <MortgageCeaseEvent>')
 def i_enable_mortgages_with_mortagagedescription_replaymenttype_mortagagevalue_interestrate_mortgagestartevent_mortgageceaseevent(browser, MortagageDescription, ReplaymentType, MortagageValue, InterestRate, MortgageStartEvent, MortgageCeaseEvent):

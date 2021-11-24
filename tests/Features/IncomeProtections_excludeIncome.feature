@@ -23,7 +23,7 @@ Feature: Protection income linking and income excluded from scenario
     And Verify the Protections for any breakages <ProtectionDescription>
     Then I logout from application
     Examples:
-      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                    | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | ProtectionDescription | ProtectionsType  | DeathInServiceMultiplier |
-      | Fla_Test1 | Suresh#2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income Protections | Automated_income  | Salary     | Current Income      | 450000       | Automated_Protection  | Death in Service | 2                        |
+      | Username  | Password  | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                    | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | ProtectionDescription | ProtectionsType  | DeathInServiceMultiplier |
+      | Fla_Test1 | Fla_Test1 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Income Protections | Automated_income  | Salary     | Current Income      | 450000       | Automated_Protection  | Death in Service | 2                        |
 
 

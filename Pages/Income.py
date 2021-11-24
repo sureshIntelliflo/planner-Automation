@@ -99,6 +99,7 @@ class Income:
                 assert textalert.text == "This income is excluded from the current scenario"
                 self.driver.find_element_by_xpath(
                     "//button[@type='button']//span[contains(text(),'Save Income')]").click()
+                time.sleep(2)
                 if self.driver.find_element_by_xpath(
                         f"//span[@class='ant-tag ant-tag-red']//preceding::span[text()= '{IncomeDescription}']").is_displayed():
                     print("Income is excluded from scenario")

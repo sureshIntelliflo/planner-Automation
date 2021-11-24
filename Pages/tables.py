@@ -21,22 +21,22 @@ class Tables:
 
         # self.driver.find_element_by_xpath("//span[@class='text-sm font-semibold'][normalize-space()='Plan Outputs']").click()
 
-        WebDriverWait(self.driver, 20).until(
+        WebDriverWait(self.driver, 5).until(
             expected_conditions.element_to_be_clickable(
                 (By.XPATH,
                  "//a[@class='NavigationSidebarItem_navlink__2ChYw NavigationSidebarItem_header__3cFRA']//span[text()='Plan Inputs']"))).click()
 
-        WebDriverWait(self.driver, 10).until(
+        WebDriverWait(self.driver, 5).until(
             expected_conditions.element_to_be_clickable(
                 (By.XPATH, "//span[@class='block leading-tight text-xs']"))).click()
 
-        WebDriverWait(self.driver, 10).until(
+        WebDriverWait(self.driver, 5).until(
             expected_conditions.element_to_be_clickable(
                 (By.XPATH, "//span[normalize-space()='Liquid Assets']"))).click()
 
         self.driver.find_element_by_xpath("//span[normalize-space()='Events']").click()
 
-        WebDriverWait(self.driver, 10).until(
+        WebDriverWait(self.driver, 5).until(
             expected_conditions.element_to_be_clickable(
                 (By.XPATH, "//button[@title='Next graph']"))).click()
 

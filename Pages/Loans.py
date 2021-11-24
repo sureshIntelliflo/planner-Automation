@@ -2,6 +2,7 @@ import time
 
 import allure
 from allure_commons.types import AttachmentType
+from selenium.webdriver.common.keys import Keys
 
 
 class Loans:
@@ -40,7 +41,16 @@ class Loans:
             self.driver.find_element_by_xpath(f"//div[contains(text(),'{repaymentType}')]").click()
             self.driver.find_element_by_xpath("//div[@name='stopEvent,id']//div[@class='ant-select-selector']").click()
             time.sleep(1)
-            self.driver.find_element_by_xpath("//div[contains(text(),'Pre-Existing')]").click()
+            #self.driver.find_element_by_xpath("//div[contains(text(),'Pre-Existing')]").click()
+            self.driver.find_element_by_xpath("//button//span[text()='Add new event']").click()
+            self.driver.find_element_by_xpath("//input[@id='eventName']").send_keys("Loan stop event")
+            eventyear = self.driver.find_element_by_xpath("//input[@id='year']")
+            eventyear.send_keys(Keys.CONTROL + "a")
+            eventyear.send_keys(Keys.DELETE)
+            eventyear.send_keys("2035")
+            self.driver.find_element_by_xpath("//button//span[text()='Add Event']").click()
+            time.sleep(1)
+
         except:
             self.Attachscreenshot("LoanDetails")
 

@@ -138,11 +138,11 @@ def i_navigate_to_property_page(browser):
     page_properties.navigaetoPropertypage()
 
 
-@then('I navigate to the recently added Property details')
-def i_navigate_to_the_recently_added_property_details(browser):
+@then('I navigate to the recently added Property details <PropertyDescription>')
+def i_navigate_to_the_recently_added_property_details(browser, PropertyDescription):
     """I navigate to the recently added Property details."""
     page_properties = Properties(browser)
-    page_properties.navigatetonarrativedetails()
+    page_properties.navigatetonarrativedetails(PropertyDescription)
 
 
 @then('I provide <PropertyDescription>')

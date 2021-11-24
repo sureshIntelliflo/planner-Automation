@@ -12,7 +12,8 @@ from Pages.Login_cashflow import CashflowLogin
 
 CASHFLOW_SYS_IE_02 = "https://planning.sys-ie-02.intelliflo.systems/"
 CASHFLOW_SYS_IE_06 = "https://planning.sys-ie-06.intelliflo.systems/"
-CASHFLOW_PROD = "https://planner.gb.intelliflo.net/login"
+CASHFLOW_PROD = "https://planning.gb.intelliflo.net/"
+
 
 # Hooks
 def pytest_bdd_step_error(step):
@@ -84,8 +85,8 @@ def take_screenshot(browser, test_name):
     screenshots_dir = "ScreenshotsOnFailure/"
     screenshot_file_path = "{}/{}.png".format(screenshots_dir, test_name)
     browser.save_screenshot(
-    screenshot_file_path
-)
+        screenshot_file_path
+    )
 
 
 @given(parsers.cfparse('user logged into application with email as "{Email_Address}" and password as "{Password}"'))
@@ -149,8 +150,8 @@ def Add_client(browser, name, knownAS, DoB, TaxResidency, Gender, ClientName):
     browser.find_element_by_xpath("//button/span[text()= 'Add Person']").click()
 
     browser.find_element_by_id("caseName").send_keys(ClientName)
-
-    browser.find_element_by_xpath("//button/span[text()= 'Create Client']").click()
+    browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+    browser.find_element_by_xpath("//button[@type='submit']//span[contains(text(),'Create Client')]").click()
     time.sleep(3)
     browser.find_element_by_xpath("//button//span[text()='Client Settings']").click()
     clientelement = browser.find_element_by_id("caseName")
@@ -165,11 +166,13 @@ def user_is_on_cashflow_login_page(browser):
     browser.get(CASHFLOW_SYS_IE_02)
     browser.implicitly_wait(30)
 
+
 @when('User is on Login page and Login as <Username> <Password>')
 def user_is_on_login_page_and_login_as_username_password(browser, Username, Password):
     """User is on Login page and Login as <Username> <Password>."""
     page_login = CashflowLogin(browser)
     page_login.CallUserLogin(Username, Password)
+
 
 @when('User successfully logged into application')
 def user_successfully_logged_into_application(browser):
@@ -177,8 +180,11 @@ def user_successfully_logged_into_application(browser):
     page_login = CashflowLogin(browser)
     page_login.VerifyUserLogingsuccessful()
 
+
 @then('User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>')
-def user_create_client_with_single_headofhousehold_as_hohname_hohknowas_dob_taxresidency_gender(browser, HoHName, HoHKnowas, DoB, TaxResidency, Gender):
+def user_create_client_with_single_headofhousehold_as_hohname_hohknowas_dob_taxresidency_gender(browser, HoHName,
+                                                                                                HoHKnowas, DoB,
+                                                                                                TaxResidency, Gender):
     """User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>."""
     page_login = CashflowLogin(browser)
     page_login.AddSingleHOHclient(HoHName, HoHKnowas, DoB, TaxResidency, Gender)
@@ -190,8 +196,10 @@ def user_provide_the_client_name_as_clientname(browser, ClientName):
     page_login = CashflowLogin(browser)
     page_login.ClientName(ClientName)
 
+
 @then('User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>')
-def user_add_second_hoh_details_as_hohname_2_hohknowas_2_dob_2_relation_secondgender(browser, HohName_2, HoHKnowas_2, DoB_2, SecondGender, relation):
+def user_add_second_hoh_details_as_hohname_2_hohknowas_2_dob_2_relation_secondgender(browser, HohName_2, HoHKnowas_2,
+                                                                                     DoB_2, SecondGender, relation):
     """User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>."""
     page_login = CashflowLogin(browser)
     page_login.AddSecondHoH(HohName_2, HoHKnowas_2, DoB_2, SecondGender, relation)

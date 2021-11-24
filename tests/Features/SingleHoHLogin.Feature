@@ -7,6 +7,6 @@ Feature: Single Head of households login
     Then User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>
     And User Provide the Client Name as <ClientName>
     Examples:
-      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName             |
-      | Fla_Test1 | Suresh#2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation 1HoH Client |
+      | Username  | Password  | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName             |
+      | Fla_Test1 | Fla_Test1 | Automation | QA        | 01/01/1990 | England      | Male   | Automation 1HoH Client |
 

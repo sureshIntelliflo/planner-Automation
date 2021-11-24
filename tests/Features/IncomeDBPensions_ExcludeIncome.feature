@@ -1,7 +1,7 @@
-Feature: Income and DB pensions
+Feature: DB Pension with income and exclude income
 
   @functional
-  Scenario Outline: Verify the income and DB Pensions Linking
+  Scenario Outline: Verify the income and DB Pensions and Exclude the income
     Given user is on cashflow login page
     When User is on Login page and Login as <Username> <Password>
     And User successfully logged into application
@@ -24,7 +24,8 @@ Feature: Income and DB pensions
     Then I add contributions with income linking <IncomeDescription> with gross contributions <GrossContributions> pension basis <PensionBasis>
     Then I add death options with spouse income after death and death lump sum <LumpSumOptions> <ServiceMultiplier>
     Then I enable adjust lifetime allowance
-    And I add Pension and verify added pensions <PensionDescription>z
+    And I add Pension and verify added pensions <PensionDescription>
+    Then I exclude Income form Baseline <IncomeDescription>
     And I logout from application
     Examples:
       | Username  | Password  | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName                   | IncomeDescription | IncomeType | CurrentFutureIncome | IncomeAmount | PensionDescription  | pensionstype | Benefitstype | BenefitIncome | LumpSum | GrossContributions | PensionBasis     | LumpSumOptions | ServiceMultiplier |

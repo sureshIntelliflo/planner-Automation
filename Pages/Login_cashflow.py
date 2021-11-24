@@ -139,7 +139,8 @@ class CashflowLogin:
                     else:
                         print("no Tax residency found")
                 self.driver.find_element_by_id("gender").click()
-                Genderlist = self.driver.find_elements_by_xpath("//*[@id='gender_list']/following::div[@aria-selected='false']")
+                Genderlist = self.driver.find_elements_by_xpath(
+                    "//*[@id='gender_list']/following::div[@aria-selected='false']")
 
                 for list in Genderlist:
                     element3 = list.get_attribute("title")
@@ -155,8 +156,12 @@ class CashflowLogin:
             assert False
 
     def ClientName(self, ClientName):
+        time.sleep(1)
         self.driver.find_element_by_id("caseName").send_keys(ClientName)
-        self.driver.find_element_by_xpath("//button/span[text()= 'Create Client']").click()
+        self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+        WebDriverWait(self.driver, 2).until(expected_conditions.element_to_be_clickable(
+            (By.XPATH, "//button[@type='submit']//span[contains(text(),'Create Client')]"))).click()
+       # self.driver.find_element_by_xpath("//button[@type='submit']//span[contains(text(),'Create Client')]").click()
         time.sleep(3)
         self.driver.find_element_by_xpath("//button//span[text()='Client Settings']").click()
         clientelement = self.driver.find_element_by_id("caseName")
@@ -164,7 +169,6 @@ class CashflowLogin:
         close = "//button[@aria-label='Close']"
         self.driver.find_element_by_xpath(close).click()
         WebDriverWait(self.driver, 2).until(expected_conditions.invisibility_of_element_located((By.XPATH, close)))
-
 
     def AddSecondHoH(self, HohName_2, HoHKnowas_2, DoB_2, SecondGender, relation):
         self.driver.find_element_by_xpath("//span[text()= 'Add partner/cohabitant']").click()
@@ -195,7 +199,6 @@ class CashflowLogin:
         #         break
         self.driver.find_element_by_xpath(f"//div[contains(text(),'{SecondGender}')]").click()
 
-
         self.driver.find_element_by_id("gender").click()
         # Genderlist = self.driver.find_elements_by_xpath("//*[@id='gender_list']/following::div[@aria-selected='false']")
         # time.sleep(1)
@@ -207,5 +210,3 @@ class CashflowLogin:
         time.sleep(1)
         self.driver.find_element_by_xpath(f"//div[contains(text(),'{relation}')]").click()
         self.driver.find_element_by_xpath("//button/span[text()= 'Add Person']").click()
-
-

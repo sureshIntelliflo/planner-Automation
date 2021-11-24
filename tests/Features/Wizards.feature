@@ -32,13 +32,13 @@ Feature: Wizards - Optimisation Wizard
     Then I save expense and Verify the expense <ExpensesDescription>
     And I navigate to Optimisation Wizard page
     Then I Define Financial Goal with financial goal <FinancialGoal> <Goaltype> <TargetYear>
-    And I define Variables like select Pre Retirement Post Retirement For the duration of the plan
-    Then I Select maximum one off lump sum <LumpSumYear>
+    #And I define Variables like select Pre Retirement Post Retirement For the duration of the plan
+    #Then I Select maximum one off lump sum <LumpSumYear>
     Then I select How much risk do I need to take and select plan includes cash pensions DGT Loan trusts
     Then I run wizards
     And I verify the wizards results
     Then I export the wizards results
     Then I logout from application
     Examples:
-      | Username  | Password    | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName         | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk | GrossReturn | Interest | Dividends | Growth | BusinessDescription | BusinessType | BusinessValue | AnnualIncreasepercentage | BaseCostforCGT | ValuationBasis  | SaleEvent | DividendFrequency | DividendAmount | IncreasePerstart | PeriodSetby | LoanDescription | loantype     | OutstandingBalance | InterestRate | repaymentType | ExpenseCategory | ExpensesDescription | EssentialAmount | DiscretionaryAmount | FinancialGoal | Goaltype      | TargetYear | LumpSumYear |
-      | Fla_Test1 | Suresh#2021 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Wizards | Automated_investment  | ISA Stocks & Shares | Pre-Existing | 300000       | High           | 11          | 30       | 40        | 30     | Automated_Business  | Pre-Existing | 500000        | 12                       | 6000           | TRADING_COMPANY | Forever   | One Off           | 5000           | 12               | Events      | Automated_Loan  | Pre-Existing | 3000000            | 14.9         | Repayment     | Long Term Care  | Automated_Expense   | 50000           | 4212                | 30000000      | Specific Year | 2030       | 2038        |
+      | Username  | Password  | HoHName    | HoHKnowas | DoB        | TaxResidency | Gender | ClientName         | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk | GrossReturn | Interest | Dividends | Growth | BusinessDescription | BusinessType | BusinessValue | AnnualIncreasepercentage | BaseCostforCGT | ValuationBasis  | SaleEvent | DividendFrequency | DividendAmount | IncreasePerstart | PeriodSetby | LoanDescription | loantype     | OutstandingBalance | InterestRate | repaymentType | ExpenseCategory | ExpensesDescription | EssentialAmount | DiscretionaryAmount | FinancialGoal | Goaltype      | TargetYear |
+      | Fla_Test1 | Fla_Test1 | Automation | QA        | 01/01/1990 | England      | Male   | Automation Wizards | Automated_investment  | ISA Stocks & Shares | Pre-Existing | 300000       | High           | 11          | 30       | 40        | 30     | Automated_Business  | Pre-Existing | 500000        | 12                       | 6000           | TRADING_COMPANY | Forever   | One Off           | 5000           | 12               | Events      | Automated_Loan  | Pre-Existing | 3000000            | 14.9         | Repayment     | Long Term Care  | Automated_Expense   | 50000           | 4212                | 30000000      | Specific Year | 2030       |

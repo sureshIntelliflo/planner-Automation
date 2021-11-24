@@ -54,5 +54,10 @@ class CommonFunctions:
             self.Attachscreenshot("clientSerach")
 
 
+    def AddNotes(self, AddNote):
+        self.driver.find_element_by_xpath("//span[normalize-space()='Add note']").click()
+        self.driver.find_element_by_xpath("//textarea[@id='notes']").send_keys(AddNote)
+
+
 
 
