@@ -4,41 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Joint Property Scenario">
-      <change afterPath="$PROJECT_DIR$/Pages/Assumptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions_ExcludeIncome.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_IncomeDBPension_excludeIncome.py" afterDir="false" />
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="DB Pension and Income, Exclude Income">
+      <change afterPath="$PROJECT_DIR$/tests/Features/AssumptionsUpdate.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_AssumptionsUpdate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Common.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Income.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Income.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Loans.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Loans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Login_cashflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Login_cashflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Assumptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Assumptions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/CapacityofLoss_Wizard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/CapacityofLoss_Wizard.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/DCAnnuityinPayment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/DCAnnuityinPayment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Exports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Exports.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/ExportsComparing.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/ExportsComparing.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDBPensions.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDCPension.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeDCPension_excludeIncome.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeDCPension_excludeIncome.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeProtectionsLInking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeProtectionsLInking.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/IncomeProtections_excludeIncome.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/IncomeProtections_excludeIncome.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentLInkingInvestment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentLInkingInvestment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/InvestmentPropertyLinking.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Investments.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Investments.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Property.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Property.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Property_2HoH.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Property_2HoH.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Protection_Wizard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Protection_Wizard.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/SingleHoHLogin.Feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/SingleHoHLogin.Feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/TwoHoHLogin.Feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/TwoHoHLogin.Feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Wizards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Wizards.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_InvestmentPropertyLinking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_InvestmentPropertyLinking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_PropertyScenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_PropertyScenario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_Property_2HoH.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_Property_2HoH.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636984228837</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="DB Pension and Income, Exclude Income">
+      <created>1637747386390</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1637747386390</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -327,7 +305,8 @@
     <MESSAGE value="Refactor 4" />
     <MESSAGE value="Refactor 5" />
     <MESSAGE value="Joint Property Scenario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Joint Property Scenario" />
+    <MESSAGE value="DB Pension and Income, Exclude Income" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB Pension and Income, Exclude Income" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
