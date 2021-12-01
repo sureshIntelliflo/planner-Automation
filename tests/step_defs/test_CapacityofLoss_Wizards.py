@@ -281,6 +281,7 @@ def i_run_the_capacity_of_loss_report_with__financialgoal_goaltype_targetyear_ma
     """I run the Capacity of Loss Report with  <FinancialGoal> <Goaltype> <TargetYear> <MarketCrashPlan> <CrashYear> <UserDefinedMaxLoss>."""
     page_wizards = Wizards(browser)
     page_wizards.NavigatetoWizards()
+    page_wizards.NavigatetoCapacityofLoss()
     page_wizards.FinancialGoal(FinancialGoal, Goaltype, TargetYear)
     page_wizards.CapacityofLoss(MarketCrashPlan, CrashYear, UserDefinedMaxLoss)
     page_wizards.RunWizards()

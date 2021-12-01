@@ -4,12 +4,16 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="DB Pension and Income, Exclude Income">
-      <change afterPath="$PROJECT_DIR$/tests/Features/AssumptionsUpdate.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_AssumptionsUpdate.py" afterDir="false" />
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="Assumptions Scenario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Assumptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Assumptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Common.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Wizards.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Wizards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/CapacityofLoss_Wizard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/CapacityofLoss_Wizard.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/ClientSearch_Rename.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Features/Wizards.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Wizards.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_CapacityofLoss_Wizards.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_CapacityofLoss_Wizards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_ClientSearch_Rename.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637747386390</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Assumptions Scenario">
+      <created>1637853445642</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1637853445642</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,7 +317,8 @@
     <MESSAGE value="Refactor 5" />
     <MESSAGE value="Joint Property Scenario" />
     <MESSAGE value="DB Pension and Income, Exclude Income" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB Pension and Income, Exclude Income" />
+    <MESSAGE value="Assumptions Scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assumptions Scenario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

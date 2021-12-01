@@ -58,6 +58,11 @@ class CommonFunctions:
         self.driver.find_element_by_xpath("//span[normalize-space()='Add note']").click()
         self.driver.find_element_by_xpath("//textarea[@id='notes']").send_keys(AddNote)
 
+    def NavigatetoClientsPage(self):
+        WebDriverWait(self.driver, 5).until(
+            expected_conditions.visibility_of_element_located(
+                (By.XPATH, "//img[@alt='Application Menu']"))).click()
 
-
-
+        WebDriverWait(self.driver, 5).until(
+            expected_conditions.visibility_of_element_located(
+                (By.XPATH, "//a[normalize-space()='Clients']"))).click()

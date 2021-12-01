@@ -38,15 +38,22 @@ class Wizards:
 
         time.sleep(1)
 
+    def NavigatetoCapacityofLoss(self):
+        time.sleep(2)
+        self.driver.find_element_by_xpath(
+            "//span[@class='text-sm font-normal'][normalize-space()='Capacity For Loss']").click()
+
     def FinancialGoal(self, FinancialGoal, Goaltype, TargetYear):
         try:
+            time.sleep(1)
             self.driver.find_element_by_xpath("//input[@id='financialGoal_amount']").send_keys(FinancialGoal)
             self.driver.find_element_by_xpath(f"//span[normalize-space()='{Goaltype}']").click()
             time.sleep(1)
-            goalYear = self.driver.find_element_by_xpath("//input[@id='financialGoalYear']")
-            goalYear.send_keys(Keys.CONTROL + "a")
-            goalYear.send_keys(Keys.DELETE)
-            goalYear.send_keys(TargetYear)
+            if Goaltype == "Specific Year":
+                goalYear = self.driver.find_element_by_xpath("//input[@id='financialGoalYear']")
+                goalYear.send_keys(Keys.CONTROL + "a")
+                goalYear.send_keys(Keys.DELETE)
+                goalYear.send_keys(TargetYear)
             time.sleep(1)
         except:
             self.Attachscreenshot("FinancialGoal")
@@ -124,8 +131,8 @@ class Wizards:
 
     def CapacityofLoss(self, MarketCrashPlan, CrashYear, UserDefinedMaxLoss):
         try:
-            self.driver.find_element_by_xpath(
-                "//span[@class='text-sm font-normal'][normalize-space()='Capacity For Loss']").click()
+
+            time.sleep(1)
             self.driver.find_element_by_xpath(
                 f"//div[@id='capacityForLossPeriod']//span[contains(text(),'{MarketCrashPlan}')]").click()
             Crash = self.driver.find_element_by_xpath("//input[@id='capacityForLossYear']")
@@ -141,12 +148,17 @@ class Wizards:
     @allure.severity(allure.severity_level.CRITICAL)
     def VerifyCapacityofLossWizard(self):
 
-        Result = self.driver.find_element_by_xpath("//span[@class='text-red-900']")
+        Result = self.driver.find_element_by_xpath("//span[@class='ant-tag ant-tag-blue']")
         if Result.is_displayed():
+            statement = self.driver.find_element_by_xpath("//span[contains(text(),'The plan could sustain a loss of')]")
+            if statement.is_displayed():
+                print(statement.text)
+            else:
+                self.Attachscreenshot("VerifyCapacityofLossWizard")
+                assert False
+        else:
             self.Attachscreenshot("VerifyCapacityofLossWizard")
             assert False
-        else:
-            assert True
 
     def NavigatetoProtectionWizard(self):
         try:
