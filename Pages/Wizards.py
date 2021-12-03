@@ -123,6 +123,7 @@ class Wizards:
         Exportwizards = self.driver.find_element_by_xpath("//span[normalize-space()='Export']")
         if Exportwizards.is_displayed():
             Exportwizards.click()
+            time.sleep(1)
             self.driver.find_element_by_link_text("Download").click()
 
         else:
