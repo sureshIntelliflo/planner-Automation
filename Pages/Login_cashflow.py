@@ -105,7 +105,10 @@ class CashflowLogin:
             assert False
 
     def AddSingleHOHclient(self, HoHName, HoHKnowas, DoB, TaxResidency, Gender):
-        element = self.driver.find_element_by_xpath("//button[@title = 'Create a new client']")
+        element = WebDriverWait(self.driver, 5).until(
+            expected_conditions.visibility_of_element_located(
+                (By.XPATH, "//button[@title = 'Create a new client']")))
+
         if element.is_enabled():
             element.click()
             createclient = self.driver.find_element_by_xpath("//form/child::span[text()='Create Client']")
@@ -135,6 +138,7 @@ class CashflowLogin:
                 for element in elements:
                     if TaxResidency == element.text:
                         element.click()
+                        time.sleep(1)
                         break
                     else:
                         print("no Tax residency found")
@@ -146,6 +150,7 @@ class CashflowLogin:
                     element3 = list.get_attribute("title")
                     if element3 == Gender:
                         list.click()
+                        time.sleep(1)
                         break
                 self.driver.find_element_by_xpath("//button/span[text()= 'Add Person']").click()
             else:
@@ -161,7 +166,7 @@ class CashflowLogin:
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         WebDriverWait(self.driver, 2).until(expected_conditions.element_to_be_clickable(
             (By.XPATH, "//button[@type='submit']//span[contains(text(),'Create Client')]"))).click()
-       # self.driver.find_element_by_xpath("//button[@type='submit']//span[contains(text(),'Create Client')]").click()
+        # self.driver.find_element_by_xpath("//button[@type='submit']//span[contains(text(),'Create Client')]").click()
         time.sleep(3)
         self.driver.find_element_by_xpath("//button//span[text()='Client Settings']").click()
         clientelement = self.driver.find_element_by_id("caseName")
@@ -187,26 +192,15 @@ class CashflowLogin:
             "//*[@class='rc-virtual-list-holder-inner']/child::div//div[contains(text(),'Blue')]").click()
 
         self.driver.find_element_by_id("relationship").click()
-        time.sleep(1)
-        # Relationlist = self.driver.find_elements_by_xpath(
-        #     "//*[@id='relationship_list']/following::div[@aria-selected='false']")
-        # time.sleep(1)
-        # for list in Relationlist:
-        #     element3 = list.get_attribute("title")
-        #     print(element3)
-        #     if element3 == relation:
-        #         list.click()
-        #         break
-        self.driver.find_element_by_xpath(f"//div[contains(text(),'{SecondGender}')]").click()
+
+        WebDriverWait(self.driver, 5).until(
+            expected_conditions.visibility_of_element_located(
+                (By.XPATH, f"//div[contains(text(),'{relation}')]"))).click()
 
         self.driver.find_element_by_id("gender").click()
-        # Genderlist = self.driver.find_elements_by_xpath("//*[@id='gender_list']/following::div[@aria-selected='false']")
-        # time.sleep(1)
-        # for list in Genderlist:
-        #     element3 = list.get_attribute("title")
-        #     if element3 == SecondGender:
-        #         list.click()
-        #         break
-        time.sleep(1)
-        self.driver.find_element_by_xpath(f"//div[contains(text(),'{relation}')]").click()
+
+        WebDriverWait(self.driver, 5).until(
+            expected_conditions.visibility_of_element_located(
+                (By.XPATH, f"//div[contains(text(),'{SecondGender}')]"))).click()
+
         self.driver.find_element_by_xpath("//button/span[text()= 'Add Person']").click()

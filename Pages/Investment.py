@@ -97,6 +97,17 @@ class investments:
         except:
             self.Attachscreenshot("returns")
 
+    def GLDReturns(self, AttitudetoRisk):
+        try:
+            riskdropdown = self.driver.find_element_by_xpath("//input[@id='riskProfileId']")
+            riskdropdown.click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                f"//div[@class='ant-select-item-option-content'][normalize-space()='{AttitudetoRisk}']").click()
+
+        except:
+            self.Attachscreenshot("GLDReturns")
+
 
     def Investmentadd(self, InvestmentDescription):
         try:
