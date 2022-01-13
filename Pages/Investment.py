@@ -331,3 +331,18 @@ class investments:
         except:
             self.Attachscreenshot("linkContribution")
 
+    def Navigate_Investment_details(self, InvestmentDescription):
+        self.driver.refresh()
+        time.sleep(1)
+        investmentnarrative = self.driver.find_element_by_xpath(
+            f"//span[normalize-space()='{InvestmentDescription}']")
+        if investmentnarrative.is_displayed():
+            investmentnarrative.click()
+            time.sleep(1)
+        else:
+            assert False
+
+    def Verify_RiskProfile_Investment(self, ParentRiskprofile):
+        riskprofile = self.driver.find_element_by_xpath(
+            f"//input[@id='riskProfileId']/following::span[@title='{ParentRiskprofile}']")
+        assert riskprofile.text == ParentRiskprofile

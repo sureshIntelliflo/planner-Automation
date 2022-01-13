@@ -17,7 +17,12 @@ Feature: Add new risk profile and link to plan
     And I add investment returns as <AttitudetoRisk>
     Then I add Investment to Baseline scenario <InvestmentDescription>
     Then I verify the investment in scenario <InvestmentDescription>
+    And User Navigate to FLA page and Disable the child override FLA and use parent risk profiles assumptions
+    Then User navigate to client list then select recent client and unlock the client with Parent Risk profile <ParentRiskprofile> <ClientName>
+    #Then I re-verify the investment plan is using parent Risk profile returns selected or not <InvestmentDescription> <ParentRiskprofile>
     And I logout from application
+
     Examples:
-      | Username  | Password  | Name                   | GrossReturn | Interest | Dividends | Growth | Fund_Platform | FinancialPlanning | HoHName        | HoHKnowas | DoB        | TaxResidency | Gender | HohName_2      | HoHKnowas_2 | DoB_2      | relation | SecondGender | ClientName            | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk         |
-      | Fla_Test1 | Fla_Test1 | Automation_RiskProfile | 5.6         | 29.5     | 30.2      | 40.3   | 2.2           | 1.7               | AutomationHOH1 | QA        | 01/01/1990 | England      | Male   | AutomationHOH1 | QA2         | 01/01/1991 | Married  | Female       | Automation GLD Update | Automated_Investment  | ISA Stocks & Shares | Pre-Existing | 300000       | Automation_RiskProfile |
+      | Username  | Password  | Name                   | GrossReturn | Interest | Dividends | Growth | Fund_Platform | FinancialPlanning | HoHName        | HoHKnowas | DoB        | TaxResidency | Gender | HohName_2      | HoHKnowas_2 | DoB_2      | relation | SecondGender | ClientName               | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk         | ParentRiskprofile |
+      | Fla_Test1 | Fla_Test1 | Automation_RiskProfile | 5.6         | 29.5     | 30.2      | 40.3   | 2.2           | 1.7               | AutomationHOH1 | QA        | 01/01/1990 | England      | Male   | AutomationHOH1 | QA2         | 01/01/1991 | Married  | Female       | Automation GLD Scenario9 | Automated_Investment  | ISA Stocks & Shares | Pre-Existing | 300000       | Automation_RiskProfile | High              |
+

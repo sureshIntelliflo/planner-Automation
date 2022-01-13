@@ -161,5 +161,5 @@ def i_verify_the_investment_in_scenario(browser, InvestmentDescription):
 @then('I logout from application')
 def i_logout_from_application(browser):
     """I logout from application."""
-    logout =  CashflowLogin(browser)
+    logout = CashflowLogin(browser)
     logout.logoutfromClientpage()

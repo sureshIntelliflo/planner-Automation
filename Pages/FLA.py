@@ -21,6 +21,7 @@ class FLA:
 
         if status == "false":
             GLDSwitch.click()
+            time.sleep(1)
             self.driver.find_element_by_xpath(
                 "//button[@type='submit']//span[text()='Override Assumptions']").click()
 
@@ -30,18 +31,19 @@ class FLA:
         elif status == "true":
             print("GLD is enabled")
 
+    def DeleteRiskprofile_ifdisplayed(self, Name):
+
+        try:
+            #verify_riskprofile = WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.XPATH, f"//td[normalize-space()='{Name}']")))
+
+            self.driver.find_element_by_xpath(
+                f"//td[normalize-space()='{Name}']//following-sibling::td//button[@title='Delete']").click()
+            self.driver.find_element_by_xpath("//span[normalize-space()='Delete Risk Profile']").click()
+        except:
+            print("no Risk profile to delete with matching")
+
     def AddRiskProfile(self, Name, GrossReturn, Interest, Dividends, Growth, Fund_Platform, FinancialPlanning):
 
-        verify_riskprofile = WebDriverWait(self.driver, 5).until(
-            expected_conditions.visibility_of_element_located(
-                (By.XPATH, f"//td[normalize-space()='{Name}']")))
-
-        if verify_riskprofile.text == Name:
-            self.driver.find_element_by_xpath(
-                "//td[normalize-space()='Automation_RiskProfile']//following-sibling::td//button[@title='Delete']").click()
-            WebDriverWait(self.driver, 5).until(
-                expected_conditions.visibility_of_element_located(
-                    (By.XPATH, "//span[normalize-space()='Delete Risk Profile']"))).click()
 
         time.sleep(3)
         self.driver.find_element_by_xpath("//div[@class='flex items-center']//*[name()='svg']").click()
@@ -72,6 +74,7 @@ class FLA:
             "//button[@type='submit']//span[normalize-space()='Add Risk Profile']").click()
 
         time.sleep(5)
+        verify_riskprofile = self.driver.find_element_by_xpath(f"//td[normalize-space()='{Name}']")
         assert verify_riskprofile.text == Name
 
     def navigatetoClientpage(self):
@@ -79,3 +82,37 @@ class FLA:
             expected_conditions.element_to_be_clickable(
                 (By.XPATH, "//a[normalize-space()='Clients']"))).click()
 
+    def NavigatetoFLApage_disableGLD(self):
+        WebDriverWait(self.driver, 1).until(
+            expected_conditions.element_to_be_clickable(
+                (By.XPATH, "//img[@alt='Application Menu']"))).click()
+        WebDriverWait(self.driver, 1).until(
+            expected_conditions.element_to_be_clickable(
+                (By.XPATH, "//a[normalize-space()='Firm Level Assumptions']"))).click()
+
+        GLDSwitch = self.driver.find_element_by_xpath("//button[@role='switch']")
+        status = GLDSwitch.get_attribute("aria-checked")
+
+        if status == "true":
+            GLDSwitch.click()
+            WebDriverWait(self.driver, 5).until(
+                expected_conditions.element_to_be_clickable(
+                    (By.XPATH, "//span[normalize-space()='Disable Assumptions']"))).click()
+
+            WebDriverWait(self.driver, 5).until(
+                expected_conditions.element_to_be_clickable(
+                    (By.XPATH, "//span[normalize-space()='Confirm']"))).click()
+
+    def UnlockPlan(self, ParentRiskprofile):
+        elements = self.driver.find_elements_by_xpath("//div[@class='ant-select-selector']")
+        value = 1
+        for element in elements:
+            time.sleep(1)
+            element.click()
+            WebDriverWait(self.driver, 1).until(
+                expected_conditions.visibility_of_element_located(
+                    (By.XPATH, f"(//input[@type='search']//following::div[text()='{ParentRiskprofile}'])[{value}]"))).click()
+            value = value + 1
+            continue
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//span[normalize-space()='Unlock Plan']").click()
