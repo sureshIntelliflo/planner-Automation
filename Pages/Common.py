@@ -19,15 +19,9 @@ class CommonFunctions:
     def DeleteClient(self):
         self.driver.refresh()
         time.sleep(1)
-       # self.driver.find_element_by_xpath("//span[normalize-space()='Plan Inputs']").click()
+        self.driver.find_element_by_xpath("//span[normalize-space()='Plan Inputs']").click()
 
-        try:
-            WebDriverWait(self.driver, 5).until(
-                expected_conditions.visibility_of_element_located(
-                    (By.XPATH,
-                     "//div[@class='flex NavigationSidebar_toggle__2JXSx items-center justify-center min-w-full h-10']"))).click()
-        except:
-            print("do nothing")
+
 
         time.sleep(2)
         self.driver.find_element_by_xpath("//span[@class='text-sm font-semibold'][normalize-space()='Summary']").click()
