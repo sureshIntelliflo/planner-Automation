@@ -14,7 +14,10 @@ class FLA:
         WebDriverWait(self.driver, 5).until(
             expected_conditions.visibility_of_element_located(
                 (By.XPATH, "//a[text() ='Firm Level Assumptions']"))).click()
+
+    def GldAction(self):
         time.sleep(2)
+
         GLDSwitch = self.driver.find_element_by_xpath("//button[@role='switch']")
 
         status = GLDSwitch.get_attribute("aria-checked")
@@ -31,18 +34,19 @@ class FLA:
         elif status == "true":
             print("GLD is enabled")
 
-    def DeleteRiskprofile_ifdisplayed(self, Name):
+    def DeleteRiskprofile_ifdisplayed(self, RiskProfileName):
 
         try:
             #verify_riskprofile = WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.XPATH, f"//td[normalize-space()='{Name}']")))
-
+            time.sleep(1)
             self.driver.find_element_by_xpath(
-                f"//td[normalize-space()='{Name}']//following-sibling::td//button[@title='Delete']").click()
+                f"//td[normalize-space()='{RiskProfileName}']//following-sibling::td//button[@title='Delete']").click()
+            time.sleep(1)
             self.driver.find_element_by_xpath("//span[normalize-space()='Delete Risk Profile']").click()
         except:
             print("no Risk profile to delete with matching")
 
-    def AddRiskProfile(self, Name, GrossReturn, Interest, Dividends, Growth, Fund_Platform, FinancialPlanning):
+    def AddRiskProfile(self, RiskProfileName, GrossReturn, Interest, Dividends, Growth, Fund_Platform, FinancialPlanning):
 
 
         time.sleep(3)
@@ -50,7 +54,7 @@ class FLA:
 
         WebDriverWait(self.driver, 5).until(
             expected_conditions.visibility_of_element_located(
-                (By.XPATH, "//input[@id='riskProfileName']"))).send_keys(Name)
+                (By.XPATH, "//input[@id='riskProfileName']"))).send_keys(RiskProfileName)
 
         WebDriverWait(self.driver, 5).until(
             expected_conditions.visibility_of_element_located(
@@ -74,13 +78,12 @@ class FLA:
             "//button[@type='submit']//span[normalize-space()='Add Risk Profile']").click()
 
         time.sleep(5)
-        verify_riskprofile = self.driver.find_element_by_xpath(f"//td[normalize-space()='{Name}']")
-        assert verify_riskprofile.text == Name
+        verify_riskprofile = self.driver.find_element_by_xpath(f"//td[normalize-space()='{RiskProfileName}']")
+        assert verify_riskprofile.text == RiskProfileName
 
     def navigatetoClientpage(self):
-        WebDriverWait(self.driver, 5).until(
-            expected_conditions.element_to_be_clickable(
-                (By.XPATH, "//a[normalize-space()='Clients']"))).click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//a[normalize-space()='Clients']").click()
 
     def NavigatetoFLApage_disableGLD(self):
         WebDriverWait(self.driver, 1).until(

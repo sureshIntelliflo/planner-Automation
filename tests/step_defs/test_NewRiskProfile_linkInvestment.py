@@ -67,6 +67,7 @@ def enable_override_parent_group_assumptions_when_level_2_user_login(browser):
     """Enable Override Parent Group Assumptions when level 2 user login."""
     page_fla = FLA(browser)
     page_fla.NavigatetoFLA()
+    page_fla.GldAction()
 
 
 @then('I add Investment Description <InvestmentDescription>')
@@ -105,8 +106,8 @@ def i_verify_the_investment_in_scenario_investmentdescription(browser, Investmen
 
 
 @then(
-    'User Add new risk profile <Name> <GrossReturn> <Interest> <Dividends> <Growth> <Fund_Platform> <FinancialPlanning>')
-def user_add_new_risk_profile_name_grossreturn_interest_dividends_growth_fund_platform_financialplanning(browser, Name,
+    'User Add new risk profile <RiskProfileName> <GrossReturn> <Interest> <Dividends> <Growth> <Fund_Platform> <FinancialPlanning>')
+def user_add_new_risk_profile_name_grossreturn_interest_dividends_growth_fund_platform_financialplanning(browser, RiskProfileName,
                                                                                                          GrossReturn,
                                                                                                          Interest,
                                                                                                          Dividends,
@@ -115,8 +116,8 @@ def user_add_new_risk_profile_name_grossreturn_interest_dividends_growth_fund_pl
                                                                                                          FinancialPlanning):
     """User Add new risk profile <Name> <GrossReturn> <Interest> <Dividends> <Growth> <Fund_Platform> <FinancialPlanning>."""
     page_fla = FLA(browser)
-    page_fla.DeleteRiskprofile_ifdisplayed(Name)
-    page_fla.AddRiskProfile(Name, GrossReturn, Interest, Dividends, Growth, Fund_Platform, FinancialPlanning)
+    page_fla.DeleteRiskprofile_ifdisplayed(RiskProfileName)
+    page_fla.AddRiskProfile(RiskProfileName, GrossReturn, Interest, Dividends, Growth, Fund_Platform, FinancialPlanning)
     page_fla.navigatetoClientpage()
 
 

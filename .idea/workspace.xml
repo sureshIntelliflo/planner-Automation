@@ -4,14 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="GLD Scenario Updated">
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="FLA Update with 2 HoH">
+      <change afterPath="$PROJECT_DIR$/tests/Features/OverideParentFLA_Add_Link_Delete_RiskProfile.Feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/step_defs/test_Add_Delete_RiskProfile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Common.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/FLA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/FLA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Investment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Investment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Features/NewRiskProfile_linkInvestment.Feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/NewRiskProfile_linkInvestment.Feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_Investments.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_Investments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/step_defs/test_NewRiskProfile_linkInvestment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_NewRiskProfile_linkInvestment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_sample.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641984618810</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="FLA Update with 2 HoH">
+      <created>1642064360132</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1642064360132</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,7 +320,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Income and DB Pensions Linking" />
     <MESSAGE value="Income and DB Pensions Linking&#10;DC Pensions" />
     <MESSAGE value="Income and DB Pensions Linking&#10;DC Pensions Update" />
     <MESSAGE value="DC Pensions fix" />
@@ -338,7 +344,8 @@
     <MESSAGE value="refactor Wizards Scenarios" />
     <MESSAGE value="refactor Wizards sync" />
     <MESSAGE value="GLD Scenario Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="GLD Scenario Updated" />
+    <MESSAGE value="FLA Update with 2 HoH" />
+    <option name="LAST_COMMIT_MESSAGE" value="FLA Update with 2 HoH" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

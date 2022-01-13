@@ -5,7 +5,7 @@ Feature: Add new risk profile and link to plan
     When User is on Login page and Login as <Username> <Password>
     And User successfully logged into application
     Then Enable Override Parent Group Assumptions when level 2 user login
-    Then User Add new risk profile <Name> <GrossReturn> <Interest> <Dividends> <Growth> <Fund_Platform> <FinancialPlanning>
+    Then User Add new risk profile <RiskProfileName> <GrossReturn> <Interest> <Dividends> <Growth> <Fund_Platform> <FinancialPlanning>
     Then User Create client with single HeadofHousehold as <HoHName> <HoHKnowas> <DoB> <TaxResidency> <Gender>
     And User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>
     And User Provide the Client Name as <ClientName>
@@ -23,6 +23,6 @@ Feature: Add new risk profile and link to plan
     And I logout from application
 
     Examples:
-      | Username  | Password  | Name                   | GrossReturn | Interest | Dividends | Growth | Fund_Platform | FinancialPlanning | HoHName        | HoHKnowas | DoB        | TaxResidency | Gender | HohName_2      | HoHKnowas_2 | DoB_2      | relation | SecondGender | ClientName               | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk         | ParentRiskprofile |
-      | Fla_Test1 | Fla_Test1 | Automation_RiskProfile | 5.6         | 29.5     | 30.2      | 40.3   | 2.2           | 1.7               | AutomationHOH1 | QA        | 01/01/1990 | England      | Male   | AutomationHOH1 | QA2         | 01/01/1991 | Married  | Female       | Automation GLD Scenario9 | Automated_Investment  | ISA Stocks & Shares | Pre-Existing | 300000       | Automation_RiskProfile | High              |
+      | Username  | Password  | RiskProfileName        | GrossReturn | Interest | Dividends | Growth | Fund_Platform | FinancialPlanning | HoHName        | HoHKnowas | DoB        | TaxResidency | Gender | HohName_2      | HoHKnowas_2 | DoB_2      | relation | SecondGender | ClientName                  | InvestmentDescription | InvestmentType      | Investment   | CurrentValue | AttitudetoRisk         | ParentRiskprofile |
+      | Fla_Test1 | Fla_Test1 | Automation_RiskProfile | 5.6         | 29.5     | 30.2      | 40.3   | 2.2           | 1.7               | AutomationHOH1 | QA        | 01/01/1990 | England      | Male   | AutomationHOH1 | QA2         | 01/01/1991 | Married  | Female       | Automation FLA Risk Profile | Automated_Investment  | ISA Stocks & Shares | Pre-Existing | 300000       | Automation_RiskProfile | High              |
 

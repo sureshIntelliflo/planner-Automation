@@ -17,11 +17,21 @@ class CommonFunctions:
                       attachment_type=AttachmentType.PNG)
 
     def DeleteClient(self):
-        self.driver.find_element_by_xpath("//span[normalize-space()='Plan Inputs']").click()
-        WebDriverWait(self.driver, 20).until(
-            expected_conditions.visibility_of_element_located(
-                (By.XPATH, "//span[@class='text-sm font-semibold'][normalize-space()='Summary']"))).click()
+        self.driver.refresh()
+        time.sleep(1)
+       # self.driver.find_element_by_xpath("//span[normalize-space()='Plan Inputs']").click()
 
+        try:
+            WebDriverWait(self.driver, 5).until(
+                expected_conditions.visibility_of_element_located(
+                    (By.XPATH,
+                     "//div[@class='flex NavigationSidebar_toggle__2JXSx items-center justify-center min-w-full h-10']"))).click()
+        except:
+            print("do nothing")
+
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//span[@class='text-sm font-semibold'][normalize-space()='Summary']").click()
+        time.sleep(1)
         self.driver.find_element_by_xpath("//span[normalize-space()='Client Settings']").click()
         time.sleep(1)
         self.driver.find_element_by_xpath("//button[@type='submit']//span[contains(text(),'Delete Client')]").click()
@@ -59,9 +69,8 @@ class CommonFunctions:
         self.driver.find_element_by_xpath("//textarea[@id='notes']").send_keys(AddNote)
 
     def NavigatetoClientsPage(self):
-        WebDriverWait(self.driver, 5).until(
-            expected_conditions.visibility_of_element_located(
-                (By.XPATH, "//img[@alt='Application Menu']"))).click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//img[@alt='Application Menu']").click()
 
         WebDriverWait(self.driver, 5).until(
             expected_conditions.visibility_of_element_located(
