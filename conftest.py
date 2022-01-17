@@ -199,7 +199,7 @@ def user_provide_the_client_name_as_clientname(browser, ClientName):
 
 @then('User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>')
 def user_add_second_hoh_details_as_hohname_2_hohknowas_2_dob_2_relation_secondgender(browser, HohName_2, HoHKnowas_2,
-                                                                                     DoB_2, SecondGender, relation):
+                                                                                     DoB_2, relation, SecondGender):
     """User Add second HoH details as <HohName_2> <HoHKnowas_2> <DoB_2> <relation> <SecondGender>."""
     page_login = CashflowLogin(browser)
-    page_login.AddSecondHoH(HohName_2, HoHKnowas_2, DoB_2, SecondGender, relation)
+    page_login.AddSecondHoH(HohName_2, HoHKnowas_2, DoB_2, relation, SecondGender)

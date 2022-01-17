@@ -175,7 +175,7 @@ class CashflowLogin:
         self.driver.find_element_by_xpath(close).click()
         WebDriverWait(self.driver, 2).until(expected_conditions.invisibility_of_element_located((By.XPATH, close)))
 
-    def AddSecondHoH(self, HohName_2, HoHKnowas_2, DoB_2, SecondGender, relation):
+    def AddSecondHoH(self, HohName_2, HoHKnowas_2, DoB_2, relation, SecondGender):
         self.driver.find_element_by_xpath("//span[text()= 'Add partner/cohabitant']").click()
 
         self.driver.find_element_by_id("fullName").clear()
@@ -190,12 +190,11 @@ class CashflowLogin:
         time.sleep(1)
         self.driver.find_element_by_xpath(
             "//*[@class='rc-virtual-list-holder-inner']/child::div//div[contains(text(),'Blue')]").click()
-
+        time.sleep(1)
         self.driver.find_element_by_id("relationship").click()
-
-        WebDriverWait(self.driver, 5).until(
-            expected_conditions.visibility_of_element_located(
-                (By.XPATH, f"//div[contains(text(),'{relation}')]"))).click()
+        self.driver.find_element_by_id("relationship").send_keys(relation)
+        time.sleep(1)
+        self.driver.find_element_by_xpath(f"//div[contains(text(),'{relation}')]").click()
 
         self.driver.find_element_by_id("gender").click()
 
