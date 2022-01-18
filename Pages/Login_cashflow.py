@@ -192,7 +192,7 @@ class CashflowLogin:
             "//*[@class='rc-virtual-list-holder-inner']/child::div//div[contains(text(),'Blue')]").click()
         time.sleep(1)
         self.driver.find_element_by_id("relationship").click()
-        self.driver.find_element_by_id("relationship").send_keys(relation)
+       # self.driver.find_element_by_id("relationship").send_keys(relation)
         time.sleep(1)
         self.driver.find_element_by_xpath(f"//div[contains(text(),'{relation}')]").click()
 

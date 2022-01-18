@@ -4,13 +4,13 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="FLA Update with 1 HoH">
+    <list default="true" id="7beb7174-d16d-4762-b835-0a8ec2bfa5f2" name="Default Changelist" comment="2 HoH Fix in scenarios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/FLA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/FLA.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Login_cashflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Login_cashflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/Property_2HoH.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/Property_2HoH.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Features/TwoHoHLogin.Feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Features/TwoHoHLogin.Feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_TwoHoH.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_TwoHoH.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_NewRiskProfile_linkInvestment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_NewRiskProfile_linkInvestment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/step_defs/test_Property_2HoH.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/step_defs/test_Property_2HoH.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642082964279</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="2 HoH Fix in scenarios">
+      <created>1642404102440</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1642404102440</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,7 +333,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Income and DB Pensions Linking&#10;DC Pensions Update" />
     <MESSAGE value="DC Pensions fix" />
     <MESSAGE value=" income DC Pension linking" />
     <MESSAGE value="refactor the Failures" />
@@ -351,7 +357,8 @@
     <MESSAGE value="GLD Scenario Updated" />
     <MESSAGE value="FLA Update with 2 HoH" />
     <MESSAGE value="FLA Update with 1 HoH" />
-    <option name="LAST_COMMIT_MESSAGE" value="FLA Update with 1 HoH" />
+    <MESSAGE value="2 HoH Fix in scenarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 HoH Fix in scenarios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

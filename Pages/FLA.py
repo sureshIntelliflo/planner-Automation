@@ -43,13 +43,14 @@ class FLA:
                 f"//td[normalize-space()='{RiskProfileName}']//following-sibling::td//button[@title='Delete']").click()
             time.sleep(1)
             self.driver.find_element_by_xpath("//span[normalize-space()='Delete Risk Profile']").click()
+            time.sleep(1)
         except:
             print("no Risk profile to delete with matching")
 
     def AddRiskProfile(self, RiskProfileName, GrossReturn, Interest, Dividends, Growth, Fund_Platform, FinancialPlanning):
 
 
-        time.sleep(3)
+        time.sleep(5)
         self.driver.find_element_by_xpath("//div[@class='flex items-center']//*[name()='svg']").click()
 
         WebDriverWait(self.driver, 5).until(
@@ -82,7 +83,7 @@ class FLA:
         assert verify_riskprofile.text == RiskProfileName
 
     def navigatetoClientpage(self):
-        time.sleep(1)
+        time.sleep(3)
         self.driver.find_element_by_xpath("//a[normalize-space()='Clients']").click()
 
     def NavigatetoFLApage_disableGLD(self):
